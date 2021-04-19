@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "choice":"/components/choice/choice",
+    "selectedBox": "/components/selectedBox/selectedBox",
+    "pocket": "/components/pocket/pocket"
+  }
+}

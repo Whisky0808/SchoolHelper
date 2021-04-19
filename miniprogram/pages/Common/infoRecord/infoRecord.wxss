@@ -1,0 +1,74 @@
+
+page {
+	
+	/* background-image: linear-gradient(-30deg, #96d489, #5aa583); */
+	height: 100%;
+}
+.info_bg{
+	height: 100%;
+	width:100%;
+}
+.identify{
+	height: 70rpx;
+	width: 340rpx;
+	margin-left: 15rpx;
+	margin-right: 15rpx;
+	font-size: 30rpx;
+	text-align: center;
+	color: #f1f1f1;
+	position: relative;
+	left:30rpx;
+	padding: 0;
+	margin: 0;
+}
+.content {
+	height: 1000rpx;
+	background-color: rgb(225,225,225,0.8);
+	width: 600rpx;
+	border-radius: 50rpx;
+	position: relative;
+	top: 10%;
+	left:10%;
+	box-shadow: 6rpx,0rpx,16rpx,-8rpx #000;
+}
+.row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	/* 字体所居位置 align-item */
+	position: relative;
+	padding: 0 30rpx;
+	height: 120rpx;
+	width: 88%;
+}
+.title {
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+	width: 120rpx;
+	font-size: 36rpx;
+	font-weight: 900;
+}
+
+.submit_btn {
+	padding: 0rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	width: 400rpx;
+	height: 80rpx;
+	margin: 60rpx auto;
+	color: #333333;
+	background-color: rgba(225, 225, 225,0.5);
+	border-radius: 10rpx;
+	box-shadow: 6rpx,0rpx,16rpx,-8rpx #000;
+}
+

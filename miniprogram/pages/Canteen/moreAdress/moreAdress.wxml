@@ -1,0 +1,39 @@
+<view class="more-adress">
+    <view class="title"><view class="bigtitle">{{func}}收获地址</view> <text class="{{func === '新增' ? 'dispdelete' : 'delete'}}" bindtap="deleteAddress">删除</text></view>
+    <view class="box">
+
+        <view style="height: 30px" class="weui-search-bar">
+            <view>
+                <view class="weui-search-bar__form">
+                    <!-- 搜索框 -->
+                    <view class="weui-search-bar__box">
+                        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                        <input bindinput="searchAddress" type="text" class="weui-search-bar__input" placeholder='请输入搜索地址' data-index="{{index}}" value="{{searchValue}}"/>
+                    </view>
+                </view>
+                <view class='select_box' style="float: left; height: 0; font-size: 38rpx;">
+                    <view class='option_box' style='height:{{searchShows?(searchDatas.length>5?300:searchDatas.length*60):0}}rpx; width: 500rpx; z-index: 100'>
+                        <rich-text class='option' style='{{searchIndexs==searchDatas.length-1&&"border:0;"}}; font-size: 38rpx;' wx:for='{{searchHighlightDatas}}' wx:key='this' data-index='{{index}}' catchtap='searchOptionTaps' nodes="{{item}}"></rich-text>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="adress-detail">
+            <text>门牌号：</text>
+            <input value="{{func === '修改' ? detailAddress : ''}}" placeholder="详细地址，例502" bindinput="bindDetialAddressInput"/>
+        </view>
+        <view class="user-name">
+            <text>联系人：</text>
+            <input value="{{func === '修改' ? name : ''}}" placeholder="请填写收货人的姓名" bindinput="bindNameInput"/>
+        </view>
+        <view class="user-phone">
+            <text>手机号：</text>
+            <input value="{{func === '修改' ? phone : ''}}" placeholder="请填写收货手机号码" bindinput="bindPhoneInput"/>
+        </view>
+        <button bindtap='getMesg'>保存地址</button>
+        <view class="attention" bindtap="tapOneDialogButton">*注：搜索部分的地址需要从搜索框中选择!</view>
+
+        <attention hide="{{hidepopup}}" attentionMeg="{{attentionMeg}}"></attention>
+    </view>
+</view>

@@ -1,0 +1,71 @@
+<view class="content">
+    <scroll-view class="fantang" scroll-y="true">
+        <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+
+            <scroll-view wx:if="{{level === '2'}}" class="big-box" scroll-y="true">
+                <!-- wx:key确保他们被重新排序，而不是重新创建，以确保使组件保持自身的状态 -->
+                <view class="comDetails" wx:for="{{comDetails}}" wx:for-item="item" wx:key="index" style="animation : slideup {{0.35*(index+1)}}s ease-in alternate;" hidden="{{!item.detailShow}}">
+                    <view style="width:100%; height:20rpx;posi">
+                        <text class="sumPrice">￥  {{item.price}} 元</text>
+                    </view>
+                    <view style="width:100%; height:20rpx">
+                        <text class="Time">{{item.arrivalTime}}前送达</text>
+                    </view>
+                    <view style="width:100%; height:20rpx;margin:30rpx;">
+                        <text style="font-size: 35rpx;font-weight: 700;color: rgb(67, 110, 230);padding:10rpx">
+                            取：
+                        </text>
+                        <text class="fromAddress">{{item.fromAddress}}</text>
+                        <text class="distance1">{{item.Distance_1}}</text>
+                    </view>
+                    <!-- <view style="width:100%; height:40rpx">
+                        <text class="distance1">{{item.Distance_1}}</text>
+                        </view> -->
+                    <view style="width:100%; height:20rpx;position:relative;top:30rpx">
+                        <text style="font-size: 35rpx;font-weight: 700;color: rgb(67, 110, 230);padding:10rpx;position: relative;top: -20rpx;left: 30rpx;">
+                            送达：
+                        </text>
+                        <text class="toAddress">{{item.toAddress}}</text>
+                        <text class="distance2 ">{{item.Distance_2}}</text>
+                    </view>
+                    <!-- <view style="width:100%; height:40rpx">
+                        <text class="distance2 ">{{item.Distance_2}}</text>
+                        </view> -->
+                    <!-- <view style="width:100%; height:40rpx">
+                        <text class="distance">路程距离：{{item.totalDistance}}</text>
+                        </view> -->
+                    <button class="primary_btn1" data-orderId="{{item.orderId}}" data-index="{{item.index}}" bindtap="toDetail">
+                        <text>抢    单</text>
+                    </button>
+                    <!-- index是open函数传递的参数名 -->
+                    <button class="primary_btn2" data-index="{{item.index}}" bindtap="open">
+                        <text>详    情</text>
+                    </button>
+                    <!-- 插件上线 bug：插件不能放里面，因为会提前加载相应的数量，然后一点击触发show就全部出来了，就有bug了 -->
+                    <tmp show="{{item.show}}" maskClosable="{{true}}" title="订单详情">
+                        <view class="order-food">
+                            <scroll-view class="order" scroll-y="true">
+                                <view class="food-list" wx:for="{{item.allFood}}" wx:for-item="i" wx:key="i">
+                                    <image src="{{i.foodimg}}"></image>
+                                    <view class="food-text">
+                                        <h3>{{i.foodname}}</h3>
+                                        <text class="food-num">x{{i.foodnum}}</text>
+                                    </view>
+                                    <view class="food-price-box">
+                                        <text class="food-price">￥{{i.foodprice}}</text>
+                                    </view>
+                                </view>
+                            </scroll-view>
+                        </view>
+                    </tmp>
+                </view>
+            </scroll-view>
+
+        <view class="notrider" wx:else>
+            <view class="sorry">很抱歉，您不是骑手</view>
+            <view class="tocl">点击成为骑手</view>
+            <button bindtap="torider">注册骑手</button>
+        </view>
+    </scroll-view>
+    <tabbar class="tab"></tabbar>
+</view>

@@ -1,0 +1,83 @@
+<view class="all">
+  <scroll-view class="add_demand" wx:if="{{level === '2'}}" scroll-y="true">
+    <view class="a" style="width: 150px; height: 100rpx; text-align: center;  margin: 10rpx auto;">
+      <h1 style="font-size: 50rpx; line-height: 100rpx">抢单</h1>
+    </view>
+
+    <view style="display:{{status?'block':'none'}}">
+      <view wx:for="{{helpOrderList}}" wx:key="index" wx:for-item="i">
+        <view class="a">
+          <view class="line">
+            <text class="c labelFont" style="font-size: 50rpx; font-weight: 700;">${{i.helperMoney}}元</text>
+            <text class="b" style="height: 70rpx; font-size: 37rpx; flex: 2; color: red; font-weight: 550">{{i.helperMust=='1'?'满人生效':'有人即可'}}</text>
+          </view>
+
+          <view class="line">
+            <text class="c labelFont" style="font-size: 37rpx">已召帮手：</text>
+            <text class="b" style=" font-size: 37rpx; color: red; font-weight: 550">{{i.applyNum}} / {{i.helperNum}}</text>
+          </view>
+
+          <view class="line">
+            <label class="c labelFont" style="font-size: 37rpx">开始时间：</label>
+            <text class="b" style=" font-size: 37rpx">{{i.startTime}}</text>
+          </view>
+
+          <view class="line">
+            <label class="c labelFont" style="font-size: 37rpx">结束时间：</label>
+            <text class="b" style=" font-size: 37rpx">{{i.endTime}}</text>
+          </view>
+
+          <view class="line">
+            <label class="c labelFont" style="font-size: 37rpx">任务内容：</label>
+            <text class="b" style=" font-size: 37rpx">{{i.content}}</text>
+          </view>
+
+          <view class="line">
+            <label class="c labelFont" style="font-size: 37rpx">帮手要求：</label>
+            <text class="b" style="height: 70rpx;; font-size: 37rpx">{{i.helperRequire}}</text>
+          </view>
+
+          <view wx:if="{{i.startAddrssList.length>=1}}" class="labelFont" style="font-size: 50rpx; margin-left: 60rpx; margin-top: 40rpx">取物地点：</view>
+            <view wx:for="{{i.startAddrssList}}" wx:key="index" wx:for-item="j">
+              <view class="line">
+                <label class="c" style="font-size: 37rpx; flex: 6">{{i.startAddrssList[index]}} {{i.startDetailAddressList[index]}}</label>
+                <image bindtap="getRoad" data-latitude="{{i.startLatitudeList[index]}}" data-longitude="{{i.startLongitudeList[index]}}" data-name="{{i.startAddrssList[index]}}" style="flex: 1; height: 35px; width: 5px" src="../../../static/icon/navigationBtn.png"></image>
+
+              </view>
+            </view>
+            <text>\n</text>
+
+            <view class="labelFont" style="font-size: 50rpx;margin-left: 60rpx;">到达地点：</view>
+            <view class="line">
+              <label class="c" style="font-size: 37rpx; flex: 6">{{i.endAddress}} {{i.endDetailAddress}}</label>
+              <image bindtap="getRoad" data-latitude="{{i.endLatitude}}" data-longitude="{{i.endLongitude}}" data-name="{{i.endAddress}}" style="flex: 1; height: 35px; width: 5px" src="../../../static/icon/navigationBtn.png"></image>
+            </view>
+            <text>\n</text>
+
+            <button bindtap="grab" data-id="{{i.helpOrderId}}" type="primary" plain="true">立即抢单</button>
+        </view>
+      </view>
+
+    </view>
+
+    <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+    <view class="modalDlg" wx:if="{{showModal}}">
+     <image src="/figures/logo-smile.png"/>
+     <text>{{alertValue}}</text>
+     <button bindtap="go">确定</button>
+    </view>
+
+    <button bindtap="submit">点我弹窗</button>
+  </scroll-view>
+
+  <scroll-view class="add_demand" scroll-y="true" wx:else>
+    <view class="notrider">
+      <view class="sorry">很抱歉，您不是骑手</view>
+      <view class="tocl">点击成为骑手</view>
+      <button bindtap="torider">注册骑手</button>
+    </view>
+  </scroll-view>
+
+  <tabbar class="tab"></tabbar>
+</view>

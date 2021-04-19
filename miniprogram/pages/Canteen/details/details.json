@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tabbar": "../../../components/tabbar2/tabbar2",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  },
+  "navigationBarTitleText": "订单详情",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#0e0d0d"
+}

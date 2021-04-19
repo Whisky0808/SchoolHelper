@@ -1,0 +1,213 @@
+@-webkit-keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(120px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+}
+
+.fromAddress {
+  font-size: 33rpx;
+  font-weight: 600;
+  color: black;
+  position: relative;
+  top: -50rpx;
+  left: 70rpx;
+}
+
+.toAddress {
+  font-size: 33rpx;
+  font-weight: 600;
+  color: black;
+  position: relative;
+  top: -74rpx;
+  left: 150rpx;
+}
+
+.primary_btn1 {
+  background-color: rgb(67, 110, 230);
+  width: 250rpx;
+  position: relative;
+  top: 103rpx;
+  left:-140rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: aliceblue;
+  padding: 0rpx;
+
+}
+
+.primary_btn2 {
+  background-color: rgb(67, 110, 230);
+  width: 250rpx;
+  position: relative;
+  top: 27rpx;
+  left: 240rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: aliceblue;
+  padding: 0rpx;
+}
+
+
+.Time {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: rgb(240, 170, 19);
+  float: right;
+  margin-right: 30rpx;
+}
+
+.sumPrice {
+  font-size: 50rpx;
+  font-weight: 900;
+  color: rgb(67, 110, 230);
+  position: relative;
+  top: 20rpx;
+}
+
+
+.distance1 {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: rgb(240, 170, 19);
+  float: right;
+  position: relative;
+  top: -50rpx;
+  left:-30rpx;
+  margin-right: 30rpx;
+}
+
+.distance2 {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: rgb(240, 170, 19);
+  float: right;
+  position: relative;
+  top: -70rpx;
+  left: 0rpx;
+  margin-right: 30rpx;
+}
+
+.comDetails {
+  height: 330rpx;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
+    0px 0px 20px rgba(0, 0, 0, 0.1) inset;
+  background-color: rgba(254, 254, 255);
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+
+/* 弹窗样式 */
+.order {
+  float: left;
+  width: 98%;
+  margin-left: 2%;
+  height: 610rpx;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  color: rgb(241, 240, 240);
+}
+
+.order-detail .canteen-name {
+  height: 110rpx;
+  width: 90%;
+  line-height: 110rpx;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+
+}
+
+.order-food .food-list {
+  width: 100%;
+  height: 190rpx;
+  margin-bottom: 10rpx;
+  /* background-color: azure; */
+  background-color: rgb(67, 110, 230);
+}
+
+.food-list image {
+  float: left;
+  height: 150rpx;
+  width: 150rpx;
+  margin: 20rpx 20rpx;
+}
+
+.food-list .food-text {
+  float: left;
+  width: 250rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.food-list .food-price-box {
+  float: left;
+  width: 80rpx;
+}
+
+.food-text h3 {
+  display: inline-block;
+  font-size: 40rpx;
+  font-weight: 500;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.food-text .food-num {
+  display: block;
+  margin-top: 35rpx;
+  margin-left: 30rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+  margin-right: 20rpx;
+  color: #f0cd34;
+
+}
+
+.food-price {
+  display: inline-block;
+  margin-top: 63rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 45rpx;
+  font-weight: 550;
+}
+
+.content{
+  height: 1055rpx;
+}
+.content .fantang{
+  height: 1055rpx;
+}
+
+/*不是骑手*/
+.notrider .sorry{
+  color: black;
+  font-size: 45rpx;
+  font-weight: 550;
+  margin-top: 400rpx;
+  text-align: center;
+}
+.notrider .tocl{
+  color: black;
+  font-size: 45rpx;
+  font-weight: 550;
+  text-align: center;
+}
+.notrider button{
+  display: inline-block;
+  background-color: #f9ca24;
+  color: white;
+  font-size: 35rpx;
+  font-weight: 550;
+  width: 400rpx;
+  margin-left: 192rpx;
+  margin-top: 200rpx;
+}

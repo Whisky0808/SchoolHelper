@@ -1,0 +1,68 @@
+<wxs module="numberUtil" src="../../../common/filter.wxs"></wxs>
+<choice hide="{{hidepopup}}" foodname="{{foodname}}" curindex="{{curindex}}" num="{{num}}" binditemChange="handleItemChange"></choice>
+
+<view>
+  <view class="carteenName">
+    欢迎来到 {{carteenName}}，尽情点餐吧！
+  </view>
+  <view class="carteenAdv">
+<!--    轮播图-->
+    <swiper class="swip" indicator-dots='true' autoplay='true' interval='5000'  duration='1000' circular='true'>
+      <block wx:for="{{scrollImg}}" wx:key="*this">
+<!--        <block>-->
+        <swiper-item>
+<!--          <image src='http://zzxdream.cn:8080/group1/M00/00/00/rBElWGB4c8yAEtNyAACF0rNyeYE380.jpg' mode='aspectFill'></image>-->
+          <image src='{{item}}' ></image>
+          <text>{{item}}</text>
+        </swiper-item>
+<!--        </block>-->
+      </block>
+    </swiper>
+  </view>
+
+  <view class="menu">
+    <scroll-view class="menu_left" scroll-y="true">
+      <!-- <view class="left_item" wx:for="{{food}}" wx:key="this">{{item.sortName}}</view>     。！。！-->
+      <view class="left_item {{leftNum == index ? 'active' : ''}}" wx:for="{{food}}" wx:key="*this" bindtap="leftClickFn" data-myindex="{{index}}">{{item.sortName}}</view> 
+    </scroll-view>
+    <!-- 右侧要滚动，所以不给高度 -->
+    <scroll-view class="menu_right" scroll-y="true" bindscroll="rightScroll" scroll-into-view="{{rightId}}" scroll-with-animation="true">
+      <view
+        wx:for="{{food}}"
+        wx:key="*this"
+        id="{{'right'+(item.sortId-1)}}"
+        class="box"
+      >
+        <view class="box_title">{{item.sortName}}</view>
+        <view class="box_content">
+          <view class="contentItem" wx:for="{{item.foodList}}" wx:key="*this" wx:for-item="val" wx:for-index="ind">
+            <image src="{{val.imgPath}}"></image>
+            <view class="item_text">
+              <h3>{{val.foodName}}</h3>
+              <view class="foodLabel"><text>{{val.label}}</text></view>
+              <text class="sale">月售{{val.sale}}</text><text class="comment">好评度{{numberUtil.numberFormat(val.goodComment/val.allComment)}}%</text>
+              <view>
+                ￥
+                <text class="price">{{numberUtil.numberFormat(val.price)}}</text>
+                <button bindtap="onShowPopup" data-foodname="{{val.foodName}}" data-foodid="{{val.foodId}}" data-foodnum="{{allFood[val.foodId].foodnum}}">加入购物车
+                  <text class="fdnum {{allFood[val.foodId].foodnum === 0 ? 'reddoc' : ''}}" >{{allFood[val.foodId].foodnum}}</text>
+                </button>
+              </view>
+
+            </view>
+          </view>
+          
+
+        </view>
+      </view>
+    </scroll-view>
+
+<!--    <selectedBox></selectedBox>-->
+<!--     当前价格 -->
+    <view class="curObject">
+      <view bindtap="bindfoodlist"><text class="tex">当前价格：￥</text><text class="price">{{numberUtil.numberFormat(curprice)}}</text></view>
+      <button bindtap='goToCount'>去结算</button>
+    </view>
+  </view>
+  <pocket class="pocket" hidelist="{{hidelistpopup}}" bindChange="handleChange"></pocket>
+</view>

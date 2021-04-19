@@ -1,0 +1,8 @@
+<view class="dom" hidden="{{hide}}" data-canclose="{{true}}" bindtap="hidepopup">
+    <view class="box">
+        <view class="title">微信授权登录</view>
+        <view class="ask">是否允许微信授权登录</view>
+        <view class="result">若不授权登录则无法使用小程序</view>
+        <button class="btn" bindtap="goToGet">授权登录</button>
+    </view>
+</view>

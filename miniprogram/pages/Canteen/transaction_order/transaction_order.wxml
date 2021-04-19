@@ -1,0 +1,47 @@
+<wxs module="numberUtil" src="../../../common/filter.wxs"></wxs>
+<view class="box">
+    <view class="title">订单已完成</view>
+    <view class="more_order">
+        <view><image src="../../../static/icon/order.png"></image></view>
+        <text class="thanks">感谢您对校园帮的信任，期待再次光临。</text>
+        <view class="add_order" bindtap="orderMore">
+            <image src="../../../static/icon/addorder.png"></image>
+            <text class="add_text">再来一单</text>
+        </view>
+    </view>
+    <view class="order_detail">
+        <!--        饭堂名字-->
+        <view class="canteen-name">{{curDetail.carteenName}}</view>
+        <!--        遍历订单菜品-->
+        <view class="order-food">
+            <scroll-view class="order" scroll-y="true">
+<!--                <view class="food-list" wx:for="{{allFood}}" wx:key="*this">-->
+                <view class="food-list" wx:for="{{curDetail.detailList}}" wx:key="*this">
+                    <image src="{{item.food.imgPath}}"></image>
+                    <view class="food-text">
+                        <h3>{{item.food.foodName}}</h3>
+                        <text class="food-num">x{{item.number}}</text>
+                    </view>
+                    <view class="food-price-box">
+                        <text class="food-price">￥{{item.food.price}}</text>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="order_mes">
+        <view class="mes_title">订单信息</view>
+        <view class="mes_detail">
+            <text class="pric_title">总费用</text>
+            <text class="total_price">￥{{numberUtil.numberFormat(curDetail.totalMoney * 1 + 0)}}</text>
+            <text class="packet_title">打包费</text>
+            <text class="packet_price">￥1.5</text>
+            <text class="packet_title">配送费</text>
+            <text class="packet_price">￥{{numberUtil.numberFormat(curDetail.distributionFee * 1 + 0)}}</text>
+            <text class="packet_title">配送地址</text>
+            <text class="packet_location">{{curDetail.searchAddress}}...</text>
+            <text class="packet_title">时间</text>
+            <text class="packet_time">{{curDetail.addTime}}</text>
+        </view>
+    </view>
+</view>

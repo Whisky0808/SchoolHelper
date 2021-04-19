@@ -1,0 +1,256 @@
+page{
+    background-color: #8ebd9b;
+}
+
+.weui-search-bar {
+  position: relative;
+  padding-left: 50rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  width: 420rpx;
+  
+  /* background-color: #EFEFF4; */
+  /* border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC; */
+}
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  background-color: white;
+}
+.weui-search-bar__form {
+  width: 420rpx;
+    height: 80rpx;
+  border: 1px solid #8ebd9b;
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+          flex: auto;
+  border-radius: 5px;
+  background: #FFFFFF;
+  /* border: 1rpx solid #E6E6EA; */
+}
+.weui-search-bar__box {
+  /* border: 1px solid #8ebd9b; */
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 420rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09BB07;
+  white-space: nowrap;
+}
+
+
+
+.search{
+  margin-left: 5%;
+  border: 1px solid #8ebd9b
+}
+
+.a{
+    margin-top: 20rpx;
+    margin-left: 3%;
+    width: 94%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.b{
+    margin-top: 10px;
+    /* background-color: red; */
+    border: 1px solid #8ebd9b;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex: 7
+}
+
+.c{
+    margin-top: 10px;
+    /* margin-top: 35px; */
+    margin-left: 20px;
+    flex: 3
+}
+
+.line{
+    padding-top: 50rpx;
+    width: 100%;
+    font-size: 38rpx;
+    display: flex;
+}
+
+/* fenlei */
+.fenlei{
+    margin: 0 25rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-bottom: 1rpx solid #e6e6e6;
+    display: flex;
+    align-items: center;
+  }
+  .fenlei text{
+    font-size: 30rpx;
+    color: #999999;
+    margin-left: 15rpx;
+  }
+  /* 下拉框 */
+  .select_box {
+    background: #fff;
+    width: 100rpx;
+    /* margin: 0 auto; */
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: left;
+    position: relative;
+  }
+  
+  .select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 86rpx;
+    /* border: 1px solid #efefef; */
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 20rpx;
+  }
+  
+  .select_text {
+    font-size: 28rpx;
+    flex: 1;
+    color: rgb(102, 102, 102);
+    line-height: 86rpx;
+    height: 86rpx;
+  }
+  
+  .select_img {
+    width: 40rpx;
+    height: 40rpx;
+    display: block;
+    transition: transform 0.3s;
+  }
+  
+  .select_img_rotate {
+    transform: rotate(180deg);
+  }
+  
+  .option_box {
+    /* position: absolute; */
+    top: 86rpx;
+    width: 100%;
+    /* border: 1px solid #efefef; */
+    box-sizing: border-box;
+    height: 0;
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+    z-index: 100;
+  }
+  
+  .option {
+    display: block;
+    line-height: 40rpx;
+    font-size: 28rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;
+    color: rgb(102, 102, 102);
+  }
+.curObject{
+    position: relative;
+    top: 90%;
+    height: 130rpx;
+    width: 100%;
+    background-color: silver;
+    border-radius: 80rpx;
+}
+.curObject view{
+    display: inline-block;
+    float: left;
+    width: 70%;
+    height: 100%;
+    line-height: 130rpx;
+    border-top-left-radius: 80rpx;
+    border-bottom-left-radius: 80rpx;
+    background-color: #191919;
+    color: #fefefe;
+    font-size: 35rpx;
+}
+.curObject .tex{
+    margin-left: 40rpx;
+}
+.curObject .price{
+    font-size: 55rpx;
+}
+.curObject button{
+    float: left;
+    height: 100%;
+    line-height: 130rpx;
+    width: 30%;
+    border-top-right-radius: 80rpx;
+    border-bottom-right-radius: 80rpx;
+    background-color: #ffd64e;
+    font-size: 35rpx;
+}
+
+/* .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  margin: 50rpx auto;
+}
+ 
+.row{
+  position: relative;
+  height: 80rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.row input{
+  width: 100%;
+  height:100%;
+}
+.codeBtn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #bbb;
+  width: 30%;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.subBtn{
+  width: 200rpx;
+  height: 80rpx;
+  background: #fff;
+  color: #000;
+  border-radius: 50rpx;
+  line-height: 80rpx;
+}  */
+
+.all{
+    height: 1055rpx;
+}
+.all .add_demand{
+    height: 1055rpx;
+}

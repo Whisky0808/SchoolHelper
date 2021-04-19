@@ -1,0 +1,71 @@
+<view class="dom" hidden="{{hidelist}}" bindtap="hidepopup" data-canclose="{{true}}">
+    <view class="box">
+        <view class="clear-food" bindtap="clearfood">清空购物车</view>
+        <view class="food">
+            <scroll-view class="order" scroll-y="true">
+                <view class="food-list" wx:for="{{selectFood}}" wx:key="*this">
+                    <image src="{{item.foodimg}}"></image>
+                    <view class="food-text">
+                        <h3>{{item.foodname}}</h3>
+                        <view class="food-num">
+                            <view class="cut">
+                                <button class="cutbtn" bindtap="numCut" data-index="{{index}}" style="width:100rpx height:100rpx">-</button>
+                            </view>
+                            <text>{{item.foodnum}}</text>
+                            <view class="add">
+                                <button class="addbtn" bindtap="numAdd" data-index="{{index}}">+</button>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="food-price-box">
+                        <text class="food-price">￥{{item.foodprice}}</text>
+                    </view>
+                </view>
+
+<!--                <view class="food-list">-->
+<!--                    <image src="http://img.mp.sohu.com/q_70,c_zoom,w_640/upload/20170725/88ffc4ce7d854815acbbfb758da3e6b4_th.jpg"></image>-->
+<!--                    <view class="food-text">-->
+<!--                        <h3>益和烤奶</h3>-->
+<!--                        <text class="food-num">x2</text>-->
+<!--                    </view>-->
+<!--                    <view class="food-price-box">-->
+<!--                        <text class="food-price">￥12</text>-->
+<!--                    </view>-->
+<!--                </view>-->
+
+<!--                <view class="food-list">-->
+<!--                    <image src="http://img.mp.sohu.com/q_70,c_zoom,w_640/upload/20170725/88ffc4ce7d854815acbbfb758da3e6b4_th.jpg"></image>-->
+<!--                    <view class="food-text">-->
+<!--                        <h3>益和烤奶</h3>-->
+<!--                        <text class="food-num">x2</text>-->
+<!--                    </view>-->
+<!--                    <view class="food-price-box">-->
+<!--                        <text class="food-price">￥12</text>-->
+<!--                    </view>-->
+<!--                </view>-->
+
+<!--                <view class="food-list">-->
+<!--                    <image src="http://img.mp.sohu.com/q_70,c_zoom,w_640/upload/20170725/88ffc4ce7d854815acbbfb758da3e6b4_th.jpg"></image>-->
+<!--                    <view class="food-text">-->
+<!--                        <h3>益和烤奶</h3>-->
+<!--                        <text class="food-num">x2</text>-->
+<!--                    </view>-->
+<!--                    <view class="food-price-box">-->
+<!--                        <text class="food-price">￥12</text>-->
+<!--                    </view>-->
+<!--                </view>-->
+
+<!--                <view class="food-list">-->
+<!--                    <image src="http://img.mp.sohu.com/q_70,c_zoom,w_640/upload/20170725/88ffc4ce7d854815acbbfb758da3e6b4_th.jpg"></image>-->
+<!--                    <view class="food-text">-->
+<!--                        <h3>益和烤奶</h3>-->
+<!--                        <text class="food-num">x2</text>-->
+<!--                    </view>-->
+<!--                    <view class="food-price-box">-->
+<!--                        <text class="food-price">￥12</text>-->
+<!--                    </view>-->
+<!--                </view>-->
+            </scroll-view>
+        </view>
+    </view>
+</view>

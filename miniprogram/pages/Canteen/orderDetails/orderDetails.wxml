@@ -1,0 +1,52 @@
+<wxs module="numberUtil" src="../../../common/filter.wxs"></wxs>
+<moreadress class="list" hide="{{hidepopup}}" userAdress="{{userAdress}}" binditemChange="handleItemChange"></moreadress>
+<view class="box">
+    <view class="head">提交订单</view>
+    <view class="address" catchtap="onShowPopup">
+        <view class="firstads">
+            <view wx:if="{{flag === 1}}">
+                <view class="userads">{{userAdress[curAds].detailAddress}}</view>
+                <view class="usermsg">
+                    <text class="username">{{userAdress[curAds].name}}</text>
+                    <text class="usertel">{{userAdress[curAds].phone}}</text>
+                </view>
+            </view>
+            <view class="add_ads" wx:elif="{{flag === 0}}">请新增地址</view>
+        </view>
+        <view class="moreads">
+            <view class="arrow"></view>
+        </view>
+    </view>
+    <view class="order-detail">
+<!--        饭堂名字-->
+        <view class="canteen-name">{{carteenName}}</view>
+<!--        遍历订单菜品-->
+        <view class="order-food">
+            <scroll-view class="order" scroll-y="true">
+                <view class="food-list" wx:for="{{allFood}}" wx:key="*this">
+                    <image src="{{item.foodimg}}"></image>
+                    <view class="food-text">
+                        <h3>{{item.foodname}}</h3>
+                        <text class="food-num">x{{item.foodnum}}</text>
+                    </view>
+                    <view class="food-price-box">
+                        <text class="food-price">￥{{numberUtil.numberFormat(item.foodnum * item.foodprice)}}</text>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+
+    <view class="mark">
+        <view class="distribution_fee">
+            <text class="te">配送费</text>
+            <text class="pri">￥{{numberUtil.numberFormat(platformFee + riderFee)}}</text>
+        </view>
+        <view class="remark">
+            <text>备注</text>
+            <textarea  type="text" bindinput="bindMarkInput" placeholder="口味、偏好等要求"/>
+        </view>
+    </view>
+
+    <selectedBox curprice="{{allPrice}}" binditemChange="submitOrder"></selectedBox>
+</view>

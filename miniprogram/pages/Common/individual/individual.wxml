@@ -1,0 +1,41 @@
+<view class="content">
+    <view class="topDetail">
+        <image class="photoImage" src="{{photo}}" binderror="error"></image>
+        <button class="changePhoto" bindtap="changePhoto">更换头像</button>
+        <view class="money"> <text>账户金额</text><text>{{completeMoney}}</text>
+            <button class="withdrawMoney" bindtap="showInputPassword" hidden="{{withdrawShow}}">提现</button>
+        </view>
+        <password title="输入提现密码" show="{{registerShow}}" bindbuttontap="passwordConfirm" buttons="{{buttons}}">
+            <input class='inputPassword' type="text" value="{{inputPassword}}" placeholder="   请输入提现密码"
+                bindinput="inputPassword" />
+        </password>
+    </view>
+    <view class="detail">
+        <view class="row">
+            <text>昵称:</text>
+            <text class="txt">{{virtualName}}</text>
+            <button class="name" bindtap="changeName">更换昵称</button>
+            <change-name title="更改昵称" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+                <input class='inputName' type="text" value="{{inputName}}" bindinput="inputName" />
+            </change-name>
+        </view>
+        <view class="row">
+            <text>真实姓名:</text>
+            <text class="txt">{{realName}}</text>
+        </view>
+        <view class="row">
+            <text>所在学校:</text>
+            <text class="txt">{{school}}</text>
+        </view>
+        <view class="row">
+            <text>联系电话:</text>
+            <text class="txt">{{phone}}</text>
+        </view>
+        <view class="row">
+            <text>手动提现</text>
+            <switch class="withdraw" checked="{{switch1Checked}}" bindchange="switch1Change" />
+        </view>
+    </view>
+
+
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tabbar": "../../../components/tabbar/tabbar",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  }
+}

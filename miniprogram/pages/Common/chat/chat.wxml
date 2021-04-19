@@ -1,0 +1,44 @@
+<view>
+  <!-- 弹窗询问插件 -->
+  <mp-half-screen-dialog bindbuttontap="buttontap" bindclose="dialogClose" show="{{dialogShow}}" maskClosable="{{false}}" title="Customer须知" desc="稍后您将与“帮手”进行对话" tips="谈话内容如若涉及金钱交易请警惕诈骗，若不慎泄露财务信息请及时报警并联系客服。请愉快使用。" buttons="{{buttons}}"></mp-half-screen-dialog>
+  <scroll-view scroll-y scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
+    <block wx:key="chatId" wx:for='{{msgList}}' wx:for-index="index">
+      <!-- msg : server发出（左） 这里的customer和server都是指的是一个section里面的白人和绿人 -->
+      <view wx:if='{{item.speaker=="server"}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+        <view style='width: 4vw; height: 11vw;'></view>
+        <view class="SerProfilePhoto">
+          <image style='width: 10vw;' src="{{item.leftIcon}}" mode='widthFix'></image>
+        </view>
+        <!-- <view class="leftName">
+        </view> -->
+        <view class='leftMsg'>{{item.content}}</view>
+        
+      </view>
+      <!-- msg : cutomer发出（右） -->
+      <view wx:else id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
+        <view class='rightMsg'>{{item.content}}</view>
+        <!-- <view class="rightName">
+        </view> -->
+        <view class="CusProfilePhoto">
+          <image style='width: 10vw;' src="{{cusHeadIco}}" mode='widthFix'></image>
+        </view>
+        <view style='width: 4vw; height: 11vw;'></view>
+      </view>
+    </block>
+    <!-- 留白占位 保证下面留空 最高的消息顶置 -->
+    <view style='width: 100%; height: 18vw;'></view>
+  </scroll-view>
+  <view class='inputRoom' style='bottom: {{inputBottom}}'>
+    <text class="iconfont icon-jiahao" style='width: 7vw; margin-left: 3.2vw;'></text>
+    <!-- 这个以后用来发文件图片用的 -->
+    <input 
+           bindconfirm='sendMessage'
+           adjust-position='{{false}}' 
+           bindkeyup="keyup" 
+           model:value="{{inputVal}}" 
+           confirm-type='send' 
+           bindfocus='focus' 
+           bindblur='blur'/>
+    <button type="primary" class="send" confirm-type='send' bindtap="sendMessage" >发送</button>
+  </view>
+</view>

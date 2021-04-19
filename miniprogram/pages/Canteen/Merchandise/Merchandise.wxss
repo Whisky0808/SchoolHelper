@@ -1,0 +1,312 @@
+/* .allFood{
+  height: 20rpx;
+  width: 20rpx;
+  background-color: antiquewhite
+}
+.allFood .img{
+  margin-top: 4rpx;
+  margin-left: 2rpx;
+  
+  height: 2rpx;
+  width: 2rpx;
+  float: left;
+}
+.foodMessage{
+  float: left;
+  margin-left: 2rpx;
+  margin-top: 4rpx;
+} */
+
+/* .menu{
+  height: calc(70vh);
+
+}
+.menu_left{
+  width: 30%;
+  height: calc(70vh);
+  float: left;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.menu_left view{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  text-align: center;
+}
+
+.menu_left view::before{
+  content: "";
+  width: 6rpx;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+}
+
+.menu_left view.active{
+  background-color: antiquewhite;
+}
+
+.menu_left view.active::before{
+  background-color: #333999;
+}
+
+
+.menu_right{
+  width: 70%;
+  height: calc(70vh);
+  float: right;
+  background-color: tan;
+}
+.menu_right .box{
+  padding: 0 10rpx;
+  padding: 10rpx 0;
+}
+.menu_right .box_title{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+}
+.menu_right .box_content{
+  background-color: #fff; */
+  /* display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; */
+/* }
+.menu_right .box_content view{
+  width: 32%;
+  text-align: center;
+  margin-left: 1%;
+}
+.menu_right .box_content view text{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} */
+
+
+/* 正式 */
+/* 欢迎语 */
+.carteenName{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 40rpx;
+  text-indent:4em;
+  /*background-color: #ee523c;*/
+  background-color: #ffd64e;
+  color: white;
+  font-weight: 550;
+  font-size: 35rpx;
+}
+/* 轮播图广告 */
+.carteenAdv{
+  width: 100%;
+  height: 350rpx;
+  background: gold;
+  margin-bottom: 20rpx;
+}
+/* 菜单 */
+.menu{
+  height: 760rpx;
+  /*background-color: lightpink;*/
+}
+/* 菜单左侧 */
+.menu .menu_left{
+  float: left;
+  width: 23%;
+  height: 630rpx;
+  background-color: #f5f9fce7;
+  box-sizing: border-box;
+}
+.menu .menu_left .left_item{
+  /* background-color: lightskyblue; */
+  border: 1px solid transparent;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 15px;
+  color: #6f7376;
+}
+.menu .menu_left .active{
+  background-color: #ffffff;
+  color: black;
+  font-weight: 550;
+}
+/* 菜单右侧 */
+.menu .menu_right{
+  float: right;
+  width: 77%;
+  height: 630rpx;
+  background-color: #fffffd;
+}
+.menu_right .box{
+  padding: 0 5rpx;
+}
+.menu_right .box_title{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+  background-color: #f6f3f6;
+}
+/* .menu_right .box_content{
+  background-color: darkgreen;
+} */
+.menu_right .box_content .contentItem{
+  /* background-color: darkmagenta; */
+  width: 100%;
+  height: 240rpx;
+  margin-bottom: 10rpx;
+}
+.menu_right .box_content .contentItem image{
+  float: left;
+  height: 200rpx;
+  width: 200rpx;
+  margin: 20rpx 0;
+}
+.menu_right .box_content .contentItem .item_text{
+  float: left;
+  width: 330rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.contentItem .item_text h3{
+  font-size: 35rpx;
+  font-weight: 550;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.contentItem .item_text .foodLabel{
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.contentItem .item_text .foodLabel text{
+  background-color: #f9f8e7;
+  color: #cfad59;
+}
+.contentItem .item_text .sale,.contentItem .item_text .comment{
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+  color: #ababab;
+  /* font-weight: 550; */
+}
+.contentItem .item_text view{
+  font-size: 28rpx;
+  color: red;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* font-weight: 550; */
+}
+.contentItem .item_text view .price{
+  display: inline-block;
+  float: left;
+  font-size: 32rpx;
+}
+.contentItem .item_text view button{
+  display: inline-block;
+  float: right;
+  margin: 0px;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 230rpx;
+  font-size: 30rpx;
+  padding: 3rpx 8rpx;
+  border-radius: 50rpx;
+  background-color: #f7c32f;
+}
+
+/* 当前商品 */
+.curObject{
+  float: left;
+  height: 130rpx;
+  width: 100%;
+  background-color: silver;
+  border-radius: 80rpx;
+}
+.curObject view{
+  display: inline-block;
+  float: left;
+  width: 70%;
+  height: 100%;
+  line-height: 130rpx;
+  border-top-left-radius: 80rpx;
+  border-bottom-left-radius: 80rpx;
+  background-color: #191919;
+  color: #fefefe;
+  font-size: 35rpx;
+}
+.curObject .tex{
+  margin-left: 40rpx;
+}
+.curObject .price{
+  font-size: 55rpx;
+}
+.curObject button{
+  float: left;
+  height: 100%;
+  line-height: 130rpx;
+  width: 30%;
+  border-top-right-radius: 80rpx;
+  border-bottom-right-radius: 80rpx;
+  background-color: #ffd64e;
+  /*background-color: #98e165;*/
+  font-size: 35rpx;
+}
+
+/* 加减按钮 */
+.cut .cutbtn, .add .addbtn{
+  width: 60rpx;
+  height: 60rpx;
+  padding: 5rpx;
+  border-radius: 100rpx;
+  background-color: #f7c32f;
+  margin: 0 6rpx;
+}
+.cut, .add{
+  display: inline-block;
+}
+.controlNum{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 200rpx;
+  /* font-size: 30rpx; */  
+  display: inline-block;
+  float: right;
+}
+.controlNum text{
+  display: inline-block;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 20rpx;
+}
+
+.fdnum{
+  display: inline-block;
+  height: 40rpx;
+  width: 40rpx;
+  line-height: 40rpx;
+  font-size: 10px;
+  border-radius: 20rpx;
+  color: white;
+  background-color: red;
+}
+.reddoc{
+  display: none;
+}
+
+.swip{
+  width: 100%;
+  height: 100%;
+}
+.swip image{
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,49 @@
+.dom{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+}
+.box{
+    width: 100;
+    height: 600rpx;
+    background-color: white;
+    position: relative;
+    top: 700rpx;
+    border-top-left-radius: 50rpx;
+    border-top-right-radius: 50rpx;
+}
+.title{
+    font-weight: 550;
+    font-size: 37rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+}
+.ask{
+    font-weight: 550;
+    font-size: 40rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    padding-left: 50rpx;
+}
+.result{
+    font-weight: 520;
+    font-size: 30rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    padding-left: 50rpx;
+    color: #918e88;
+}
+.btn{
+    height: 100rpx;
+    width: 350rpx;
+    font-weight: 550;
+    font-size: 40rpx;
+    background-color: #00b26a;
+    color: white;
+    margin-top: 80rpx;
+    border-radius: 30rpx;
+}

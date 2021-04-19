@@ -1,0 +1,44 @@
+<view class="info_bg" style="{{'background:'+('url('+imgUrl+');background-size:100% 110%')+';'}}">
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <form action="" bindsubmit="formSubmit">
+        <view class="content">
+            <view class="row">
+                <text class="title">省份:</text>
+                <picker range="{{addressData.province}}" value="{{addressData.provinceIndex}}" bindchange="bindProvinceChange">
+                    <view>{{addressData.province[addressData.provinceIndex]}}</view>
+                </picker>
+            </view>
+            <view class="row">
+                <text class="title">城市:</text>
+                <picker range="{{addressData.city}}" value="{{addressData.cityIndex}}" bindchange="bindCityChange">
+                    <view>{{addressData.city[addressData.cityIndex]}}</view>
+                </picker>
+            </view>
+            <view class="row">
+                <text class="title">学校:</text>
+                <picker range="{{addressData.school}}" value="{{addressData.schoolIndex}}" bindchange="bindSchoolChange">
+                    <view>{{addressData.school[addressData.schoolIndex]}}</view>
+                </picker>
+            </view>
+            <view class="row">
+                <text class="title">姓名:</text>
+                <input type="text" placeholder="   请输入姓名" placeholder-class="placeholder" name="name" />
+            </view>
+            <view class="row">
+                <text class="title">学号:</text>
+                <input type="text" placeholder="   请输入学号" placeholder-class="placeholder" name="num" />
+            </view>
+            <view class="row">
+                <text class="title">手机号:</text>
+                <input type="text" placeholder="   请输入手机号" placeholder-class="placeholder" name="celePhone" bindblur="confirmCele"/>
+            </view>
+            <view class="row">
+                <text class="title">验证码:</text>
+                <input type="text" placeholder="   请输入验证" placeholder-class="placeholder" name="code" />
+                <!-- <button class="identify" type="warn" blur-type='blur'>{{btnValue}}</button> -->
+                <button class="identify" blur-type='blur' type='{{btnDisabled ? "warn" : "default"}}' value="{{btnValue}}" bindtap='getCode' disabled='{{btnDisabled}}'>{{btnValue}}</button>
+            </view>
+            <button class="submit_btn" type="default" form-type="submit">提交</button>
+        </view>
+    </form>
+</view>

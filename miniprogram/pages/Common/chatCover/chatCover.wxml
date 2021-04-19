@@ -1,0 +1,24 @@
+<view class="all">
+    <scroll-view class="add_demand" scroll-y="true">
+<view class="content">
+<view class="top">
+<text >RealTime:   </text>{{time}}
+</view>
+<scroll-view class="hot-box" scroll-y="true">
+    <block wx:for="{{dlgContent}}" wx:key="index">
+        <!-- <view wx:if='{{item.signal==new}}' style=""></view> -->
+        <view class="dlgDetail" bindtap="toSec" data-chatId="{{item.chatId}}">
+            <view class="dlgImg">
+                <image class="dlgImg" style='width: 10vw;' mode="widthFix" src="{{item.cusHeadIco}}"></image>
+            </view>
+            <view class="dlgTitle">
+                <text class="dlgTitle">{{item.dlgTitle}}</text>
+            </view>
+            <view class="dlgTime">{{item.dlgTime}}</view>
+        </view>
+    </block>
+</scroll-view>
+</view>
+</scroll-view>
+<tabbar class="tab"></tabbar>
+</view>

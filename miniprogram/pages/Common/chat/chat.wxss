@@ -1,0 +1,129 @@
+/* pages/contact/contact.wxss */
+/* @import "../mp/mp.wxss"; */
+
+.SerProfilePhoto {
+  width: 10vw;
+  height: 11vw;
+  margin-right: 7vw;
+  display: flex;
+  align-items: center;
+  z-index: 9;
+}
+
+.CusProfilePhoto {
+  width: 10vw;
+  height: 11vw;
+  margin-left: 7vw;
+  display: flex;
+  align-items: center;
+  z-index: 9;
+}
+
+page {
+  background-color: #f1f1f1;
+}
+
+.inputRoom {
+  width: 100vw;
+  height: 16vw;
+  border-top: 1px solid #cdcdcd;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+input {
+  width: 76vw;
+  height: 9.33vw;
+  background-color: #fff;
+  border-radius: 40rpx;
+  margin-left: 2vw;
+  padding: 0 3vw;
+  font-size: 28rpx;
+  color: #444;
+}
+
+.leftMsg {
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #fff;
+  margin-left: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+
+.rightMsg {
+  font-size: 35rpx;
+  color: #444;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #96EB6A;
+  margin-right: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+
+.send {
+  height: 70rpx;
+  width: 140rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #07c160;
+  color: #f1f1f1;
+}
+
+
+.modals {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modals-cancel {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.bottom-dialog-body {
+  position: absolute;
+  z-index: 10001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  height: 300rpx;
+  background-color: #fff;
+}
+
+/*动画前初始位置*/
+.bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.weui-btn.dialog--weui-btn.btn1.dialog--btn1 {
+  position: relative;
+  top: 10rpx;
+  left: -50rpx;
+}
+
+.weui-btn.dialog--weui-btn.btn2.dialog--btn2 {
+  position: relative;
+  top: 10rpx;
+  left: 50rpx;
+}

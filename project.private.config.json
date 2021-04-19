@@ -1,0 +1,47 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/Canteen/competition/competition",
+          "pathName": "pages/Canteen/competition/competition",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Common/bg_cover/bg_cover",
+          "pathName": "pages/Common/bg_cover/bg_cover",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/test2/test2",
+          "pathName": "pages/test2/test2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/test3/test3",
+          "pathName": "pages/test3/test3",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

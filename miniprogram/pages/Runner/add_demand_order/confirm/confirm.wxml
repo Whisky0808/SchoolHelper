@@ -1,0 +1,76 @@
+<view style="display:{{flag?'block':'none'}}">
+
+  <view class="a">
+
+    <view class="line">
+      <label class="c labelFont" style="font-size: 37rpx">任务标题：</label>
+      <text class="b" style="font-size: 37rpx">{{title}}</text>
+    </view>
+
+    <view class="line">
+      <label class="c labelFont" style="font-size: 37rpx">雇主昵称：</label>
+      <text class="b" style=" font-size: 37rpx">{{name}}</text>
+    </view>
+    
+    <view class="line">
+      <label class="c labelFont" style="font-size: 37rpx">联系电话：</label>
+      <text class="b" style="font-size: 37rpx">{{phone}}</text>
+    </view>
+
+    <view class="line">
+      <label class="c labelFont" style="font-size: 37rpx">开始时间：</label>
+      <text class="b" style=" font-size: 37rpx">{{startTime}}</text>
+    </view>
+
+    <view class="line">
+      <label class="c labelFont" style="font-size: 37rpx">结束时间</label>
+      <text class="b" style="font-size: 37rpx">{{endTime}}</text>
+    </view>
+
+    <view class="line">
+      <label class="c labelFont" style="font-size: 37rpx">任务内容：</label>
+      <text class="b" style="font-size: 37rpx">{{content}}</text>
+    </view>
+
+    <view class="line">
+      <label class="c labelFont" style="font-size: 37rpx">帮手要求：</label>
+      <text class="b" style="font-size: 37rpx">{{helperRequire}}</text>
+    </view>
+
+    <view class="line">
+      <label class="c labelFont" style="font-size: 37rpx">人   数：</label>
+      <text class="b" style=" font-size: 37rpx">{{helperNum}}</text>
+    </view>
+
+    <view class="line">
+      <label class="c labelFont" style="font-size: 37rpx">每人佣金：</label>
+      <text class="b" style=" font-size: 37rpx">{{helperMoney}}</text>
+    </view>
+
+    <view class="line">
+      <label class="c labelFont" style="font-size: 37rpx; flex: 1">是否满人才生效：</label>
+      <text class="b" style="height: 70rpx; font-size: 37rpx; flex: 1">{{helperMust=='1'?'是':'否'}}</text>
+    </view>
+
+    <view wx:if="{{startAddressList.length==1?false:true}}" class="labelFont" style="font-size: 50rpx; margin-left: 60rpx;">取物地点：</view>
+      <view wx:for="{{startAddressList}}" wx:key="index">
+        <view class="line">
+          <label class="c" style="font-size: 37rpx; flex: 1">{{item}} {{startDetailAddressList[index]}}</label>
+        </view>
+    </view>
+
+    <view class="labelFont" style="font-size: 50rpx;margin-left: 60rpx;">到达地点：</view>
+    <view class="line">
+      <label class="c" style="font-size: 37rpx; flex: 1">{{endAddress}} {{endDetailAddress}}</label>
+    </view>
+
+      <text>\n</text>
+      <view class="dom">
+        <view class="curObject">
+            <view><text class="tex">总费用：￥</text><text class="price">{{totalMoney}}</text></view>
+            <button bindtap="addHelperOrder">提交订单</button>
+        </view>
+      </view>
+    </view>
+    
+</view>

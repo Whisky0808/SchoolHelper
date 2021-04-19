@@ -1,0 +1,26 @@
+<view class="dom" hidden="{{hide}}" bindtap="hidepopup" data-canclose="{{true}}">
+    <view class="more-adress">
+        <view class="choose-text">选择收货地址</view>
+        <view class="all-adress">
+            <scroll-view class="scroll" scroll-y="true">
+                <view class="adress" wx:for="{{userAdress}}" wx:key="*this">
+                    <view class="adress-list" bindtap="Jump" data-index="{{index}}">
+                        <view class="dog">
+                            <view class="circle {{curindex === index ? 'bechoose' : ''}}"></view>
+                        </view>
+                        <view class="mesg">
+                            <view class="userads">{{item.detailAddress}}</view>
+                            <view class="usermsg">
+                                <text class="username">{{item.name}}</text>
+                                <text class="usertel">{{item.phone}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="modify" bindtap="modifyAddress" data-modifyindex="{{index}}">修改</view>
+                </view>
+
+            </scroll-view>
+        </view>
+        <view class="add-adress" bindtap='addAdress'>新增收获地址</view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+<wxs module="numberUtil" src="/common/filter.wxs"></wxs>
+<view class="dom">
+    <view class="curObject">
+        <view><text class="tex">当前价格：￥</text><text class="price">{{numberUtil.numberFormat(curprice)}}</text></view>
+        <button bindtap="submitOrder">提交订单</button>
+    </view>
+</view>

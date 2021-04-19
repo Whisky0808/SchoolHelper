@@ -1,0 +1,78 @@
+<swiper class="principle" indicator-dots="true" indicator-color="rgba(0,0,0,.3)" current="0" current-item-id="" previous-margin="0px" next-margin="0px" display-multiple-items="1" bindchange="swiperchange">
+    <swiper-item class="swiper1" item-id="" style="background:#f3a683;">
+        <text class="tx1">骑手准则1</text>
+        <view class="textarea" name="" id="" cols="5" rows="10">
+            骑手准则11degrhgkjfdvhj
+                bcjdskerhfdjbcxndsjkerhfvbxnsdjkewurhffdhhuiehuibhidsuihwqayd
+                hixufhsvfyugeseuwisfhbdsuhribdshfdsihauehufuhuhfurhufhdsxbcxb
+                hjfau
+        </view>
+    </swiper-item>
+    <swiper-item class="swiper2" item-id="{{item.id}}" style="background:#f7d794;">
+        <text class="tx1">骑手准则2</text>
+        <view class="textarea" name="" id="" cols="5" rows="10">
+            骑手准则21degrhgkjfdvhj
+                bcjdskerhfdjbcxndsjkerhfvbxnsdjkewurhffdhhuiehuibhidsuihwqayd
+                hixufhsvfyugeseuwisfhbdsuhribdshfdsihauehufuhuhfurhufhdsxbcxb
+                hjfau
+        </view>
+    </swiper-item>
+    <swiper-item class="swiper3" item-id="" style="background:#f19066;">
+        <text class="tx1">骑手准则3</text>
+        <view class="textarea" name="" id="" cols="5" rows="10">
+            骑手准则31degrhgkjfdvhj
+                bcjdskerhfdjbcxndsjkerhfvbxnsdjkewurhffdhhuiehuibhidsuihwqayd
+                hixufhsvfyugeseuwisfhbdsuhribdshfdsihauehufuhuhfurhufhdsxbcxb
+                hjfau
+        </view>
+    </swiper-item>
+    <swiper-item class="swiper4" item-id="" bindtap="toNav" style="background:#f5cd79;">
+        <text class="tx1">骑手准则4</text>
+        <view class="textarea" name="" id="" cols="5" rows="10">
+            骑手准则41degrhgkjfdvhj
+                bcjdskerhfdjbcxndsjkerhfvbxnsdjkewurhffdhhuiehuibhidsuihwqayd
+                hixufhsvfyugeseuwisfhbdsuhribdshfdsihauehufuhuhfurhufhdsxbcxb
+                hjfau
+        </view>
+    </swiper-item>
+</swiper>
+<!-- 假页面 -->
+<page-container show="{{show}}" overlay="{{overlay}}" duration="{{duration}}" position="{{position}}">
+    <view class="screen">
+        <view class="protocol">
+            <share-element class="title" key="title" duration="{{duration}}" transform>
+                {{title}}
+            </share-element>
+            <scroll-view class="inside" scroll-y="true">
+                <view class="paragraph {{show ? 'enter' : ''}}">
+                    这是我网上随便找的内容Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisl enim, sodales non augue efficitur, sagittis
+				varius neque. Fusce dolor turpis, maximus eu volutpat quis, pellentesque et ligula. Ut vehicula metus in nibh
+				mollis ornare. Etiam aliquam lacinia malesuada. Vestibulum dignissim mollis quam a tristique. Maecenas neque
+				mauris, malesuada vitae magna eu, congue consectetur risus. Etiam vitae pulvinar ex. Maecenas suscipit mi ac
+				imperdiet pretium. Aliquam velit mauris, euismod quis elementum sed, malesuada non dui. Nunc rutrum sagittis
+				ligula in dapibus. Cras suscipit ut augue eget mollis. Donec auctor feugiat ipsum id viverra. Vestibulum eu nisi
+				risus. Vestibulum eleifend dignissim.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nisl enim, sodales non augue efficitur, sagittis
+				varius neque. Fusce dolor turpis, maximus eu volutpat quis, pellentesque et ligula. Ut vehicula metus in nibh
+				mollis ornare. Etiam aliquam lacinia malesuada. Vestibulum dignissim mollis quam a tristique. Maecenas neque
+				mauris, malesuada vitae magna eu, congue consectetur risus. Etiam vitae pulvinar ex. Maecenas suscipit mi ac
+				imperdiet pretium. Aliquam velit mauris, euismod quis elementum sed, malesuada non dui. Nunc rutrum sagittis
+				ligula in dapibus. Cras suscipit ut augue eget mollis. Donec auctor feugiat ipsum id viverra. Vestibulum eu nisi
+				risus. Vestibulum eleifend dignissim.
+                </view>
+                <button class="screen2-button" bindtap="register" hidden="{{!show}}">
+                    <p class="screen2-button-content">我已阅读并同意</p>
+                </button>
+            </scroll-view>
+            <!-- 假页显示的时候才显示按钮 -->
+        </view>
+    </view>
+</page-container>
+
+<password title="设置提现密码" show="{{registerShow}}" bindbuttontap="passwordConfirm" buttons="{{buttons}}">
+    <input class='inputPassword' type="text" value="{{inputPassword}}" placeholder="   请输入密码" bindinput="inputPassword" />
+    <input class='inputPassword' type="text" value="{{inputPassword}}" placeholder="   请再次输入密码" bindinput="inputPasswordAgain" />
+</password>
+<mp-dialog title="提示" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+    <view>注册骑手失败！</view>
+</mp-dialog>

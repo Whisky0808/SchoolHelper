@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tmp":"../../../components/orderShowdialog/mp",
+    "mp-toptips": "weui-miniprogram/toptips/toptips",
+    "tabbar": "../../../components/tabbar2/tabbar2"
+  }
+}

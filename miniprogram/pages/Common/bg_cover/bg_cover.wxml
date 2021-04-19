@@ -1,0 +1,4 @@
+<view class="bg_cover" style="{{'background:'+('url('+imgUrl+');background-size:100% 110%')+';'}}">
+    <half-screen-dialog hide="{{hidepopup}}" bindgoToGetMesg="handleGoToGetMesg">
+    </half-screen-dialog>
+</view>

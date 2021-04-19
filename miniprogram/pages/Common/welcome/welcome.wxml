@@ -1,0 +1,37 @@
+<view class="content">
+    <view class="detail">
+        <image src="{{photo}}" class="img" bindtap="toIndividual"></image>
+        <view class="headTitle"><text class="name">{{name}}</text><text class="school">
+            {{school}}
+        </text></view>
+    </view>
+    <view class="detail3">
+        <!-- <swiper class="swiper" indicator-dots="true" indicator-color="white" autoplay="ture" circular="{{true}}">
+            <swiper-item>
+                <image class="swiperImg" src=""></image>
+            </swiper-item>
+            <swiper-item>
+                <image class="swiperImg" src=""></image>
+            </swiper-item>
+            <swiper-item>
+                <image class="swiperImg" src=""></image>
+            </swiper-item>
+        </swiper> -->
+    </view>
+    <view class="detail2">
+        <view class="category">
+            <view class="box"  bindtap="toCanteen">
+                <image class="image" src="/static/icon/canteen.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">          
+                </image>
+                <text class="txt">饭堂业务</text>
+            </view>
+            <view class="box" bindtap="toHelp">
+                <image class="image" src="/static/icon/runner.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                </image>
+                <text class="txt">超短工业务</text>
+            </view>
+            
+            
+        </view>
+    </view>
+</view>

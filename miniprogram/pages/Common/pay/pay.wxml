@@ -1,0 +1,11 @@
+<view class="pay">
+    <image class="submit_img" src="../../../static/icon/submit.png"></image>
+    <view class="submit_text">恭喜您！订单提交成功！</view>
+
+    <view class="container">
+        <button class="pay_button" bindtap="pay"> 点击支付 </button>
+    </view>
+    <mp-dialog title="提示" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>恭喜你，支付成功！</view>
+    </mp-dialog>
+</view>

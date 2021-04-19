@@ -1,0 +1,178 @@
+page{
+    background-color: #f4f4f4;
+}
+.box{
+    height: 100%;
+    width: 100%;
+}
+.box .title{
+    height: 180rpx;
+    line-height: 180rpx;
+    font-weight: 550;
+    font-size: 50rpx;
+    padding-left: 5%;
+}
+.box .more_order{
+    display: inline-block;
+    background-color: white;
+    height: 300rpx;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 25rpx;
+}
+.box .order_detail{
+    display: inline-block;
+    background-color: white;
+    height: 750rpx;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10rpx;
+    border-radius: 25rpx;
+}
+.box .order_mes{
+    display: inline-block;
+    background-color: white;
+    height: 600rpx;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10rpx;
+    border-radius: 25rpx;
+}
+
+/*再来一单*/
+.more_order image{
+    height: 32px;
+    width: 32px;
+    margin-left: 46%;
+}
+.more_order .thanks{
+    display: inline-block;
+    width: 92%;
+    margin-left: 4%;
+    color: #7e7e7e;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 2px solid #e9e9e9;
+}
+.add_order{
+    width: 100%;
+    height: 130rpx;
+}
+.add_order .add_text{
+    display: inline-block;
+    height: 50rpx;
+    line-height: 50rpx;
+    width: 100%;
+    text-align: center;
+    color: #f08a24;
+}
+.add_order image{
+    margin-top: 10rpx;
+    margin-left: 46%;
+}
+
+/*订单详情*/
+.order{
+    float: left;
+    width: 95%;
+    margin-left: 2%;
+    height: 610rpx;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+.canteen-name{
+    height: 110rpx;
+    width: 90%;
+    line-height: 110rpx;
+    font-size: 30rpx;
+    padding-left: 30rpx;
+}
+.order-food .food-list{
+    width: 100%;
+    height: 190rpx;
+    margin-bottom: 10rpx;
+    background-color: azure;
+}
+.food-list image{
+    float: left;
+    height: 150rpx;
+    width: 150rpx;
+    margin: 20rpx 20rpx;
+}
+.food-list .food-text{
+    float: left;
+    width: 250rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+}
+.food-list .food-price-box{
+    float: left;
+    width: 80rpx;
+}
+.food-text h3{
+    display: inline-block;
+    font-size: 40rpx;
+    font-weight: 500;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+.food-text .food-num{
+    display: block;
+    margin-top: 35rpx;
+    margin-left: 30rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 35rpx;
+    margin-right: 20rpx;
+    color: #ababab;
+}
+.food-price{
+    display: inline-block;
+    margin-top: 63rpx;
+    /*margin-right: 30rpx;*/
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 45rpx;
+    font-weight: 550;
+}
+
+/*订单信息*/
+.order_mes .mes_title{
+    display: inline-block;
+    width: 92%;
+    margin-left: 4%;
+    font-size: 37rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 2px solid #e9e9e9;
+}
+.mes_detail .pric_title,.mes_detail .packet_title{
+    display: inline-block;
+    margin-left: 4%;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.mes_detail .total_price,.mes_detail .packet_price{
+    margin-left: 60%;
+}
+.mes_detail .total_price{
+    color: red;
+}
+.packet_location{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 15%;
+    display: inline-block;
+    width: 400rpx;
+    height: 40rpx;
+    line-height: 50rpx;
+}
+.packet_time{
+    margin-left: 24%;
+    display: inline-block;
+    width: 400rpx;
+    height: 40rpx;
+    line-height: 50rpx;
+}

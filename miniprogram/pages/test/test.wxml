@@ -1,0 +1,4 @@
+<view class="all">
+    <button bindtap="dian">点我</button>
+</view>
+<tabbar2></tabbar2>

@@ -1,0 +1,140 @@
+<view class="a" style="width: 150px; height: 100rpx; text-align: center;  margin: 10rpx auto;">
+  <h1 style="font-size: 50rpx; line-height: 100rpx">需求单详情</h1>
+</view>
+
+<view class="a" style="margin-bottom: 20rpx">
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 50rpx; flex:4">总费用：</label>
+    <text class="b" style="font-size: 50rpx; color: red">￥{{totalMoney}}元</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">已召人数：</label>
+    <text class="b" style="font-size: 37rpx; color: red">{{applyNum}} / {{helperNum}}</text>
+  </view>
+
+  
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx;">已召帮手：</label>
+    <view class="b" style="display: {{helperRealName.length==0?'block':'none'}}">无帮手接单</view>
+    <view style="display: {{helperRealName.length==0?'none':'block'}}">
+      <view wx:for="{{helperRealName}}" wx:key="index" class="b" style="width: 430rpx">
+        <view style="display: flex">
+          <text class="b" style="font-size: 37rpx; flex:10">{{item}}</text>
+          <view style="display:{{helperStatus[index]=='1'?'block':'none'}}">
+            <button disabled="true" bindtap="signIn" data-index="{{index}}" data-openid="{{helperOpenid[index]}}" style="flex: 2; height: 60rpx; font-size: 30rpx; margin-top: 30rpx; background-color: #8ebd9b">已签</button>
+          </view>
+
+          <view style="display: {{helperStatus[index]=='2'?'block':'none'}}">
+            <button disabled="true" bindtap="signIn" data-index="{{index}}" data-openid="{{helperOpenid[index]}}" style="flex: 2; height: 60rpx; font-size: 30rpx; margin-top: 30rpx; background-color: {{helperStatus[index]=='0'?'#f9ca24':'#8ebd9b'}};">违约</button>
+          </view>
+
+          <view style="display:{{helperStatus[index]=='0'?'block':'none'}}">
+            <button bindtap="signIn" data-index="{{index}}" data-openid="{{helperOpenid[index]}}" style="flex: 2; height: 60rpx; font-size: 30rpx; margin-top: 30rpx; background-color: #f9ca24">签到</button>
+          </view>
+
+          <view style="display:{{helperStatus[index]=='9'?'block':'none'}}">
+            <button bindtap="signIn" data-index="{{index}}" data-openid="{{helperOpenid[index]}}" style="flex: 2; height: 60rpx; font-size: 30rpx; margin-top: 30rpx; background-color: #95a5a6">未开始</button>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+  
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">任务标题：</label>
+    <text class="b" style="font-size: 37rpx">{{title}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">雇主昵称：</label>
+    <text class="b" style=" font-size: 37rpx">{{name}}</text>
+  </view>
+  
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">联系电话：</label>
+    <text class="b" style="font-size: 37rpx">{{phone}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">开始时间：</label>
+    <text class="b" style=" font-size: 37rpx">{{startTime}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">结束时间</label>
+    <text class="b" style="font-size: 37rpx">{{endTime}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">任务内容：</label>
+    <text class="b" style="font-size: 37rpx">{{content}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">帮手要求：</label>
+    <text class="b" style="font-size: 37rpx">{{helperRequire}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">人   数：</label>
+    <text class="b" style=" font-size: 37rpx">{{helperNum}} 人</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">每人佣金：</label>
+    <text class="b" style=" font-size: 37rpx">{{helperMoney}} 元</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx; flex: 1">是否满人才生效：</label>
+    <text class="b" style="height: 70rpx; font-size: 37rpx; flex: 1">{{helperMust=='1'?'是':'否'}}</text>
+  </view>
+
+  <view wx:if="{{startAddressList.length>=1?true:false}}" class="labelFont" style="font-size: 50rpx; margin-left: 60rpx;">取物地点：</view>
+    <view wx:for="{{startAddressList}}" wx:key="index">
+      <view style="display: {{index+1!=startAddressList.length?'block':'none'}}">
+        <view class="line">
+          <label class="c" style="font-size: 37rpx; flex: 6">{{item}} {{startDetailAddressList[index]}}</label>
+          <image  bindtap="getRoad" data-latitude="{{startLatitudeList[index]}}" data-longitude="{{startLongitudeList[index]}}" data-name="{{startAddressList[index]}}" style="flex: 1; height: 35px; width: 5px" src="../../../static/icon/navigationBtn.png"></image>
+        </view>
+      </view>
+      
+  </view>
+
+  <view class="labelFont" style="font-size: 50rpx;margin-left: 60rpx;">到达地点：</view>
+  <view class="line" >
+    <label class="c" style="font-size: 37rpx; flex: 6">{{endAddress}} {{endDetailAddress}}</label>
+    <image bindtap="getRoad" data-latitude="{{endLatitude}}" data-longitude="{{endLongitude}}" data-name="{{endAddress}}" style="flex: 1; height: 35px; width: 5px" src="../../../static/icon/navigationBtn.png"></image>
+  </view>
+  <text>\n</text>
+  <!-- <view style="display: {{status=='3'?'block':'none'}}">
+    <button bindtap="confirmHelpOrder" type="primary" plain="true" style="background-color:#f9ca24; color: black; border: 1px solid #f9ca24">确认需求单完成</button>
+  </view> -->
+
+  <!-- <view style="display: {{status=='1'?'block':'none'}}"> -->
+  <view class="no_have_cancel" wx:if="{{status === '5'}}">
+    <button style="background-color: #f9ca24;color: black;border: 1px solid #f9ca24;" bindtap="pay" type="primary" plain="true">立即支付</button>
+  </view>
+
+  <view class="have_cancel" wx:else>
+    <button class="btn1" style="background-color: #f9ca24;color: black;border: 1px solid #f9ca24; border-top-right-radius: 0rpx;border-bottom-right-radius: 0rpx;" bindtap="pay" type="primary" plain="true">立即支付</button>
+    <button class="btn2" style="background-color: red;color: white;border: 1px solid red;border-top-left-radius: 0rpx;border-bottom-left-radius: 0rpx;" bindtap="cancel" type="primary" plain="true">取消订单</button>
+  </view>
+  <!-- </view> -->
+
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+<view class="modalDlg" wx:if="{{showModal}}">
+ <image src="/figures/logo-smile.png"/>
+ <text>{{alertValue}}</text>
+ <button bindtap="go">确定</button>
+</view>
+  <mp-dialog title="提示" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+    <view>恭喜你，支付成功！</view>
+  </mp-dialog>
+</view>
+  
