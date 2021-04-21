@@ -38,7 +38,7 @@
     "minifyWXSS": true
   },
   "appid": "wxba66765f9a57a056",
-  "projectname": "%E7%BB%88_%E6%A0%A1%E5%9B%AD%E5%B8%AE",
+  "projectname": "Version2_SchoolHelp",
   "libVersion": "2.14.1",
   "condition": {
     "search": {
