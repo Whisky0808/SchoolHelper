@@ -1,0 +1,3 @@
+<view >
+  <button bindtap="getCoupon" class="button-sp-area" type="primary" plain="true">点击抽取优惠券</button>
+</view>

@@ -1,6 +1,9 @@
 {
   "pages": [
     "pages/Common/bg_cover/bg_cover",
+    "pages/Common/welcome/welcome",
+    "pages/Common/drawCoupon/drawCoupon",
+    
     "pages/test2/test2",
     "pages/Runner/help_order_detail/help_order_detail",
     "pages/Runner/add_demand_order/add_demand_order",
@@ -29,7 +32,7 @@
     "pages/Common/pay/pay",
     "pages/Common/chatCover/chatCover",
     "pages/Common/chat/chat",
-    "pages/Common/welcome/welcome",
+    
     "pages/Common/infoRecord/infoRecord"
   ],
   "window": {

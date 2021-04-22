@@ -2,7 +2,7 @@
 const app = getApp();
 //心跳对象
 let heartCheck = {
-  timeout: 1000,
+  timeout: 10000,
   timeoutObj: null,
   serverTimeoutObj: null,
   // 心跳对象内timeout为每1秒发一次心跳,timeoutObj、serverTimeoutObj是清除定时器用的对象，reset方法重置定时器，start发送心跳。
@@ -208,15 +208,17 @@ Page({
       // let objData = JSON.parse(data.data);
       // 收到消息
       if (res.data == 'Hi') {
+        console.log(555)
+        console.log(res.data)
         heartCheck.reset().start()//下一次心跳
       } else {
         //处理数据
         console.log("展示：", res);
         msgList.push({
-          speaker: '',
-          contentType: '',
-          content: '',
-          leftIcon: '',
+          speaker: 'server',
+          contentType: '11',
+          content: '11',
+          leftIcon: '11',
         })
       }
 
