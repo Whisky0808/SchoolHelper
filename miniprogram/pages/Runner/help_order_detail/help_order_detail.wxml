@@ -5,8 +5,15 @@
 <view class="a" style="margin-bottom: 20rpx">
 
   <view class="line">
-    <label class="c labelFont" style="font-size: 50rpx; flex:4">总费用：</label>
-    <text class="b" style="font-size: 50rpx; color: red">￥{{totalMoney}}元</text>
+    <view class="c labelFont" style="display: flex">
+      <label  style="font-size: 50rpx;">总费用：</label>
+      <view style="font-size: 50rpx;  display: flex">
+        <text style="color: red;">￥{{totalMoney}}元</text>
+        <span style="display: {{couponMoney>0?'block':'none'}}; font-size: 30rpx; margin-top: 30rpx; color:black">已优惠{{couponMoney}}元</span>
+      </view>
+    </view>
+    
+    
   </view>
 
   <view class="line">

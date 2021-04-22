@@ -59,7 +59,7 @@ page{
     margin-left: 40rpx;
 }
 .curObject .price{
-    font-size: 55rpx;
+    font-size: 40rpx;
 }
 .curObject button{
     float: left;

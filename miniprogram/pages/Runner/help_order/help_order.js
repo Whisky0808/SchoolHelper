@@ -188,7 +188,7 @@ Page({
               waitFinishOrder: res.data.data,
               // waitPayOrder: [{ name: "番茄炒蛋加牛仔骨头(春晖园)", state: "待付款", time: "2020-09-30 14:00-16:00", status: "未开始", url: "../../images/bad1.jpg", money: "86" }],
             })
-            console.log('===')
+            console.log('==========')
             console.log(this.data.waitFinishOrder)
           }
         })
@@ -281,6 +281,7 @@ Page({
       + '&helperRealName=' + data.helperRealName + '&helperOpenid=' + data.helperOpenid
       + '&helperStatus=' + data.helperStatus + '&names=' + data.names
       + '&openids=' + data.openids + '&statuses=' + data.statuses
+      + '&couponMoney=' + data.couponMoney
     })
   },
 

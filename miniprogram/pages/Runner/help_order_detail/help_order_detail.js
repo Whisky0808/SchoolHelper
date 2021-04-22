@@ -12,6 +12,7 @@ Page({
   data: {
     flag: false,
     helpOrderId: '',
+    conponMoney: 0,
     status: '',
     endAddress: '',
     endDetailAddress: '',
@@ -118,6 +119,7 @@ Page({
       startDetailAddress: data.startDetailAddress,
       startLatitudes: data.startLatitudes,
       startLongitudes: data.startLongitudes,
+      couponMoney: data.couponMoney,
       flag: true
     })
   },
