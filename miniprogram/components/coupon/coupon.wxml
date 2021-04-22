@@ -1,0 +1,20 @@
+<view class="dom" hidden="{{hide}}" bindtap="hidepopup" data-canclose="{{true}}">
+    <view class="box">
+        <view class="title">恭喜您，获得以下优惠券</view>
+        <view class="container">
+            <scroll-view class="scroll" scroll-y="true">
+                <view class="coupon" wx:for="{{coupons}}" wx:key="*this">
+                    <view class="type_and_date">
+                        <view class="type">{{item.couponTypeName}}</view>
+                        <view class="date">有效期至{{item.expireTime}}</view>
+                    </view>
+                    <view class="price_and_condition">
+                        <view class="price">{{item.reduceMoney}}</view>
+                        <view class="condition">满{{item.reachMoney}}可用</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <button bindtap="btnClick" class="btn">确 定</button>
+    </view>
+</view>

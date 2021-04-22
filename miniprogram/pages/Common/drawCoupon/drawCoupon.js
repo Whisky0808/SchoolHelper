@@ -7,8 +7,11 @@ Page({
   data: {
     reduceMoneyList: [0,0,2,2,2,2,2,3,3,5],
     reachMoneyList: [2,2,5,5,6,6,8,8,10,10],
-    couponList: []
+    couponList: [],
+    // 组件隐藏
+    hidepopup: true
   },
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -60,6 +63,16 @@ Page({
       success: res => {
         console.log(1)
         console.log(res)
+
+        // 组件显示
+        this.setData({
+          hidepopup: false
+        })
+        let childComChange = this.selectComponent('.coupon');
+        childComChange.setData({
+          coupons: res.data.data,
+          test: 1
+        })
       }
     })
   },

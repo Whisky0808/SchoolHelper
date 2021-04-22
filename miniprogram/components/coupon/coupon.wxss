@@ -1,0 +1,92 @@
+.dom{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+}
+.box{
+    width: 700rpx;
+    height: 700rpx;
+    background-color: white;
+    position: relative;
+    top: 300rpx;
+    left: 30rpx;
+    border-radius: 50rpx;
+}
+
+.box .title{
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 45rpx;
+    font-weight: 550;
+    text-align: center;
+}
+
+.box .container{
+    margin-top: 40rpx;
+    height: 430rpx;
+    /*background-color: #8ebd9b;*/
+}
+.container .coupon{
+    display: inline-block;
+    height: 180rpx;
+    width: 660rpx;
+    margin-left: 20rpx;
+    border-radius: 40rpx;
+    background-color: #f5bd00;
+}
+.scroll{
+    height: 100%;
+    width: 100%;
+}
+.btn{
+    width: 350rpx;
+    height: 80rpx;
+    font-size: 40rpx;
+    font-weight: 550;
+    line-height: 80rpx;
+    border-radius: 30rpx;
+    background-color: #129646;
+    color: white;
+}
+
+.coupon .type_and_date{
+    display: inline-block;
+    float: left;
+    width: 70%;
+    height: 180rpx;
+    /*background-color: #f19066;*/
+}
+.coupon .price_and_condition{
+    display: inline-block;
+    float: left;
+    width: 30%;
+    height: 180rpx;
+    /*background-color: #95a5a6;*/
+}
+
+.type_and_date .type{
+    height: 110rpx;
+    line-height: 110rpx;
+    font-size: 45rpx;
+    font-weight: 550;
+    margin-left: 30rpx;
+}
+.type_and_date .date{
+    height: 70rpx;
+    /*line-height: 70rpx;*/
+    margin-left: 30rpx;
+}
+
+.price_and_condition .price{
+    height: 110rpx;
+    margin-left: 34rpx;
+    line-height: 120rpx;
+    font-size: 65rpx;
+    color: red;
+}
+.price_and_condition .condition{
+    color: red;
+}
