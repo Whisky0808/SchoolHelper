@@ -12,27 +12,52 @@
     box-shadow: 3px 3px 4px rgb(78, 77, 77);
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 }
-.money{
+/* text {
+    font-size: 30rpx;
+    font-weight: 400;
+} */
+
+.money {
     position: relative;
-    top: -250rpx;
+    top: -200rpx;
     left: 50%;
     width: 200rpx;
     height: 150rpx;
 }
-.money>text{
+.coupons{
+    position: relative;
+    top: -345rpx;
+    left: 83%;
+}
+.coupons>text{
+    font-size: 30rpx;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: 80rpx;
+    left: 0rpx;
+}
+.money>text {
     font-size: 50rpx;
     color: white;
     font-weight: 700;
+    position: absolute;
+    top: 80rpx;
+    left: -10rpx;
 }
-.detail{
-position: relative;
-top:100rpx;
-color: white;
-font-weight: 700;
+
+.icon {
+    width: 70rpx;
+    height: 70rpx;
 }
-text{
-    font-size: 30rpx;
-    font-weight: 400;
+
+.detail {
+    /* top: -90rpx; */
+    color: white;
+    background-color: rgba(43, 42, 42, 0.7);
+    width: 100%;
+    height: 800rpx;
+    position: relative
 }
 
 .inputName {
@@ -56,6 +81,8 @@ button {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
+    font-weight: 700;
+    font-size:30rpx;
     -webkit-box-align: center;
     -webkit-align-items: center;
     align-items: center;
@@ -67,40 +94,66 @@ button {
 }
 
 .name {
-    position: relative;
-    left: 130rpx;
+    position: absolute;
+    left: 540rpx;
+    width: 190rpx;
+    height: 70rpx;
+    font-size: 27rpx;
+    font-weight: 700;
+    background: black;
 }
-.withdrawMoney{
-    position: relative;
-    top: 8%;
+
+.withdrawMoney {
+    position: absolute;
+    top: 205rpx;
+    left: -40rpx;
+    width: 190rpx;
+    height: 70rpx;
+    font-size: 27rpx;
+    font-weight: 700;
+    background: black;
 }
 
 .withdraw {
     position: relative;
-    left:470rpx;
+    left: 470rpx;
 }
-.content{
-    background-color: #e84118;
+
+.bg {
+    height: 100%;
     width: 100%;
-    height: 400rpx;
+}
+
+.content {
+
+    width: 100%;
+    height: 550rpx;
     /* shadow */
-    -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.548);
+    /* -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.548);
     -webkit-box-shadow: 3px 3px 4px rgba(53, 50, 50, 0.76);
     box-shadow: 3px 3px 4px rgb(78, 77, 77);
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); */
 
 }
-.changePhoto{
-    position: relative;
-    left: -25%;
+
+.changePhoto {
+    position: absolute;
+    top: 270rpx;
+    left: 100rpx;
+    width: 190rpx;
+    height: 70rpx;
+    font-size: 27rpx;
+    font-weight: 700;
+    background: black;
 }
-page{
-    background-color: #4b4b4b;
+
+page {
+
     height: 100%;
-    
 }
-.txt{
+
+.txt {
     text-align: right;
     position: relative;
-    left:30%;
+    left: 30%;
 }

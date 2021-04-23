@@ -17,7 +17,7 @@ let heartCheck = {
       wx.sendSocketMessage({
         data: 'hhh',
         success: function () {
-          console.log("send successfully");
+          console.log("HeartCheck:send successfully");
         }
       });
       this.serverTimeoutObj = setTimeout(() => {

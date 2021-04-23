@@ -18,11 +18,13 @@ page {
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 
 }
-.txt{
+
+.txt {
     position: relative;
-    top:0rpx;
-    width:200rpx;
+    top: 0rpx;
+    width: 200rpx;
 }
+
 .image {
     width: 250rpx;
     height: 250rpx;
@@ -51,15 +53,21 @@ page {
     box-shadow: 3px 3px 4px #000;
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 }
-.school{
-    font-size: 40rpx;
-    font-weight: 500;
-    position: relative;
+
+.school {
+
+    font-size: 30rpx;
+    font-weight: 700;
+    position: absolute;
     top: 89rpx;
-    left: 200rpx;
+    left: 70rpx;
+    width: 370rpx;
+    height: 80rpx;
+
 }
+
 .name {
-    position: relative;
+    position: absolute;
     top: 70rpx;
     left: 20rpx;
 }
@@ -73,8 +81,8 @@ page {
     color: white;
     padding: 0rpx;
     margin: 0rpx;
-    height: 100rpx;
-    width: 400rpx;
+    height: 250rpx;
+    width: 500rpx;
 }
 
 .detail2 {

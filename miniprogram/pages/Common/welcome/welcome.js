@@ -7,9 +7,9 @@ Page({
    */
   data: {
     openid: "",
-    name: app.globalData.userInfo.nickName,
-    photo: app.globalData.userInfo.avatarUrl,
-    school: app.globalData.userInfo.schoolName,
+    name: "",
+    photo: "",
+    school: "",
 
   },
 
@@ -18,12 +18,13 @@ Page({
    */
   onLoad: function (options) {
     console.log("===");
-    console.log(app);
+    console.log("welcome的头像"+app.globalData.userInfo.avatarUrl);
     this.setData({
-      openid: "",
+      openid: app.globalData.userInfo.openid,
       name: app.globalData.userInfo.nickName,
       photo: app.globalData.userInfo.avatarUrl,
       school: app.globalData.userInfo.schoolName,
+      // school:"广东技术师范大学东校区"
     })
   },
   toIndividual(e) {
@@ -55,6 +56,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    console.log(app.globalData.userInfo);
+    this.setData({
+      openid: app.globalData.userInfo.openid,
+      name: app.globalData.userInfo.nickName,
+      photo: app.globalData.userInfo.avatarUrl,
+      school: app.globalData.userInfo.schoolName,
+    })
 
   },
 

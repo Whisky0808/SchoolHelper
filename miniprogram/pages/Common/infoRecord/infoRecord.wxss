@@ -23,7 +23,7 @@ page {
 }
 .content {
 	height: 1000rpx;
-	background-color: rgb(225,225,225,0.8);
+	background-color: rgba(77, 74, 74, 0.4);
 	width: 600rpx;
 	border-radius: 50rpx;
 	position: relative;
@@ -50,6 +50,7 @@ page {
 	width: 120rpx;
 	font-size: 36rpx;
 	font-weight: 900;
+	color:white;
 }
 
 .submit_btn {

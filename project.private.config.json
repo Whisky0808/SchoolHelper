@@ -39,6 +39,48 @@
         {
           "name": "pages/test3/test3",
           "pathName": "pages/test3/test3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Common/protocol/protocol",
+          "pathName": "pages/Common/protocol/protocol",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Common/infoRecord/infoRecord",
+          "pathName": "pages/Common/infoRecord/infoRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Canteen/transaction_order/transaction_order",
+          "pathName": "pages/Canteen/transaction_order/transaction_order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Common/drawCoupon/drawCoupon",
+          "pathName": "pages/Common/drawCoupon/drawCoupon",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Common/bg_cover/bg_cover",
+          "pathName": "pages/Common/bg_cover/bg_cover",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Common/welcome/welcome",
+          "pathName": "pages/Common/welcome/welcome",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Common/individual/individual",
+          "pathName": "pages/Common/individual/individual",
           "scene": null
         }
       ]

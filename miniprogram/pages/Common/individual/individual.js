@@ -1,6 +1,7 @@
 const app = getApp();
 Page({
   data: {
+    imgUrl: '/static/img/individual.png',
     status: false,//输入提现密码是否正确
     registerShow: false,//提现密码弹窗
     withdrawShow: true,//提现方式
@@ -29,7 +30,9 @@ Page({
       success(res) {
         const tempFilePaths = res.tempFilePaths //选择成功，获取资源路径
         console.log(tempFilePaths[0]);
-
+        wx.showLoading({
+          title: '上传中',
+        })
         wx.uploadFile({
           url: 'https://zzxdream.cn1.utools.club/image/uploadUserImage',//上传头像的接口
           filePath: tempFilePaths[0], //上传路径
@@ -38,20 +41,26 @@ Page({
             'openid': app.globalData.userInfo.openid, //用户对象openid识别
           },
           success(res) {
+            that.setData({
+              photo: tempFilePaths[0],
+            })
+            app.globalData.userInfo.avatarUrl = that.data.photo;
+            console.log(app.globalData.userInfo.avatarUrl)
+            wx.hideLoading()
             console.log(res);
             wx.showToast({
               title: 'success',
               icon: 'success',
               duration: 2000
             })
-            that.setData({
-              photo: tempFilePaths[0],
-            })
 
           }
         })
       }
     })
+  },
+  couponsTo:function(){
+
   },
   showInputPassword: function () {
     if (this.data.money != 0.00) {
@@ -113,6 +122,9 @@ Page({
       dialogShow: false,
     })
     console.log(this.data.virtualName);
+    wx.showLoading({
+      title: '更新中',
+    })
     wx.request({
       url: 'https://zzxdream.cn1.utools.club/user/updateNickName',
       method: "PUT",
@@ -122,6 +134,8 @@ Page({
       },
       success: function (res) {
         console.log(res);
+        app.globalData.userInfo.nickName = that.data.virtualName;
+        wx.hideLoading()
         wx.showToast({
           title: 'success',
           icon: 'success',
@@ -182,8 +196,6 @@ Page({
   },
   onLoad: function () {
     console.log(app.globalData.userInfo);
-    console.log(app.globalData.userInfo.avartarUrl);
-    console.log(app);
     //因为跳转太快有些数据还没来得及更新到这里的data，因此重新set一次
     this.setData({
       virtualName: app.globalData.userInfo.nickName,
