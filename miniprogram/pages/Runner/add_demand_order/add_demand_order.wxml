@@ -1,60 +1,50 @@
 <view class="all">
   <scroll-view class="add_demand" scroll-y="true">
-    <view class="a" style="width: 150px; height: 100rpx; text-align: center;  margin: 10rpx auto;">
-      <h1 style="font-size: 50rpx; line-height: 100rpx">需求单发布</h1>
+    <view>
+      <view class="bigtitle">
+        <image src="../../../static/icon/need.png"></image>
+        需求单发布
+      </view>
     </view>
-    <view class="a">
-      <view class="line">
-        <label class="c">任务标题：</label>
-        <input class="b" bindinput="bindTitleInput"  style="height: 70rpx" />
-      </view>
-      <hr/>
-
-      <view class="line">
-        <label class="c">雇主昵称：</label>
-        <input class="b" bindinput="bindNameInput" style="height: 70rpx" />
+    <view class="body">
+      <view class="title title_first">
+        <text class="tex">任务标题：</text>
+        <input bindinput="bindTitleInput" />
       </view>
 
-      <view class="line">
-        <label class="c">联系电话：</label>
-        <input class="b" bindinput="bindPhoneInput" style="height: 70rpx" />
-      </view>
-      <hr/>
-
-      <view class="line">
-        <label class="c">开始时间：</label>
-        <view style="height: 100rpx; padding-left: 0; flex: 7; ">
-          <!--index.wxml-->
-          <view style="height: 50rpx; background-color: white">
-            <pickerYMDHM placeholder = "{{placeholder}}" date = "{{date}}" disabled = "{{disabled}}" bind:onPickerChange="srartPickerChange" startDate="{{startDate}}" endDate="{{endDate}}">
-            </pickerYMDHM>
-          </view>
-        </view>
+      <view class="title">
+        <text class="tex">雇主昵称：</text>
+        <input bindinput="bindNameInput" />
       </view>
 
-      <view class="line" >
-        <label class="c">结束时间：</label>
-        <view  style="height: 100rpx; padding-left: 0; flex: 7;">
-          <!--index.wxml-->
-          <view style="height: 50rpx; background-color: white">
-            <pickerYMDHM placeholder = "{{placeholder}}" date = "{{date}}" disabled = "{{disabled}}" bind:onPickerChange="endPickerChange" startDate="{{startDate}}" endDate="{{endDate}}">
-            </pickerYMDHM>
-          </view>
-        </view>
+      <view class="title">
+        <text class="tex">联系电话：</text>
+        <input bindinput="bindPhoneInput" />
       </view>
 
-      <view class="line">
-        <label class="c">任务内容：</label>
-        <textarea class="b" bindinput="bindContentInput" />
-      </view>
-      <hr/>
-
-      <view class="line">
-        <label class="c">帮手要求：</label>
-        <textarea class="b" style="height:60px" bindinput="bindRequireInput" />
+      <view class="title">
+        <text class="tex">开始时间：</text>
+        <pickerYMDHM class="choose_time" placeholder = "{{placeholder}}" date = "{{date}}" disabled = "{{disabled}}" bind:onPickerChange="srartPickerChange" startDate="{{startDate}}" endDate="{{endDate}}">
+        </pickerYMDHM>
       </view>
 
-      <view class="line">
+      <view class="title">
+        <text class="tex">结束时间：</text>
+        <pickerYMDHM class="choose_time" placeholder = "{{placeholder}}" date = "{{date}}" disabled = "{{disabled}}" bind:onPickerChange="endPickerChange" startDate="{{startDate}}" endDate="{{endDate}}">
+        </pickerYMDHM>
+      </view>
+
+      <view class="title big_title">
+        <text class="tex big_text">任务内容：</text>
+        <textarea class="big_input" bindinput="bindContentInput" />
+      </view>
+
+      <view class="title big_title">
+        <text class="tex big_text">帮手要求：</text>
+        <textarea class="big_input" bindinput="bindRequireInput" />
+      </view>
+
+      <view class="title">
         <view style="flex: 1">
           <label style="margin-left: 20px; float: left; font-size: 38rpx">人数：</label>
           <view class='select_box' style="z-index: 110;float: left; border: 1px solid #8ebd9b; font-size: 38rpx; border-radius: 5px; height: 60rpx">
@@ -68,7 +58,7 @@
           <!-- <input style="float: left; width: 50px;  border: 1px solid #8ebd9b"/> -->
         </view>
         <view style="flex: 1">
-          <label style="margin-left: 10px; float: left; font-size: 38rpx">个佣金：</label>
+          <label style="margin-left: 10px; float: left; font-size: 38rpx">佣金：</label>
           <view class='select_box' style="z-index: 110;float: left; border: 1px solid #8ebd9b;font-size: 38rpx; height: 60rpx; border-radius: 5px">
             <view class='select' catchtap='selectMoneyTaps'>
               <text style="font-size: 20px;" class='select_text'>{{moneyDatas[moneyIndexs]}}</text>
@@ -80,180 +70,116 @@
         </view>
       </view>
 
-      <view class="line">
-        <label class="c" style="font-size: 17px">是否满人才生效：</label>
-        <switch style="margin-left: 0; flex: 3;" checked="{{helperMust}}" bindchange="switchChange"/>
-      </view>
-      <br/>
-
-      <view style="display: flex; margin-top: 10px;">
-        <button bindtap="addAddress" style="flex: 1;" plain="true" type="primary" size="mini" style="height: 70rpx">新增地址</button>
-        <button bindtap="removeAddress" style="flex: 1;" type="warn" plain="true" size="mini" style="height: 70rpx">删除地址</button>
+      <view class="title">
+        <text class="tex">是否满人才生效：</text>
+        <switch class="choose_switch" checked="{{helperMust}}" bindchange="switchChange"/>
       </view>
 
-      <!-- 第一搜索框 -->
-      <view class="line">
-        <view style="height: 30rpx; flex: 6" class="weui-search-bar">
-          <view>
-            <view class="weui-search-bar__form">
-              <!-- 搜索框 -->
-              <view class="weui-search-bar__box">
-                <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                <input style="height: 40rpx" catchtap="firstSelectTaps" bindinput="firstSearchAddress" type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" data-index="{{index}}" value="{{firstSearchValue}}"/>
-              </view>
-            </view>
-            <view class='select_box' style="float: left; height: 0; font-size: 38rpx; z-index: 100">
-              <view class='option_box' style='height:{{firstSearchShows?(firstSearchDatas.length>5?300:firstSearchDatas.length*60):0}}rpx; width: 500rpx; z-index: 100'>
-                <rich-text class='option' style='{{firstSearchIndexs==firstSearchDatas.length-1&&"border:0;"}}; font-size: 38rpx;'
-                           wx:for='{{firstSearchHighlightDatas}}' wx:key='this' data-index='{{index}}'
-                           catchtap='firstSearchOptionTaps' nodes="{{item}}">
-                </rich-text>
-              </view>
-            </view>
-          </view>
-        </view>
-        <view style="flex: 2">
-          <radio-group bindchange="bandleChange" style="font-size: 18px; display: flex">
-            <radio  color="red" value="1" style="transform:scale(0.8); flex: 1">取</radio>
-            <radio  color="red" value="2" style="transform:scale(0.8); flex: 1">达</radio>
+      <view class="title">
+        <button bindtap="addAddress" plain="true" type="primary">新增地址</button>
+        <button bindtap="removeAddress" type="warn" plain="true">删除地址</button>
+      </view>
+      <!--第一搜索-->
+      <view class="title search_title">
+
+        <view class="tex">
+          <radio-group bindchange="bandleChange">
+            <radio  color="red" value="1" style="transform:scale(0.8);">取</radio>
+            <radio  color="red" value="2" style="transform:scale(0.8);">达</radio>
           </radio-group>
         </view>
-      </view>
-      <text>\n</text>
-      <!-- 第一详细地址 -->
-      <view class="line">
-        <view style="flex: 2">
-          <label style="font-size: 35rpx; width: 200rpx; display: inline-block">详细地址：</label>
+
+        <view class="search">
+          <icon class="search_icon" type="search" size="14"></icon>
+          <input class="search_btn" catchtap="firstSelectTaps" bindinput="firstSearchAddress" type="text" placeholder='请输入搜索地址' data-index="{{index}}" value="{{firstSearchValue}}"/>
+          <view class='option_box' style='position:absolute; top: 1800rpx; height:{{firstSearchShows?(firstSearchDatas.length>5?300:firstSearchDatas.length*60):0}}rpx; width: 450rpx; z-index: 100'>
+            <rich-text class='option' style='{{firstSearchIndexs==firstSearchDatas.length-1&&"border:0;"}}; font-size: 38rpx;'
+                       wx:for='{{firstSearchHighlightDatas}}' wx:key='this' data-index='{{index}}'
+                       catchtap='firstSearchOptionTaps' nodes="{{item}}">
+            </rich-text>
+          </view>
         </view>
-        <view style="height: 30rpx; flex: 6; width: 100%" class="weui-search-bar">
-          <view>
-            <view class="weui-search-bar__form">
-              <!-- 搜索框 -->
-              <view class="weui-search-bar__box">
-                <icon class="weui-icon-search_in-box" type="info" size="14"></icon>
-                <input style="height: 70rpx" bindinput="firstDetailInput" type="text" class="weui-search-bar__input" placeholder="请输入详细地址"/>
-              </view>
-            </view>
+
+        <view class="title">
+          <text class="tex tex_adrs">详细地址：</text>
+          <view class="search">
+            <icon class="search_icon" type="info" size="14"></icon>
+            <input class="search_btn" bindinput="firstDetailInput" type="text" placeholder='请输入详细地址'/>
           </view>
         </view>
       </view>
 
-      <text>\n</text>
 
-      <!-- 第二搜索框 -->
-      <view style="display:{{secondShows?'block':'none'}}">
-        <view class="line">
-          <view style="height: 30rpx; flex: 6" class="weui-search-bar">
-            <view>
-              <view class="weui-search-bar__form">
-                <!-- 搜索框 -->
-                <view class="weui-search-bar__box">
-                  <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                  <input style="height: 70rpx" catchtap="secondSelectTaps" bindinput="secondSearchAddress" type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" data-index="{{index}}" value="{{secondSearchValue}}"/>
-                </view>
-              </view>
-              <view class='select_box' style="float: left; height: 0; font-size: 38rpx; z-index: 90">
-                <view class='option_box' style='height:{{secondSearchShows?(secondSearchDatas.length>5?300:secondSearchDatas.length*60):0}}rpx; width: 500rpx; z-index: 100'>
-                  <rich-text class='option' style='{{secondSearchIndexs==secondSearchDatas.length-1&&"border:0;"}}; font-size: 38rpx;'
-                             wx:for='{{secondSearchHighlightDatas}}' wx:key='this' data-index='{{index}}'
-                             catchtap='secondSearchOptionTaps' nodes="{{item}}">
-                  </rich-text>
-                </view>
-              </view>
-            </view>
-          </view>
-          <view style="flex: 2">
-            <radio-group bindchange="bandleChange" style="font-size: 18px; display: flex">
-              <radio  color="red" value="3" style="transform:scale(0.8); flex: 1">取</radio>
-              <radio  color="red" value="4" style="transform:scale(0.8); flex: 1">达</radio>
-            </radio-group>
+      <!--                第二搜索-->
+      <view class="title search_title" style="display:{{secondShows?'inline-block':'none'}}">
+
+        <view class="tex">
+          <radio-group bindchange="bandleChange">
+            <radio  color="red" value="3" style="transform:scale(0.8);">取</radio>
+            <radio  color="red" value="4" style="transform:scale(0.8);">达</radio>
+          </radio-group>
+        </view>
+
+        <view class="search">
+          <icon class="search_icon" type="search" size="14"></icon>
+          <input class="search_btn" catchtap="secondSelectTaps" bindinput="secondSearchAddress" type="text" placeholder='请输入搜索地址' data-index="{{index}}" value="{{secondSearchValue}}"/>
+
+          <view class='option_box' style='position:absolute; top: 2100rpx; height:{{secondSearchShows?(secondSearchDatas.length>5?300:secondSearchDatas.length*60):0}}rpx; width: 450rpx; z-index: 100'>
+            <rich-text class='option' style='{{firstSearchIndexs==firstSearchDatas.length-1&&"border:0;"}}; font-size: 38rpx;'
+                       wx:for='{{secondSearchHighlightDatas}}' wx:key='this' data-index='{{index}}'
+                       catchtap='secondSearchOptionTaps' nodes="{{item}}">
+            </rich-text>
           </view>
         </view>
-      </view>
-      <text>\n</text>
-      <!-- 第二详细地址 -->
-      <view style="display:{{secondShows?'block':'none'}}">
-        <view class="line">
-          <view style="flex: 2">
-            <label style="font-size: 35rpx;">详细地址：</label>
-          </view>
-          <view style="height: 30px; flex: 6" class="weui-search-bar">
-            <view>
-              <view class="weui-search-bar__form">
-                <!-- 搜索框 -->
-                <view class="weui-search-bar__box">
-                  <icon class="weui-icon-search_in-box" type="info" size="14"></icon>
-                  <input style="height: 70rpx" bindinput="secondDetailInput" type="text" class="weui-search-bar__input" placeholder="请输入详细地址"/>
-                </view>
-              </view>
-            </view>
+
+        <view class="title">
+          <text class="tex tex_adrs">详细地址：</text>
+          <view class="search">
+            <icon class="search_icon" type="info" size="14"></icon>
+            <input class="search_btn" bindinput="secondDetailInput" type="text" placeholder='请输入详细地址'/>
           </view>
         </view>
       </view>
 
-      <text>\n</text>
+      <!--                第三搜索-->
+      <view class="title search_title" style="display:{{thirdShows?'inline-block':'none'}}">
 
-      <!-- 第三搜索框 -->
-      <view style="display:{{thirdShows?'block':'none'}}">
-        <view class="line">
-          <view style="height: 30px; flex: 6" class="weui-search-bar">
-            <view>
-              <view class="weui-search-bar__form">
-                <!-- 搜索框 -->
-                <view class="weui-search-bar__box">
-                  <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                  <input style="height: 70rpx" catchtap="thirdSelectTaps" bindinput="thirdSearchAddress" type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" data-index="{{index}}" value="{{thirdSearchValue}}"/>
-                </view>
-              </view>
-              <view class='select_box' style="float: left; height: 0; font-size: 38rpx; z-index: 80">
-                <view class='option_box' style='height:{{thirdSearchShows?(thirdSearchDatas.length>5?300:thirdSearchDatas.length*60):0}}rpx; width: 500rpx; z-index: 100'>
-                  <rich-text class='option' style='{{thirdSearchIndexs==thirdSearchDatas.length-1&&"border:0;"}}; font-size: 38rpx;'
-                             wx:for='{{thirdSearchHighlightDatas}}' wx:key='this' data-index='{{index}}'
-                             catchtap='thirdSearchOptionTaps' nodes="{{item}}">
-                  </rich-text>
-                </view>
-              </view>
-            </view>
-          </view>
-          <view style="flex: 2">
-            <radio-group bindchange="bandleChange" style="font-size: 18px; display: flex">
-              <radio  color="red" value="5" style="transform:scale(0.8); flex: 1">取</radio>
-              <radio  color="red" value="6" style="transform:scale(0.8); flex: 1">达</radio>
-            </radio-group>
+        <view class="tex">
+          <radio-group bindchange="bandleChange">
+            <radio  color="red" value="5" style="transform:scale(0.8);">取</radio>
+            <radio  color="red" value="6" style="transform:scale(0.8);">达</radio>
+          </radio-group>
+        </view>
+
+        <view class="search">
+          <icon class="search_icon" type="search" size="14"></icon>
+          <input class="search_btn" catchtap="thirdSelectTaps" bindinput="thirdSearchAddress" type="text" placeholder='请输入搜索地址' data-index="{{index}}" value="{{thirdSearchValue}}"/>
+
+          <view class='option_box' style='position:absolute; top: 2400rpx; height:{{thirdSearchShows?(thirdSearchDatas.length>5?300:thirdSearchDatas.length*60):0}}rpx; width: 450rpx; z-index: 100'>
+            <rich-text class='option' style='{{firstSearchIndexs==firstSearchDatas.length-1&&"border:0;"}}; font-size: 38rpx;'
+                       wx:for='{{thirdSearchHighlightDatas}}' wx:key='this' data-index='{{index}}'
+                       catchtap='thirdSearchOptionTaps' nodes="{{item}}">
+            </rich-text>
           </view>
         </view>
-      </view>
-      <text>\n</text>
-      <!-- 第三详细地址 -->
-      <view style="display:{{thirdShows?'block':'none'}}">
-        <view class="line">
-          <view style="flex: 2">
-            <label style="font-size: 35rpx;">详细地址：</label>
-          </view>
-          <view style="height: 30px; flex: 6" class="weui-search-bar">
-            <view>
-              <view class="weui-search-bar__form">
-                <!-- 搜索框 -->
-                <view class="weui-search-bar__box">
-                  <icon class="weui-icon-search_in-box" type="info" size="14"></icon>
-                  <input style="height: 70rpx" bindinput="thirdDetailInput" type="text" class="weui-search-bar__input"/>
-                </view>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
 
-      <text>\n</text>
-      <view class="dom">
-        <view class="curObject">
-          <view><text class="tex">总费用：￥</text><text class="price">{{totalMoney}}</text></view>
-          <button bindtap="addHelperOrder">去结算</button>
+        <view class="title">
+          <text class="tex tex_adrs">详细地址：</text>
+          <view class="search">
+            <icon class="search_icon" type="info" size="14"></icon>
+            <input class="search_btn" bindinput="thirdDetailInput" type="text" placeholder='请输入详细地址'/>
+          </view>
         </view>
       </view>
 
     </view>
 
+    <view class="dom">
+      <view class="curObject">
+        <view><text class="tex">总费用：￥</text><text class="price">{{totalMoney}}</text></view>
+        <button bindtap="addHelperOrder">去结算</button>
+      </view>
+    </view>
   </scroll-view>
   <tabbar class="tab"></tabbar>
 </view>

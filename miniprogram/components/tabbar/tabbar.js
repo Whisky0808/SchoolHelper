@@ -62,6 +62,7 @@ Component({
       })
       wx.redirectTo({
         url: '/pages/Runner/add_demand_order/add_demand_order'
+        // url: '/pages/test2/test2'
       })
     },
     to2(){

@@ -1,13 +1,12 @@
 {
   "pages": [
+    "pages/Common/bg_cover/bg_cover",
+    "pages/test2/test2",
+    "pages/Runner/add_demand_order/add_demand_order",
     "pages/Common/drawCoupon/drawCoupon",
     "pages/test3/test3",
-    "pages/Common/bg_cover/bg_cover",
     "pages/Common/welcome/welcome",
-    
-    "pages/test2/test2",
     "pages/Runner/help_order_detail/help_order_detail",
-    "pages/Runner/add_demand_order/add_demand_order",
     "pages/Runner/help_order/help_order",
     "pages/Runner/grab/grab",
     "pages/Runner/add_demand_order/confirm/confirm",

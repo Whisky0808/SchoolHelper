@@ -345,6 +345,7 @@ Page({
 
   //第三搜索框
   thirdSearchAddress: function(e) {
+    let that = this;
     console.log(e)
     let time = Date.parse(new Date) / 1000;
     let keyword = e.detail.value;
@@ -751,7 +752,7 @@ Page({
     let data = this.data;
 
     wx.navigateTo({
-      url: './confirm/confirm?startTime=' + data.startTime
+      url: '../Runner/add_demand_order/confirm/confirm?startTime=' + data.startTime
           + '&endTime=' + data.endTime + '&totalMoney=' + data.totalMoney
           + '&helperMoney=' + data.moneyDatas[data.moneyIndexs] + '&platformMoney=' + data.platformMoney
           + '&content=' + data.content + '&title=' + data.title + '&helperNum=' + data.selectDatas[data.indexs]

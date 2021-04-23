@@ -139,7 +139,7 @@ Page({
         money = money * 1.05;
       }
     }
-  
+
     this.setData({
       indexs: Indexs,
       shows: !this.data.shows,
@@ -229,6 +229,7 @@ Page({
         firstSearchShows: false
       });
     }else if(time - this.data.firstTime >= 1){
+      console.log(that.data);
       console.log("time = ", time)
       this.setData({
         firstTime: time
@@ -271,11 +272,11 @@ Page({
               firstLongitude: longitude
             });
           }
-          
+
         }
       })
     }
-    
+
   },
 
   //第二搜索框
@@ -335,15 +336,16 @@ Page({
               secondLongitude: longitude
             });
           }
-          
+
         }
       })
     }
-    
+
   },
 
   //第三搜索框
   thirdSearchAddress: function(e) {
+    let that = this;
     console.log(e)
     let time = Date.parse(new Date) / 1000;
     let keyword = e.detail.value;
@@ -398,11 +400,11 @@ Page({
               thirdLongitude: longitude
             });
           }
-          
+
         }
       })
     }
-    
+
   },
 
 
@@ -561,34 +563,34 @@ Page({
         duration: 2000
       })
     }, params);
-    
+
   },
   timer: function () {
     let promise = new Promise((resolve, reject) => {
       let setTimer = setInterval(
-        () => {
-          console.log("我进来啦")
-          var second = this.data.second - 1;
-          this.setData({
-            second: second,
-            btnValue: second+'秒',
-            btnDisabled: true
-          })
-          if (this.data.second <= 0) {
+          () => {
+            console.log("我进来啦")
+            var second = this.data.second - 1;
             this.setData({
-              second: 60,
-              btnValue: '获取验证码',
-              btnDisabled: false
+              second: second,
+              btnValue: second+'秒',
+              btnDisabled: true
             })
-            resolve(setTimer)
+            if (this.data.second <= 0) {
+              this.setData({
+                second: 60,
+                btnValue: '获取验证码',
+                btnDisabled: false
+              })
+              resolve(setTimer)
+            }
+            if(second == 0){
+              this.setData({
+                status: false
+              })
+            }
           }
-          if(second == 0){
-            this.setData({
-              status: false
-            })
-          }
-        }
-        , 1000)
+          , 1000)
     })
     promise.then((setTimer) => {
       clearInterval(setTimer)
@@ -604,7 +606,7 @@ Page({
   },
 
   /**
-   * 日历控件绑定函数 
+   * 日历控件绑定函数
    * 点击日期返回
    */
   srartPickerChange: function (e) {
@@ -762,7 +764,7 @@ Page({
           + '&endLongitude=' + data.endLongitude + '&startLatitudes=' + startLatitudes
           + '&startLongitudes=' + startLongitudes + '&endLatitude=' + endLatitude
           + '&endLongitude=' + endLongitude
-    })  
+    })
   },
 
   /**
@@ -783,5 +785,5 @@ Page({
     })
   },
 
-  
+
 })

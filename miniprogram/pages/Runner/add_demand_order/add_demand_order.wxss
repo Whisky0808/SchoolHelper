@@ -1,114 +1,156 @@
 page{
-    background-color: #8ebd9b;
+    /*background-color: #2b2b2b;*/
+    background-color: #e6e6e6;
+    margin: 0;
+    padding: 0;
+}
+.all{
+    height: 2000rpx;
+}
+.all .add_demand{
+    height: 2000rpx;
 }
 
-.weui-search-bar {
-  position: relative;
-  padding-left: 50rpx;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  box-sizing: border-box;
-  width: 420rpx;
-  
-  /* background-color: #EFEFF4; */
-  /* border-top: 1rpx solid #D7D6DC;
-  border-bottom: 1rpx solid #D7D6DC; */
-}
-.weui-icon-search_in-box {
-  position: absolute;
-  left: 10px;
-  top: 18px;
-  background-color: white;
-}
-.weui-search-bar__form {
-  width: 420rpx;
-    height: 80rpx;
-  border: 1px solid #8ebd9b;
-  position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: auto;
-          flex: auto;
-  border-radius: 5px;
-  background: #FFFFFF;
-  /* border: 1rpx solid #E6E6EA; */
-}
-.weui-search-bar__box {
-  /* border: 1px solid #8ebd9b; */
-  position: relative;
-  padding-left: 30px;
-  padding-right: 30px;
-  width: 420rpx;
-  height: 80rpx;
-  box-sizing: border-box;
-  z-index: 1;
-}
-.weui-search-bar__input {
-  height: 28px;
-  line-height: 28px;
-  font-size: 14px;
-}
-.weui-search-bar__cancel-btn {
-  margin-left: 10px;
-  line-height: 28px;
-  color: #09BB07;
-  white-space: nowrap;
-}
-
-
-
-.search{
-  margin-left: 5%;
-  border: 1px solid #8ebd9b
-}
-
-.a{
+.bigtitle{
+    display: inline-block;
+    /*background-color: red;*/
+    /*color: white;*/
+    width: 400rpx;
+    height: 150rpx;
+    line-height: 150rpx;
+    font-size: 50rpx;
+    font-weight: 550;
+    text-align: center;
     margin-top: 20rpx;
-    margin-left: 3%;
-    width: 94%;
-    background-color: white;
-    border-radius: 5px;
+    margin-left: 25%;
+    border-radius: 30rpx;
+}
+.bigtitle image{
+    position: relative;
+    height: 32px;
+    width: 32px;
+    top: 10rpx;
+    right: 10rpx;
+}
+.body{
+    width: 96%;
+    margin-left: 2%;
+    /*background-color: white;*/
+    border-radius: 20rpx;
+    margin-top: 20rpx;
+    background-color: #ffd64e;
+    box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .3);
+    /*color: white;*/
 }
 
-.b{
-    margin-top: 10px;
-    /* background-color: red; */
-    border: 1px solid #8ebd9b;
-    border-radius: 5px;
-    margin-right: 10px;
-    flex: 7
-}
-
-.c{
-    margin-top: 10px;
-    /* margin-top: 35px; */
-    margin-left: 20px;
-    flex: 3
-}
-
-.line{
-    padding-top: 50rpx;
+/*任务标题*/
+.title{
+    display: inline-block;
     width: 100%;
-    font-size: 38rpx;
-    display: flex;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-top: 20rpx;
+}
+.search_title{
+    display: inline-block;
+    width: 96%;
+    margin-left: 2%;
+    height: 270rpx;
+    line-height: 100rpx;
+    margin-top: 20rpx;
+    border-bottom: 1px dashed red;
+}
+.title_first{
+    margin-top: 45rpx;
+}
+.big_title{
+    height: 220rpx;
 }
 
-/* fenlei */
-.fenlei{
-    margin: 0 25rpx;
-    height: 90rpx;
-    line-height: 90rpx;
-    border-bottom: 1rpx solid #e6e6e6;
-    display: flex;
-    align-items: center;
-  }
-  .fenlei text{
-    font-size: 30rpx;
-    color: #999999;
+.title .tex{
+    position: relative;
+    display: inline;
+    width: 230rpx;
+    font-size: 38rpx;
+    font-weight: 540;
+    height: 80rpx;
+    line-height: 80rpx;
+    bottom: 30rpx;
+    margin-left: 30rpx;
+}
+.tex_adrs{
+    top: 4rpx;
+}
+.title .big_text{
+    bottom: 90rpx;
+}
+
+.tex radio-group{
+    display: inline-block;
+    width: 230rpx;
+    height: 80rpx;
+}
+
+.title input, .title textarea{
+    display: inline-block;
+    border: 1rpx solid black;
+    width: 450rpx;
+    border-radius: 10rpx;
+    height: 80rpx;
+    line-height: 80rpx;
     margin-left: 15rpx;
-  }
-  /* 下拉框 */
-  .select_box {
+}
+.title .search{
+    display: inline-block;
+    /*background-color: antiquewhite;*/
+    width: 410rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 15rpx;
+    border: 1px solid black;
+    border-radius: 10rpx;
+}
+.title .big_input{
+    height: 200rpx;
+}
+.title .select_box{
+    display: inline-block;
+    border: 1rpx solid black;
+    width: 100rpx;
+    border-radius: 10rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 15rpx;
+}
+.title .choose_switch{
+    position: relative;
+    display: inline-block;
+    margin-left: 15rpx;
+    bottom: 30rpx;
+    left: 30rpx;
+}
+.title button{
+    display: inline-block;
+    width: 300rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}
+
+.title .choose_time{
+    position: relative;
+    bottom: 30rpx;
+    left: 30rpx;
+    display: inline-block;
+    width: 450rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 15rpx;
+}
+
+/*下拉框*/
+.select_box {
     background: #fff;
     width: 100rpx;
     /* margin: 0 auto; */
@@ -116,39 +158,30 @@ page{
     line-height: 90rpx;
     text-align: left;
     position: relative;
-  }
-  
-  .select {
+}
+
+.select {
     box-sizing: border-box;
     width: 100%;
-    height: 86rpx;
+    /*height: 86rpx;*/
+    height: 100%;
     /* border: 1px solid #efefef; */
     border-radius: 8rpx;
     display: flex;
     align-items: center;
+    text-align: center;
     padding: 0 20rpx;
-  }
-  
-  .select_text {
+    background-color: #f9ca24;
+}
+
+.select_text {
     font-size: 28rpx;
     flex: 1;
     color: rgb(102, 102, 102);
     line-height: 86rpx;
     height: 86rpx;
-  }
-  
-  .select_img {
-    width: 40rpx;
-    height: 40rpx;
-    display: block;
-    transition: transform 0.3s;
-  }
-  
-  .select_img_rotate {
-    transform: rotate(180deg);
-  }
-  
-  .option_box {
+}
+.option_box {
     /* position: absolute; */
     top: 86rpx;
     width: 100%;
@@ -160,19 +193,75 @@ page{
     background: #fff;
     transition: height 0.3s;
     z-index: 100;
-  }
-  
-  .option {
+}
+
+.option {
     display: block;
     line-height: 40rpx;
     font-size: 28rpx;
     border-bottom: 1px solid #efefef;
     padding: 10rpx;
     color: rgb(102, 102, 102);
-  }
-.curObject{
+}
+
+.search .search_icon{
+    display: inline-block;
+    width: 80rpx;
+    height: 80rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+.search .search_btn{
+    position: absolute;
+    display: inline-block;
+    width: 320rpx;
+    height: 80rpx;
+    /*background-color: #8ebd9b;*/
+    border: 0rpx;
+
+}
+
+/* 下拉框 */
+.select_box {
+    background: #fff;
+    width: 100rpx;
+    /* margin: 0 auto; */
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: left;
     position: relative;
-    top: 90%;
+    z-index: 1;
+}
+
+.option_box {
+    /* position: absolute; */
+    top: 86rpx;
+    width: 100%;
+    /* border: 1px solid #efefef; */
+    box-sizing: border-box;
+    height: 0;
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+    z-index: 100;
+}
+
+.option {
+    display: block;
+    line-height: 40rpx;
+    font-size: 28rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;
+    color: rgb(102, 102, 102);
+    z-index: 1;
+}
+
+/*结算*/
+.curObject{
+    /*position: relative;*/
+    /*top: 94%;*/
+    margin-top: 30px;
     height: 130rpx;
     width: 100%;
     background-color: silver;
@@ -205,52 +294,4 @@ page{
     border-bottom-right-radius: 80rpx;
     background-color: #ffd64e;
     font-size: 35rpx;
-}
-
-/* .container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 90%;
-  margin: 50rpx auto;
-}
- 
-.row{
-  position: relative;
-  height: 80rpx;
-  width: 100%;
-  border-radius: 10rpx;
-  background: #fff;
-  margin-bottom: 20rpx;
-  padding-left: 20rpx;
-  box-sizing: border-box;
-}
-.row input{
-  width: 100%;
-  height:100%;
-}
-.codeBtn{
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: #bbb;
-  width: 30%;
-  font-size: 26rpx;
-  height: 80rpx;
-  line-height: 80rpx;
-}
-.subBtn{
-  width: 200rpx;
-  height: 80rpx;
-  background: #fff;
-  color: #000;
-  border-radius: 50rpx;
-  line-height: 80rpx;
-}  */
-
-.all{
-    height: 1055rpx;
-}
-.all .add_demand{
-    height: 1055rpx;
 }
