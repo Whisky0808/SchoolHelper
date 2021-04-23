@@ -17,7 +17,7 @@ let heartCheck = {
       wx.sendSocketMessage({
         data: 'hhh',
         success: function () {
-          console.log("HeartCheck:send successfully");
+          console.log("send successfully");
         }
       });
       this.serverTimeoutObj = setTimeout(() => {
@@ -52,6 +52,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    p: [],
     cusHeadIco: '',//头像
     scrollHeight: '100vh',
     inputBottom: 0,
@@ -85,6 +86,7 @@ Page({
       key: 'chatDetail',
       success: function (res) {
         for (let i = 0; i < res.data.length; i++) {
+          console.log(res.data[0].message)
           that.setData({
             msgList: res.data[0].msgList
           })
@@ -208,18 +210,41 @@ Page({
       // let objData = JSON.parse(data.data);
       // 收到消息
       if (res.data == 'Hi') {
-        console.log(555)
-        console.log(res.data)
+        // console.log(555)
+        // console.log(res.data)
         heartCheck.reset().start()//下一次心跳
       } else {
         //处理数据
-        console.log("展示：", res);
-        msgList.push({
-          speaker: 'server',
-          contentType: '11',
-          content: '11',
-          leftIcon: '11',
-        })
+        let status = res.data[0];
+        if(status === '1'){
+          let data = res.data.substr(1);
+          data = JSON.parse(data);
+          console.log("来咯！")
+          console.log(data)
+          msgList.push({
+            speaker: data.speaker,
+            contentType: data.contentType,
+            content: data.content,
+            leftIcon: data.leftIcon,
+          })
+        }
+        else if(status === '2'){
+          let data = res.data.substr(1);
+          data = JSON.parse(data);
+          for(let chat of data){
+            let message = chat.noReadMessage;
+            
+          }
+          console.log("来咯！未读消息")
+          console.log(data)
+        }
+        
+        
+        that.setData({
+          msgList,
+          inputVal: '',
+        });
+
       }
 
       //这里是拿到那个要展示要用的每个openid对应的data，这里的data其实是些列表信息，不是信息具体

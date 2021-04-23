@@ -94,69 +94,69 @@ Page({
   Conection: function () {
     let that = this;
     //建立连接
-    wx.connectSocket({
-      url: "ws://zzxdream.cn1.utools.club/chat/" + this.data.username,//username是该用户的openid
-      success: function () {
-        console.log('连接成功');
-        that.initEvenHandle();
-      }
-    })
+    // wx.connectSocket({
+    //   url: "ws://zzxdream.cn1.utools.club/chat/" + this.data.username,//username是该用户的openid
+    //   success: function () {
+    //     console.log('连接成功');
+    //     that.initEvenHandle();
+    //   }
+    // })
 
   },
   //Connect Websocket之后的操作
-  initEvenHandle() {
-    let that = this;
+  // initEvenHandle() {
+  //   let that = this;
 
-    //打开websocket连接
-    wx.onSocketOpen((result) => {
-      console.log("webstock连接打开！");
-    })
+  //   //打开websocket连接
+  //   wx.onSocketOpen((result) => {
+  //     console.log("webstock连接打开！");
+  //   })
 
-    //接收信息
-    wx.onSocketMessage(function (data) {
-      let objData = JSON.parse(data.data);
-      console.log("展示：", data); //这里是拿到那个要展示要用的每个openid对应的data，这里的data其实是些列表信息，不是信息具体
-      for (let i = 0; i < objData.length; i++) {
-        chatArray.push({
-          chatId: objData[i].chatId,
-          chatName: objData[i].chatName,
-          groupChat: objData[i].groupChat,
-          isShow: objData[i].isShow,
-          noReadMessage: objData[i].noReadMessage,
-          openidList: objData[i].openidList,//发给什么对象
-          leftIcon: "",//左边的头像
-        })
-        // 创建remove函数，利用数组内置的indexof函数，将指定元素remove掉
-        let Mopenid = that.data.username;
-        Array.prototype.remove = function (val) {
-          let index = this.indexOf(val);
-          if (index > -1) {
-            this.splice(index, 1);
-          }
-        }
-        console.log((chatArray[i].openidList));
-        (chatArray[i].openidList).remove(Mopenid);
-        console.log("删掉自己openid后的openidList数组：", (chatArray[i].openidList));
-        chatArray[i].openidList = "omfL-4vHXzZLzDu3iEKYkT5HFZhg";//测试！！！！
-      }
-      that.setData({
-        chatArray: chatArray
-      })
+  //   //接收信息
+  //   wx.onSocketMessage(function (data) {
+  //     let objData = JSON.parse(data.data);
+  //     console.log("展示：", data); //这里是拿到那个要展示要用的每个openid对应的data，这里的data其实是些列表信息，不是信息具体
+  //     for (let i = 0; i < objData.length; i++) {
+  //       chatArray.push({
+  //         chatId: objData[i].chatId,
+  //         chatName: objData[i].chatName,
+  //         groupChat: objData[i].groupChat,
+  //         isShow: objData[i].isShow,
+  //         noReadMessage: objData[i].noReadMessage,
+  //         openidList: objData[i].openidList,//发给什么对象
+  //         leftIcon: "",//左边的头像
+  //       })
+  //       // 创建remove函数，利用数组内置的indexof函数，将指定元素remove掉
+  //       let Mopenid = that.data.username;
+  //       Array.prototype.remove = function (val) {
+  //         let index = this.indexOf(val);
+  //         if (index > -1) {
+  //           this.splice(index, 1);
+  //         }
+  //       }
+  //       console.log((chatArray[i].openidList));
+  //       (chatArray[i].openidList).remove(Mopenid);
+  //       console.log("删掉自己openid后的openidList数组：", (chatArray[i].openidList));
+  //       chatArray[i].openidList = "omfL-4vHXzZLzDu3iEKYkT5HFZhg";//测试！！！！
+  //     }
+  //     that.setData({
+  //       chatArray: chatArray
+  //     })
 
-    })
+  //   })
 
-    //连接失败
-    wx.onSocketError((res) => {
-      console.log('WebSocket fail失败!!' + res)
-      // this.reconnect();
-    })
-    //连接关闭
-    wx.onSocketClose((res) => {
-      console.log('WebSocket close关闭!!' + res)
-      // this.reconnect();
-    })
+  //   //连接失败
+  //   wx.onSocketError((res) => {
+  //     console.log('WebSocket fail失败!!' + res)
+  //     // this.reconnect();
+  //   })
+  //   //连接关闭
+  //   wx.onSocketClose((res) => {
+  //     console.log('WebSocket close关闭!!' + res)
+  //     // this.reconnect();
+  //   })
 
-  },
+  // },
   // 加载过来的数据LoadData
 
   LoadData: function () {
