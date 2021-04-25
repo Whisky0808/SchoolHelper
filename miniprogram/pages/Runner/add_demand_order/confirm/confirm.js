@@ -97,7 +97,8 @@ Page({
       method: 'GET',
       success: res => {
         let p = res.data.data;
-
+        console.log("===============================")
+        console.log(p)
         for(let a of p){
           a.checked = false
         }

@@ -216,7 +216,7 @@ Page({
     console.log(i);
     console.log(this.data.dlgContent[i].cusHeadIco)
     wx.navigateTo({
-      url: '../chat/chat?avartarUrl=' + this.data.dlgContent[i].cusHeadIco + "&chatId=" + this.data.dlgContent[i].chatId + "&openidList=" + "omfL-4vXwLBasPNGQlGvRGGIFd8Q"
+      url: '../chat/chat?avartarUrl=' + this.data.dlgContent[i].cusHeadIco + "&chatId=" + this.data.dlgContent[i].chatId + "&openidList=" + "omfL-4vHXzZLzDu3iEKYkT5HFZhg"
     })
 
   },

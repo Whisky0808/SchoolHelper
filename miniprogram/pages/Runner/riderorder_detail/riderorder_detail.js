@@ -33,7 +33,9 @@ Page({
     startDetailAddress: '',
     startLatitudes: '',
     startLongitudes: '',
-    helperRealName: ''
+    helperRealName: '',
+
+    userInfo: ''
   },
 
   /**
@@ -45,6 +47,10 @@ Page({
     console.log("来了")
     console.log(data)
     console.log(data.startAddressList)
+
+    this.setData({
+      userInfo: app.globalData.userInfo
+    })
 
     let startAddressList = data.startAddressList.split('#');
     let startDetailAddressList = data.startDetailAddressList.split('#');
@@ -91,5 +97,28 @@ Page({
     let longitude = e.currentTarget.dataset.longitude;
     app.getRoad(positionName, latitude, longitude);
   },
+
+  buildChat: function(e){
+    // let that = this;
+    // let openids = this.data.helperOpenidList + "," + this.data.userInfo.openid;
+    // wx.request({
+    //   url: 'https://zzxdream.cn1.utools.club/buildChat/addChat',
+    //   method: 'POST',
+    //   data: {
+    //     chatId: that.data.helpOrderId,
+    //     chatType: 2,
+    //     schoolId: that.data.userInfo.schoolId,
+    //     openids: openids,
+    //     chatName: that.data.title
+    //   },
+    //   success: res => {
+    //     console.log("添加聊天成功！")
+    //     console.log(res)
+        wx.navigateTo({
+          url: '../../Common/chat/chat?avartarUrl=' + this.data.userInfo.avartarUrl + "&chatId=" + this.data.helpOrderId
+        })
+    //   }
+    // })
+  }
 
 })

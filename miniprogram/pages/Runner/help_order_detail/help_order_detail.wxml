@@ -18,14 +18,14 @@
 
   <view class="line">
     <label class="c labelFont" style="font-size: 37rpx">已召人数：</label>
-    <text class="b" style="font-size: 37rpx; color: red">{{applyNum}} / {{helperNum}}</text>
+    <text class="b" style="font-size: 37rpx; color: red; flex: 3">{{applyNum}} / {{helperNum}}</text>
+    <button bindtap="buildChat" style="font-size: 37rpx; flex:3;">立即联系</button>
   </view>
-
   
   <view class="line">
     <label class="c labelFont" style="font-size: 37rpx;">已召帮手：</label>
-    <view class="b" style="display: {{helperRealName.length==0?'block':'none'}}">无帮手接单</view>
-    <view style="display: {{helperRealName.length==0?'none':'block'}}">
+    <view style="display: {{helperRealName[0]==''?'block':'none'}}; flex: 5; color:red">无帮手接单</view>
+    <view style="display: {{helperRealName[0]!=''?'block':'none'}}">
       <view wx:for="{{helperRealName}}" wx:key="index" class="b" style="width: 430rpx">
         <view style="display: flex">
           <text class="b" style="font-size: 37rpx; flex:10">{{item}}</text>

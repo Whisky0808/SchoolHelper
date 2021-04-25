@@ -40,6 +40,7 @@ Page({
     startLongitudes: '',
     helperRealName: '',
     helperOpenid: '',
+    helperOpenidList: '',
     helperStatus: '',
     showModal: false,
     alertValue: '',
@@ -87,10 +88,11 @@ Page({
       helperStatus = data.helperStatus.split(',');
     }
     
-    console.log("看过来 = ", startAddressList)
+    console.log("看过来 = ", helperRealName.length)
 
     this.setData({
       helperOpenid: helperOpenid,
+      helperOpenidList: data.helperOpenid,
       helperStatus: helperStatus,
       helperRealName: helperRealName,
       applyNum: data.applyNum,
@@ -137,6 +139,29 @@ Page({
     this.setData({
       showOneButtonDialog: true
     })
+  },
+
+  buildChat: function(e){
+    // let that = this;
+    // let openids = this.data.helperOpenidList + "," + this.data.userInfo.openid;
+    // wx.request({
+    //   url: 'https://zzxdream.cn1.utools.club/buildChat/addChat',
+    //   method: 'POST',
+    //   data: {
+    //     chatId: that.data.helpOrderId,
+    //     chatType: 2,
+    //     schoolId: that.data.userInfo.schoolId,
+    //     openids: openids,
+    //     chatName: that.data.title
+    //   },
+    //   success: res => {
+    //     console.log("添加聊天成功！")
+    //     console.log(res)
+        wx.navigateTo({
+          url: '../../Common/chat/chat?avartarUrl=' + this.data.userInfo.avartarUrl + "&chatId=" + this.data.helpOrderId
+        })
+    //   }
+    // })
   },
 
   cancel(){

@@ -56,7 +56,7 @@ Page({
     let curDetail = {
       detailList: this.data.noPayDetail[e.currentTarget.dataset.index].detailList,
       totalMoney: this.data.noPayDetail[e.currentTarget.dataset.index].totalMoney,
-      distributionFee: this.data.noPayDetail[e.currentTarget.dataset.index].riderMoney + this.data.toDetail[e.currentTarget.dataset.index].platformMoney,
+      distributionFee: this.data.noPayDetail[e.currentTarget.dataset.index].riderMoney + this.data.noPayDetail[e.currentTarget.dataset.index].platformMoney,
       searchAddress: this.data.noPayDetail[e.currentTarget.dataset.index].searchAddress,
       addTime: this.data.noPayDetail[e.currentTarget.dataset.index].addTime,
       carteenName: this.data.noPayDetail[e.currentTarget.dataset.index].carteenName,
@@ -74,7 +74,7 @@ Page({
     let curDetail = {
       detailList: this.data.noCompeted[e.currentTarget.dataset.index].detailList,
       totalMoney: this.data.noCompeted[e.currentTarget.dataset.index].totalMoney,
-      distributionFee: this.data.noCompeted[e.currentTarget.dataset.index].riderMoney + this.data.toDetail[e.currentTarget.dataset.index].platformMoney,
+      distributionFee: this.data.noCompeted[e.currentTarget.dataset.index].riderMoney + this.data.noCompeted[e.currentTarget.dataset.index].platformMoney,
       searchAddress: this.data.noCompeted[e.currentTarget.dataset.index].searchAddress,
       addTime: this.data.noCompeted[e.currentTarget.dataset.index].addTime,
       carteenName: this.data.noCompeted[e.currentTarget.dataset.index].carteenName,

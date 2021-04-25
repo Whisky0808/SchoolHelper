@@ -11,7 +11,8 @@
 
   <view class="line">
     <label class="c labelFont" style="font-size: 37rpx">已召人数：</label>
-    <text class="b" style="font-size: 37rpx; color: red">{{applyNum}} / {{helperNum}}</text>
+    <text class="b" style="font-size: 37rpx; color: red; flex: 3">{{applyNum}} / {{helperNum}}</text>
+    <button bindtap="buildChat" style="font-size: 37rpx; flex:3;">立即联系</button>
   </view>
   
   <view class="line">
