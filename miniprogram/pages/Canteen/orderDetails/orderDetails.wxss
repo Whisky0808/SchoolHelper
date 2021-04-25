@@ -1,7 +1,8 @@
 /*整体架构*/
+
 .box{
     background-color: #8ebd9b;
-    height: 1600rpx;
+    /*height: 1600rpx;*/
 }
 .box .head{
     height: 100rpx;
@@ -28,7 +29,7 @@
     margin-top: 12rpx;
 }
 .box .mark{
-    height: 400rpx;
+    /*height: 400rpx;*/
     width: 95%;
     background-color: white;
     border-radius: 30rpx;
@@ -51,7 +52,9 @@
 .distribution_fee .te{
     margin-left: 10rpx;
 }
-
+.remark{
+    height:300rpx;
+}
 .remark text{
     display: inline-block;
     height: 100rpx;

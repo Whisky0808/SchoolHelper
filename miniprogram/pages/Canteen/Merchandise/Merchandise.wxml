@@ -31,7 +31,7 @@
         wx:for="{{food}}"
         wx:key="*this"
         id="{{'right'+(item.sortId-1)}}"
-        class="box"
+        class="box {{item.foodList.length == 0 ? 'hidebox' : ''}}"
       >
         <view class="box_title">{{item.sortName}}</view>
         <view class="box_content">
