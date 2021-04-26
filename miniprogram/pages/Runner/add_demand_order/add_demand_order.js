@@ -47,9 +47,9 @@ Page({
     secondShows: false,
     thirdShows: false,
 
-    firstSearchIndexs: 0,
-    secondSearchIndexs: 0,
-    thirdSearchIndexs: 0,
+    firstSearchIndexs: -1,
+    secondSearchIndexs: -1,
+    thirdSearchIndexs: -1,
 
     firstSearchValue: '',
     secondSearchValue: '',
@@ -80,8 +80,26 @@ Page({
     second: 60,
     status: false,
     realCode: '',
-    platformMoney: 0
+    platformMoney: 0,
 
+    showOneButtonDialog: false,
+    oneButton: [{text: '确定'}],
+    alert: ''
+
+  },
+
+  tapOneDialogButton(e) {
+    this.setData({
+      showOneButtonDialog: true
+    })
+  },
+
+  // 弹窗
+  tapDialogButton(e) {
+    let that = this;
+    this.setData({
+      showOneButtonDialog: false
+    })
   },
 
   // 点击下拉显示框
@@ -672,6 +690,64 @@ Page({
   },
 
   addHelperOrder: function(){
+
+    let a = '12345';
+    console.log("查找 = ");
+    console.log(a.indexOf('45'))
+
+    if(this.data.title.trim() == ''){
+      this.setData({
+        alert: '需求单标题不能为空'
+      })
+      this.tapOneDialogButton();
+      return;
+    }
+
+    if(this.data.name.trim() == ''){
+      this.setData({
+        alert: '雇主昵称不能为空'
+      })
+      this.tapOneDialogButton();
+      return;
+    }
+
+    if(this.data.phone.trim() == ''){
+      this.setData({
+        alert: '联系电话不能为空'
+      })
+      this.tapOneDialogButton();
+      return;
+    }
+
+    if(this.data.startTime.trim() == ''){
+      console.log(11111111111)
+      console.log(" = " + this.data.startTime)
+      this.setData({
+        alert: '需求单开始时间不能为空'
+      })
+      this.tapOneDialogButton();
+      return;
+    }
+
+    if(this.data.endTime.trim() == ''){
+      this.setData({
+        alert: '需求单结束时间不能为空'
+      })
+      this.tapOneDialogButton();
+      return;
+    }
+
+    console.log(333)
+    if(this.data.content.trim() == ''){
+      console.log(222)
+      console.log(this.data.content)
+      this.setData({
+        alert: '需求单任务内容不能为空'
+      })
+      this.tapOneDialogButton();
+      return;
+    }
+
     if(this.data.helperMust){
       this.setData({
         helperMust: 1
@@ -692,31 +768,62 @@ Page({
     let endLatitude = '';
     let endLongitude = '';
 
+    //检测是否有勾选上到达地址
+    let isArrive = false;
+
     // 第一搜索框数据判断
     if(this.data.firstStatus === true){
       let index = this.data.firstSearchIndexs;
+      let arr = this.data.firstSearchDatas;
+      console.log("89")
+      console.log(this.data.firstSearchValue)
+      if(index == -1 || this.data.firstSearchValue.indexOf(arr[index]) == - 1){
+        this.setData({
+          alert: '第一个搜索地址必须从下拉框中选择'
+        })
+        this.tapOneDialogButton();
+        return;
+      }
+
       startLatitudes += this.data.firstLatitude[index] + "#";
       startLongitudes += this.data.firstLongitude[index] + "#";
       startAddress += this.data.firstSearchValue + "#";
       startDetailAddress += this.data.firstDetailAddress + "#";
 
     }else if(this.data.firstStatus === false){
+      isArrive = true;
       let index = this.data.firstSearchIndexs;
+      let arr = this.data.firstSearchDatas;
+      if(index == -1 || this.data.firstSearchValue.indexOf(arr[index]) == - 1){
+        this.setData({
+          alert: '第一个搜索地址必须从下拉框中选择'
+        })
+        this.tapOneDialogButton();
+        return;
+      }
+
       endAddress = this.data.firstSearchDatas[index];
       endDetailAddress = this.data.firstDetailAddress;
       endLatitude = this.data.firstLatitude[index];
       endLongitude = this.data.firstLongitude[index];
     }
 
-    let a = "1";
-    a += "2";
-    console.log("a = ", a)
-
     // 第二搜索框数据判断
     if(this.data.secondStatus === true){
       console.log("我进来了，第二个")
       console.log(this.data.secondSearchValue)
       let index = this.data.secondSearchIndexs;
+
+      let arr = this.data.secondSearchDatas;
+      if(index == -1 || this.data.secondSearchValue.indexOf(arr[index]) == - 1){
+        this.setData({
+          alert: '第二个搜索地址必须从下拉框中选择'
+        })
+        this.tapOneDialogButton();
+        return;
+      }
+
+
       startLatitudes += this.data.secondLatitude[index] + "#";
       startLongitudes += this.data.secondLongitude[index] + "#";
       startAddress += this.data.secondSearchValue + "#";
@@ -724,7 +831,18 @@ Page({
       console.log(startAddress)
 
     }else if(this.data.secondStatus === false){
+      isArrive = true;
       let index = this.data.secondSearchIndexs;
+
+      let arr = this.data.secondSearchDatas;
+      if(index == -1 || this.data.secondSearchValue.indexOf(arr[index]) == - 1){
+        this.setData({
+          alert: '第二个搜索地址必须从下拉框中选择'
+        })
+        this.tapOneDialogButton();
+        return;
+      }
+
       endAddress = this.data.secondSearchDatas[index];
       endDetailAddress = this.data.secondDetailAddress;
       endLatitude = this.data.secondLatitude[index];
@@ -734,18 +852,76 @@ Page({
     // 第三搜索框数据判断
     if(this.data.thirdStatus === true){
       let index = this.data.thirdSearchIndexs;
+
+      let arr = this.data.thirdSearchDatas;
+      if(index == -1 || this.data.thirdSearchValue.indexOf(arr[index]) == - 1){
+        this.setData({
+          alert: '第三个搜索地址必须从下拉框中选择'
+        })
+        this.tapOneDialogButton();
+        return;
+      }
+
       startLatitudes += this.data.thirdLatitude[index] + "#";
       startLongitudes += this.data.thirdLongitude[index] + "#";
       startAddress += this.data.thirdSearchValue + "#";
       startDetailAddress += this.data.thirdDetailAddress + "#";
 
     }else if(this.data.thirdStatus === false){
+      isArrive = true;
       let index = this.data.thirdSearchIndexs;
+
+      let arr = this.data.thirdSearchDatas;
+      if(index == -1 || this.data.thirdSearchValue.indexOf(arr[index]) == - 1){
+        this.setData({
+          alert: '第三个搜索地址必须从下拉框中选择'
+        })
+        this.tapOneDialogButton();
+        return;
+      }
+
       endAddress = this.data.thirdSearchDatas[index];
       endDetailAddress = this.data.thirdDetailAddress;
       endLatitude = this.data.thirdLatitude[index];
       endLongitude = this.data.thirdLongitude[index];
     }
+
+    if(isArrive == false){
+      this.setData({
+        alert: '请至少选择一个最终地点'
+      })
+      // 弹窗
+      this.tapOneDialogButton();
+      return;
+    }
+
+    //判断第一个搜索框的详细地址是否为空
+    if(this.data.firstDetailAddress.trim() == ''){
+      this.setData({
+        alert: '第一个详细地址不能为空'
+      })
+      this.tapOneDialogButton();
+      return;
+    }
+
+    //判断第二个搜索框的详细地址是否为空
+    if(this.data.secondSearchIndexs != -1 && this.data.secondDetailAddress.trim() == ''){
+      this.setData({
+        alert: '第二个详细地址不能为空'
+      })
+      this.tapOneDialogButton();
+      return;
+    }
+
+    //判断第三个搜索框的详细地址是否为空
+    if(this.data.thirdSearchIndexs != - 1 && this.data.thirdDetailAddress.trim() == ''){
+      this.setData({
+        alert: '第三个详细地址不能为空'
+      })
+      this.tapOneDialogButton();
+      return;
+    }
+
     let that = this;
 
     console.log("===")

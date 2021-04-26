@@ -172,6 +172,11 @@
         </view>
       </view>
 
+      <!-- 弹窗 -->
+    <mp-dialog title="提示" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>{{alert}}</view>
+    </mp-dialog>
+
     </view>
 
     <view class="dom">
@@ -181,5 +186,8 @@
       </view>
     </view>
   </scroll-view>
+
+  
+
   <tabbar class="tab"></tabbar>
 </view>
