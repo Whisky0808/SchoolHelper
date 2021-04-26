@@ -1,6 +1,6 @@
 page{
     /*background-color: #2b2b2b;*/
-    background-color: #e6e6e6;
+    background-color: #f5f6fa;
     margin: 0;
     padding: 0;
 }

@@ -2,7 +2,8 @@
   <scroll-view class="fantang" scroll-y="true">
     <view>
       <image class="schoolBg" src="/static/img/schoolPost.png" mode="widthFix"></image>
-      <view class="schoolName">{{schoolName}}，欢迎您！</view>
+<!--      <view class="schoolName">{{schoolName}}</view>-->
+      <view class="schoolName">广东技术师范大学</view>
     </view>
 
     <view class="schoolCarteen">

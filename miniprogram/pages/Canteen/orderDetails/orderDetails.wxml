@@ -46,33 +46,34 @@
             <text>备注</text>
             <textarea  type="text" bindinput="bindMarkInput" placeholder="口味、偏好等要求"/>
         </view>
+
+        <!-- 优惠券单选框列表部分 -->
+        <radio-group bindchange="bandleChange" style="font-size: 18px; padding-top: 10rpx; margin-bottom: 15rpx">
+            <view style="margin-left: 10rpx;">优惠券</view>
+            <view wx:for="{{couponList}}" >
+                <view style="border-radius: 15rpx; background-color: #FCD46D; margin-left: 30rpx; margin-right: 30rpx; margin-top: 20rpx; padding-bottom: 20rpx">
+                    <view style=" margin-left: 30rpx; padding-top: 20rpx; display: flex" >
+                        <view style="flex: 8; font-weight: 800">
+                            {{item.couponTypeName}}
+                        </view>
+                        <view style="flex: 2; font-size: 50rpx; font-weight: 500; color: #F54118">
+                            {{item.reduceMoney}}
+                        </view>
+                        <radio checked="{{item.checked}}" catchtap="chooseCoupon" data-reducemoney="{{item.reduceMoney}}" data-reachmoney="{{item.reachMoney}}"
+                               data-index="{{index}}" data-couponid="{{item.couponId}}" color="green" value="1" style="transform:scale(0.8);" ></radio>
+                    </view>
+                    <view style="margin-left: 30rpx; display: flex; font-size: 25rpx">
+                        <view style="flex: 7">
+                            有效期至{{item.expireTime}}
+                        </view>
+                        <view style="flex: 3; color: #F54118">
+                            满{{item.reachMoney}}可用
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </radio-group>
     </view>
 
-    <!-- 优惠券单选框列表部分 -->
-    <radio-group bindchange="bandleChange" style="font-size: 18px; padding-top: 10rpx;">
-        <view wx:for="{{couponList}}" >
-          <view style="border-radius: 15rpx; background-color: #FCD46D; margin-left: 30rpx; margin-right: 30rpx; margin-top: 20rpx; padding-bottom: 20rpx">
-            <view style=" margin-left: 30rpx; padding-top: 20rpx; display: flex" >
-              <view style="flex: 8; font-weight: 800">
-                {{item.couponTypeName}}
-              </view>
-              <view style="flex: 2; font-size: 50rpx; font-weight: 500; color: #F54118">
-                {{item.reduceMoney}}
-              </view>
-              <radio checked="{{item.checked}}" catchtap="chooseCoupon" data-reducemoney="{{item.reduceMoney}}" data-reachmoney="{{item.reachMoney}}"
-                    data-index="{{index}}" data-couponid="{{item.couponId}}" color="green" value="1" style="transform:scale(0.8);" ></radio>
-            </view>
-            <view style="margin-left: 30rpx; display: flex; font-size: 25rpx">
-              <view style="flex: 7">
-                有效期至{{item.expireTime}}
-              </view>
-              <view style="flex: 3; color: #F54118">
-                满{{item.reachMoney}}可用
-              </view>
-            </view>
-          </view>
-        </view>
-      </radio-group>
-
-    <!-- <selectedBox curprice="{{allPrice}}" binditemChange="submitOrder"></selectedBox> -->
+    <selectedBox curprice="{{allPrice}}" binditemChange="submitOrder"></selectedBox>
 </view>
