@@ -220,7 +220,7 @@ Page({
     // app.getDistance(23.131701,113.371491,23.133256,113.370852);
     app.getDistance3(destinationLat, destinationLng,this.data.carteenLatitude,that.data.carteenLongitudde);
     let riderfee = 2;
-    setTimeout(()=>{
+    // setTimeout(()=>{
       console.log(app);
       let distance = app.globalData.distance;
       let time = parseInt((distance / 1.2) / 60)+1;
@@ -239,7 +239,7 @@ Page({
       riderFee: riderfee
     })
     console.log('骑手费：'+ riderfee);
-    },1200)
+    // },1200)
   },
 
   /**

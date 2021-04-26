@@ -12,7 +12,7 @@
                 </view>
             </block>
         </view>
-        <swiper class="swiper-box"  indicator-color="rgba(0,0,0,.3)"  duration="300" current="{{currtab}}" bindchange="tabChange" style="background-color: #8ebd9b; background-size:100% 110%">
+        <swiper class="swiper-box"  indicator-color="rgba(0,0,0,.3)"  duration="300" current="{{currtab}}" bindchange="tabChange" style="background: linear-gradient(#ffcc33,#f6f6f6); background-size:100% 110%">
 
             <!-- 已完成 -->
             <swiper-item indicatte-dots = "false" autoplay ="flase">

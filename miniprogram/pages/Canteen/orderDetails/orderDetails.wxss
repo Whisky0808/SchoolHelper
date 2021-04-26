@@ -1,8 +1,9 @@
 /*整体架构*/
 
 .box{
-    background-color: #8ebd9b;
+    /*background-color: #8ebd9b;*/
     /*height: 1600rpx;*/
+    background: linear-gradient(#ffcc33,#f6f6f6);
 }
 .box .head{
     height: 100rpx;
@@ -95,7 +96,7 @@
     width: 100%;
     height: 190rpx;
     margin-bottom: 10rpx;
-    background-color: azure;
+    /*background-color: azure;*/
 }
 .food-list image{
     float: left;

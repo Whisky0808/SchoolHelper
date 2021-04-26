@@ -7,7 +7,7 @@
   text-indent:4em;
   /*background-color: #ee523c;*/
   background-color: #ffd64e;
-  color: white;
+  color: black;
   font-weight: 550;
   font-size: 35rpx;
 }

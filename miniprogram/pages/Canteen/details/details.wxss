@@ -74,16 +74,20 @@ page{
   margin-top:10rpx;
   border-radius: 20rpx;
   font-weight: 700;
-  color: #fff;
+  /*color: #fff;*/
+  color: black;
   border-radius: 10rpx;
   height: 300rpx;
-  background-color:#576574;
+  /*background-color:#576574;*/
+  background: linear-gradient(#ffcc33,#f6f6f6);
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
     0px 0px 20px rgba(0, 0, 0, 0.1) inset;
 }
 .orderDetails:nth-child(odd) {
-  background-color:#10ac84;
-  color: #fff;
+  /*background-color:#10ac84;*/
+  background: linear-gradient(#ffcc33,#f6f6f6);
+  /*color: #fff;*/
+  color: black;
 }
 
 .orderListTitle {
@@ -93,7 +97,7 @@ page{
 }
 
 .userName {
-  color: rgba(255, 255, 255, 0.952);
+  /*color: rgba(255, 255, 255, 0.952);*/
   font-size: larger;
 }
 
@@ -120,7 +124,7 @@ page{
 .orderListDetails .productImg {
   /*flex: 1;*/
   display: inline-block;
-  height: 195rpx;
+  height: 200rpx;
   width: 450px;
   margin-top: 20rpx;
   margin-left: 20rpx;
@@ -165,13 +169,13 @@ page{
   float: left;
   display: inline-block;
   width: 130rpx;
-  height: 130rpx;
+  /*height: 130rpx;*/
   margin-right: 30rpx;
   text-align: center;
   color: rgba(255, 255, 255, 0.89);
   background-color: rgba(62, 65, 59, 0.7);
   border-radius: 20rpx;
-  height: 70%;
+  height: 150rpx;
   
 }
 
@@ -224,6 +228,8 @@ page{
   line-height: 60rpx;
   width: 180rpx;
   margin-top: 10rpx;
+  left: -33rpx;
+  top: 10rpx;
 }
 
 .canteen{

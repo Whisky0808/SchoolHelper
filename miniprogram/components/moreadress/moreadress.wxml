@@ -21,6 +21,6 @@
 
             </scroll-view>
         </view>
-        <view class="add-adress" bindtap='addAdress'>新增收获地址</view>
+        <view class="add-adress" bindtap='addAdress'>⊕ 新增收获地址</view>
     </view>
 </view>

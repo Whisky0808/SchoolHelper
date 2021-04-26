@@ -1,6 +1,7 @@
 /*切换栏*/
 page{
-    background-color: #8ebd9b;
+    /*background-color: #8ebd9b;*/
+    background: linear-gradient(#ffcc33,#f6f6f6);
     height: 100%;
 }
 .state_change{

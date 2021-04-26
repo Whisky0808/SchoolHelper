@@ -320,6 +320,7 @@ Page({
             that.setData({
               toDetail: res.data.data
             })
+            let already = that.data.alreadyOrder;
             res.data.data.forEach(function (value,index) {
               let food = [];
               value.detailList.forEach(function (v,i) {
@@ -328,12 +329,15 @@ Page({
                   imgPath:v.food.imgPath
                 })
               })
-              that.data.alreadyOrder.push({
+              already.push({
                 name: value.detailList[0].food.foodName + '(' + value.carteenName + ')',
                 state: "交易成功",
                 money: value.totalMoney.toString(),
                 food:food,
               })
+            })
+            that.setData({
+              alreadyOrder: already
             })
             console.log(that.data.alreadyOrder);
           }
@@ -355,6 +359,7 @@ Page({
             that.setData({
               noPayDetail: res.data.data
             })
+            let wait = that.data.waitPayOrder
             res.data.data.forEach(function (value,index) {
               let food = [];
               value.detailList.forEach(function (v,i) {
@@ -363,12 +368,16 @@ Page({
                   imgPath:v.food.imgPath
                 })
               })
-              that.data.waitPayOrder.push({
+              // that.data.waitPayOrder.push({
+              wait.push({
                 name: value.detailList[0].food.foodName + '(' + value.carteenName + ')',
                 // state: "交易成功",
                 money: value.totalMoney.toString(),
                 food:food,
               })
+            })
+            that.setData({
+              waitPayOrder:wait
             })
           }
         })
@@ -389,6 +398,7 @@ Page({
             that.setData({
               noCompeted: res.data.data
             })
+            let lost = that.data.lostOrder;
             res.data.data.forEach(function (value,index) {
               let food = [];
               value.detailList.forEach(function (v,i) {
@@ -397,13 +407,16 @@ Page({
                   imgPath:v.food.imgPath
                 })
               })
-              that.data.lostOrder.push({
+              lost.push({
                 name: value.detailList[0].food.foodName + '(' + value.carteenName + ')',
                 // state: "交易成功",
                 money: value.totalMoney.toString(),
                 food:food,
                 status: value.status
               })
+            })
+            that.setData({
+              lostOrder: lost
             })
           }
         })

@@ -27,6 +27,7 @@
 .adress{
     width: 100%;
     height: 180rpx;
+    border-bottom: 1px solid #87939a;
 }
 .more-adress .choose-text{
     height: 70rpx;
@@ -77,18 +78,21 @@
     /*background-color: blueviolet;*/
     /*padding-left: 8%;*/
     padding-top: 5%;
-    border-bottom: 1px solid #87939a;
+    /*border-bottom: 1px solid #87939a;*/
 }
 .all-adress .modify{
     float: left;
     width: 20%;
-    height: 180rpx;
-    line-height: 180rpx;
+    height: 160rpx;
+    line-height: 160rpx;
     text-align: center;
-    background-color: white;
+    /*background-color: white;*/
     border-bottom: 1px solid #87939a;
-    background-color: #999;
+    border-radius: 30rpx;
+    margin-top: 10rpx;
+    /*background-color: #999;*/
     /*background-color: bisque;*/
+    background-color: #f6f6f6;
 }
 
 .dog .circle{
@@ -101,5 +105,6 @@
     border: 1px solid black;
 }
 .dog .bechoose{
-    background-color: #ffd64e;
+    background-color: #ffcc33;
+    border: 1px solid #ffcc33;
 }
