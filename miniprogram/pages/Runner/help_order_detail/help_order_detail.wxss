@@ -1,5 +1,5 @@
 page{
-  background-color: #8ebd9b;
+    background: linear-gradient(#ffcc33,#f6f6f6);
 }
 
 .labelFont{
@@ -12,6 +12,7 @@ page{
   width: 94%;
   background-color: white;
   border-radius: 5px;
+    box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .5);
 }
 
 .b{
@@ -120,4 +121,17 @@ page{
      border: 1px solid red;
      border-top-left-radius: 0rpx;
      border-bottom-left-radius: 0rpx;
+ }
+
+ .btn{
+     flex: 3;
+     position: relative;
+     display: inline-block;
+    font-size: 34rpx;
+     background-color: #1aad19;
+     color: white;
+     border-radius: 25rpx;
+     margin-left: -20rpx;
+     left: -30rpx;
+     width: 80rpx;
  }

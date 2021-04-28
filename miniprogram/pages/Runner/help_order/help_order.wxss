@@ -2,7 +2,7 @@
 page{
   /*background-color: #8ebd9b;*/
   background: linear-gradient(#ffcc33,#f6f6f6);
-  height: 100%;
+  /*height: 100%;*/
 }
 .swiper-tab {
   height: 80rpx;
