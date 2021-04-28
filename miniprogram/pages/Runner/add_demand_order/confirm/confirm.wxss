@@ -1,9 +1,10 @@
 page{
-  background-color: #8ebd9b;
+  /*background-color: #8ebd9b;*/
+    background: linear-gradient(#ffcc33,#f6f6f6);
 }
 
 .labelFont{
-  color: #8ebd9b;
+  color: #ffcc33;
 }
 
 .a{
@@ -12,6 +13,7 @@ page{
   width: 94%;
   background-color: white;
   border-radius: 5px;
+    box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .5);
 }
 
 .b{

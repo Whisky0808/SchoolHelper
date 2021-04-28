@@ -1,5 +1,13 @@
 page{
-  background-color: #8ebd9b;
+  /*background-color: #8ebd9b;*/
+    background: linear-gradient(#ffcc33,#f6f6f6);
+}
+
+.nograb{
+    font-size: 45rpx;
+    font-weight: 550;
+    text-align: center;
+    margin-top: 400rpx;
 }
 
 .labelFont{
@@ -12,6 +20,7 @@ page{
   width: 94%;
   background-color: white;
   border-radius: 5px;
+    box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .3);
 }
 
 .b{

@@ -4,12 +4,21 @@
       <h1 style="font-size: 50rpx; line-height: 100rpx">抢单</h1>
     </view>
 
-    <view style="display:{{status?'block':'none'}}">
+    <view class="nograb" style="display: {{helpOrderList.length==0?'block':'none'}}">
+      <text style="margin-">暂无订单，请稍等！</text>
+    </view>
+
+    <view style="display:{{status && helpOrderList.length>0?'block':'none'}}">
       <view wx:for="{{helpOrderList}}" wx:key="index" wx:for-item="i">
         <view class="a">
           <view class="line">
             <text class="c labelFont" style="font-size: 50rpx; font-weight: 700;">${{i.helperMoney}}元</text>
             <text class="b" style="height: 70rpx; font-size: 37rpx; flex: 2; color: red; font-weight: 550">{{i.helperMust=='1'?'满人生效':'有人即可'}}</text>
+          </view>
+
+          <view class="line">
+            <text class="c labelFont" style="font-size: 37rpx">任务标题：</text>
+            <text class="b" style=" font-size: 37rpx; color: red; font-weight: 550">{{i.title}}</text>
           </view>
 
           <view class="line">
@@ -68,7 +77,6 @@
      <button bindtap="go">确定</button>
     </view>
 
-    <button bindtap="submit">点我弹窗</button>
   </scroll-view>
 
   <scroll-view class="add_demand" scroll-y="true" wx:else>
