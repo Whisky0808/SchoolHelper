@@ -1,0 +1,159 @@
+.photoImage {
+    width: 200rpx;
+    height: 201rpx;
+    position: relative;
+    top: 30rpx;
+    left: 12%;
+    background: red;
+    border-radius: 10%;
+    margin-bottom: 50rpx;
+    -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.548);
+    -webkit-box-shadow: 3px 3px 4px rgba(53, 50, 50, 0.76);
+    box-shadow: 3px 3px 4px rgb(78, 77, 77);
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+/* text {
+    font-size: 30rpx;
+    font-weight: 400;
+} */
+
+.money {
+    position: relative;
+    top: -200rpx;
+    left: 50%;
+    width: 200rpx;
+    height: 150rpx;
+}
+.coupons{
+    position: relative;
+    top: -95rpx;
+    left: 50%;
+}
+.coupons>text{
+    font-size: 40rpx;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: 80rpx;
+    left: 0rpx;
+}
+.money>text {
+    font-size: 50rpx;
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: 80rpx;
+    left: -10rpx;
+}
+
+.icon {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.detail {
+    /* top: -90rpx; */
+    color: white;
+    background-color: rgba(43, 42, 42, 0.7);
+    width: 100%;
+    height: 800rpx;
+    position: relative
+}
+
+.inputName {
+    border-style: solid;
+    border-color: black;
+    border-radius: 20rpx;
+    height: 70rpx
+}
+
+
+button {
+    width: 180rpx;
+    height: 80rpx;
+    font-size: 30rpx;
+    background-color: #4075e6;
+    color: aliceblue;
+    font-weight: 400;
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    font-weight: 700;
+    font-size:30rpx;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /* 字体所居位置 align-item */
+    position: relative;
+    padding: 0 30rpx;
+    height: 120rpx;
+    width: 88%;
+}
+
+.name {
+    position: absolute;
+    left: 540rpx;
+    width: 190rpx;
+    height: 70rpx;
+    font-size: 27rpx;
+    font-weight: 700;
+    background: black;
+}
+
+.withdrawMoney {
+    position: absolute;
+    top: 205rpx;
+    left: -40rpx;
+    width: 190rpx;
+    height: 70rpx;
+    font-size: 27rpx;
+    font-weight: 700;
+    background: black;
+}
+
+.withdraw {
+    position: relative;
+    left: 470rpx;
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+
+    width: 100%;
+    height: 550rpx;
+    /* shadow */
+    /* -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.548);
+    -webkit-box-shadow: 3px 3px 4px rgba(53, 50, 50, 0.76);
+    box-shadow: 3px 3px 4px rgb(78, 77, 77);
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); */
+
+}
+
+.changePhoto {
+    position: absolute;
+    top: 270rpx;
+    left: 100rpx;
+    width: 190rpx;
+    height: 70rpx;
+    font-size: 27rpx;
+    font-weight: 700;
+    background: black;
+}
+
+page {
+
+    height: 100%;
+}
+
+.txt {
+    text-align: right;
+    position: relative;
+    left: 30%;
+}

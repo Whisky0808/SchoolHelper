@@ -1,0 +1,41 @@
+<wxs module="numberUtil" src="../../../common/filter.wxs"></wxs>
+<view class="box">
+    <view class="title">未完成订单</view>
+    <view class="more_order">
+        <view><image src="../../../static/icon/order.png"></image></view>
+        <text class="thanks">请在{{curDetail.addTimeNoFinish}}前送达</text>
+    </view>
+    <view class="order_detail">
+        <!--        饭堂名字-->
+        <view class="canteen-name">{{curDetail.carteenName}}</view>
+        <!--        遍历订单菜品-->
+        <view class="order-food">
+            <scroll-view class="order" scroll-y="true">
+                <!--                <view class="food-list" wx:for="{{allFood}}" wx:key="*this">-->
+                <view class="food-list" wx:for="{{curDetail.detailList}}" wx:key="*this">
+                    <image src="{{item.food.imgPath}}"></image>
+                    <view class="food-text">
+                        <h3>{{item.food.foodName}}</h3>
+                        <text class="food-num">x{{item.number}}</text>
+                    </view>
+                    <view class="food-price-box">
+                        <text class="food-price">￥{{numberUtil.numberFormat(item.food.price * 1 + 0)}}</text>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="order_mes">
+        <view class="mes_title">订单信息</view>
+        <view class="mes_detail">
+            <view class="address_title">配送地址：</view>
+            <text class="address_detail">{{curDetail.searchAddress}}</text>
+            <view class="time">订单时间：</view>
+            <text class="time_detail">{{curDetail.addTime}}</text>
+        </view>
+    </view>
+    <button class="finish_order" bindtap="finishOrderBtn">我已送达</button>
+    <mp-dialog title="提示" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>未到指定配送地点，订单未完成！</view>
+    </mp-dialog>
+</view>

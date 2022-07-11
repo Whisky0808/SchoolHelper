@@ -1,0 +1,14 @@
+{
+  "name": "campusassistant",
+  "version": "1.0.0",
+  "description": "开发人员：詹镇鑫 李雅妍 郑晓琦 校园帮",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "weui-miniprogram": "^1.0.7"
+  }
+}

@@ -1,0 +1,4 @@
+.all{
+    height: 1000rpx;
+    background-color: antiquewhite;
+}

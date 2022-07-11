@@ -1,0 +1,193 @@
+<view class="all">
+  <scroll-view class="add_demand" scroll-y="true">
+    <view>
+      <view class="bigtitle">
+        <image src="../../../static/icon/need.png"></image>
+        需求单发布
+      </view>
+    </view>
+    <view class="body">
+      <view class="title title_first">
+        <text class="tex">任务标题：</text>
+        <input bindinput="bindTitleInput" />
+      </view>
+
+      <view class="title">
+        <text class="tex">雇主昵称：</text>
+        <input bindinput="bindNameInput" />
+      </view>
+
+      <view class="title">
+        <text class="tex">联系电话：</text>
+        <input bindinput="bindPhoneInput" />
+      </view>
+
+      <view class="title">
+        <text class="tex">开始时间：</text>
+        <pickerYMDHM class="choose_time" placeholder = "{{placeholder}}" date = "{{date}}" disabled = "{{disabled}}" bind:onPickerChange="srartPickerChange" startDate="{{startDate}}" endDate="{{endDate}}">
+        </pickerYMDHM>
+      </view>
+
+      <view class="title">
+        <text class="tex">结束时间：</text>
+        <pickerYMDHM class="choose_time" placeholder = "{{placeholder}}" date = "{{date}}" disabled = "{{disabled}}" bind:onPickerChange="endPickerChange" startDate="{{startDate}}" endDate="{{endDate}}">
+        </pickerYMDHM>
+      </view>
+
+      <view class="title big_title">
+        <text class="tex big_text">任务内容：</text>
+        <textarea class="big_input" bindinput="bindContentInput" />
+      </view>
+
+      <view class="title big_title">
+        <text class="tex big_text">帮手要求：</text>
+        <textarea class="big_input" bindinput="bindRequireInput" />
+      </view>
+
+      <view class="title">
+        <view style="flex: 1">
+          <label style="margin-left: 20px; float: left; font-size: 38rpx">人数：</label>
+          <view class='select_box' style="z-index: 110;float: left; border: 1px solid #8ebd9b; font-size: 38rpx; border-radius: 5px; height: 60rpx">
+            <view class='select' catchtap='selectTaps'>
+              <text style="font-size: 20px;" class='select_text'>{{selectDatas[indexs]}}</text>
+            </view>
+            <view class='option_box' style='height:{{shows?(selectDatas.length>5?300:selectDatas.length*20):0}}rpx;'>
+              <text class='option' style='{{indexs==selectDatas.length-1&&"border:0;"}}; font-size: 38rpx' wx:for='{{selectDatas}}' wx:key='this' data-index='{{index}}' catchtap='optionTaps'>{{item}}</text>
+            </view>
+          </view>
+          <!-- <input style="float: left; width: 50px;  border: 1px solid #8ebd9b"/> -->
+        </view>
+        <view style="flex: 1">
+          <label style="margin-left: 10px; float: left; font-size: 38rpx">佣金：</label>
+          <view class='select_box' style="z-index: 110;float: left; border: 1px solid #8ebd9b;font-size: 38rpx; height: 60rpx; border-radius: 5px">
+            <view class='select' catchtap='selectMoneyTaps'>
+              <text style="font-size: 20px;" class='select_text'>{{moneyDatas[moneyIndexs]}}</text>
+            </view>
+            <view class='option_box' style='height:{{moneyShows?(moneyDatas.length>5?300:moneyDatas.length*20):0}}rpx;'>
+              <text class='option' style='{{moneyIndexs==moneyDatas.length-1&&"border:0;"}}; font-size: 38rpx;background-color: #b2bec3' wx:for='{{moneyDatas}}' wx:key='this' data-index='{{index}}' catchtap='moneyOptionTaps'>{{item}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="title">
+        <text class="tex">是否满人才生效：</text>
+        <switch class="choose_switch" checked="{{helperMust}}" bindchange="switchChange"/>
+      </view>
+
+      <view class="title">
+        <button bindtap="addAddress" plain="true" type="primary">新增地址</button>
+        <button bindtap="removeAddress" type="warn" plain="true">删除地址</button>
+      </view>
+      <!--第一搜索-->
+      <view class="title search_title">
+
+        <view class="tex">
+          <radio-group bindchange="bandleChange">
+            <radio  color="red" value="1" style="transform:scale(0.8);">取</radio>
+            <radio  color="red" value="2" style="transform:scale(0.8);">达</radio>
+          </radio-group>
+        </view>
+
+        <view class="search">
+          <icon class="search_icon" type="search" size="14"></icon>
+          <input class="search_btn" catchtap="firstSelectTaps" bindinput="firstSearchAddress" type="text" placeholder='请输入搜索地址' data-index="{{index}}" value="{{firstSearchValue}}"/>
+          <view class='option_box' style='position:absolute; top: 1800rpx; height:{{firstSearchShows?(firstSearchDatas.length>5?300:firstSearchDatas.length*60):0}}rpx; width: 450rpx; z-index: 100'>
+            <rich-text class='option' style='{{firstSearchIndexs==firstSearchDatas.length-1&&"border:0;"}}; font-size: 38rpx;'
+                       wx:for='{{firstSearchHighlightDatas}}' wx:key='this' data-index='{{index}}'
+                       catchtap='firstSearchOptionTaps' nodes="{{item}}">
+            </rich-text>
+          </view>
+        </view>
+
+        <view class="title">
+          <text class="tex tex_adrs">详细地址：</text>
+          <view class="search">
+            <icon class="search_icon" type="info" size="14"></icon>
+            <input class="search_btn" bindinput="firstDetailInput" type="text" placeholder='请输入详细地址'/>
+          </view>
+        </view>
+      </view>
+
+
+      <!--                第二搜索-->
+      <view class="title search_title" style="display:{{secondShows?'inline-block':'none'}}">
+
+        <view class="tex">
+          <radio-group bindchange="bandleChange">
+            <radio  color="red" value="3" style="transform:scale(0.8);">取</radio>
+            <radio  color="red" value="4" style="transform:scale(0.8);">达</radio>
+          </radio-group>
+        </view>
+
+        <view class="search">
+          <icon class="search_icon" type="search" size="14"></icon>
+          <input class="search_btn" catchtap="secondSelectTaps" bindinput="secondSearchAddress" type="text" placeholder='请输入搜索地址' data-index="{{index}}" value="{{secondSearchValue}}"/>
+
+          <view class='option_box' style='position:absolute; top: 2100rpx; height:{{secondSearchShows?(secondSearchDatas.length>5?300:secondSearchDatas.length*60):0}}rpx; width: 450rpx; z-index: 100'>
+            <rich-text class='option' style='{{firstSearchIndexs==firstSearchDatas.length-1&&"border:0;"}}; font-size: 38rpx;'
+                       wx:for='{{secondSearchHighlightDatas}}' wx:key='this' data-index='{{index}}'
+                       catchtap='secondSearchOptionTaps' nodes="{{item}}">
+            </rich-text>
+          </view>
+        </view>
+
+        <view class="title">
+          <text class="tex tex_adrs">详细地址：</text>
+          <view class="search">
+            <icon class="search_icon" type="info" size="14"></icon>
+            <input class="search_btn" bindinput="secondDetailInput" type="text" placeholder='请输入详细地址'/>
+          </view>
+        </view>
+      </view>
+
+      <!--                第三搜索-->
+      <view class="title search_title" style="display:{{thirdShows?'inline-block':'none'}}">
+
+        <view class="tex">
+          <radio-group bindchange="bandleChange">
+            <radio  color="red" value="5" style="transform:scale(0.8);">取</radio>
+            <radio  color="red" value="6" style="transform:scale(0.8);">达</radio>
+          </radio-group>
+        </view>
+
+        <view class="search">
+          <icon class="search_icon" type="search" size="14"></icon>
+          <input class="search_btn" catchtap="thirdSelectTaps" bindinput="thirdSearchAddress" type="text" placeholder='请输入搜索地址' data-index="{{index}}" value="{{thirdSearchValue}}"/>
+
+          <view class='option_box' style='position:absolute; top: 2400rpx; height:{{thirdSearchShows?(thirdSearchDatas.length>5?300:thirdSearchDatas.length*60):0}}rpx; width: 450rpx; z-index: 100'>
+            <rich-text class='option' style='{{firstSearchIndexs==firstSearchDatas.length-1&&"border:0;"}}; font-size: 38rpx;'
+                       wx:for='{{thirdSearchHighlightDatas}}' wx:key='this' data-index='{{index}}'
+                       catchtap='thirdSearchOptionTaps' nodes="{{item}}">
+            </rich-text>
+          </view>
+        </view>
+
+        <view class="title">
+          <text class="tex tex_adrs">详细地址：</text>
+          <view class="search">
+            <icon class="search_icon" type="info" size="14"></icon>
+            <input class="search_btn" bindinput="thirdDetailInput" type="text" placeholder='请输入详细地址'/>
+          </view>
+        </view>
+      </view>
+
+      <!-- 弹窗 -->
+    <mp-dialog title="提示" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>{{alert}}</view>
+    </mp-dialog>
+
+    </view>
+
+    <view class="dom">
+      <view class="curObject">
+        <view><text class="tex">总费用：￥</text><text class="price">{{totalMoney}}</text></view>
+        <button bindtap="addHelperOrder">去结算</button>
+      </view>
+    </view>
+  </scroll-view>
+
+  
+
+  <tabbar class="tab"></tabbar>
+</view>

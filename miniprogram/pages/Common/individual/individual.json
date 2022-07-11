@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#e84118",
+  "usingComponents": {
+    "password": "weui-miniprogram/dialog/dialog",
+		"change-name": "weui-miniprogram/dialog/dialog"
+	}
+}

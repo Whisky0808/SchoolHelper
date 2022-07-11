@@ -1,0 +1,297 @@
+page{
+    /*background-color: #2b2b2b;*/
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+.all{
+    height: 2000rpx;
+}
+.all .add_demand{
+    height: 2000rpx;
+}
+
+.bigtitle{
+    display: inline-block;
+    /*background-color: red;*/
+    /*color: white;*/
+    width: 400rpx;
+    height: 150rpx;
+    line-height: 150rpx;
+    font-size: 50rpx;
+    font-weight: 550;
+    text-align: center;
+    margin-top: 20rpx;
+    margin-left: 25%;
+    border-radius: 30rpx;
+}
+.bigtitle image{
+    position: relative;
+    height: 32px;
+    width: 32px;
+    top: 10rpx;
+    right: 10rpx;
+}
+.body{
+    width: 96%;
+    margin-left: 2%;
+    /*background-color: white;*/
+    border-radius: 20rpx;
+    margin-top: 20rpx;
+    background-color: #ffd64e;
+    box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .3);
+    /*color: white;*/
+}
+
+/*任务标题*/
+.title{
+    display: inline-block;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-top: 20rpx;
+}
+.search_title{
+    display: inline-block;
+    width: 96%;
+    margin-left: 2%;
+    height: 270rpx;
+    line-height: 100rpx;
+    margin-top: 20rpx;
+    border-bottom: 1px dashed red;
+}
+.title_first{
+    margin-top: 45rpx;
+}
+.big_title{
+    height: 220rpx;
+}
+
+.title .tex{
+    position: relative;
+    display: inline;
+    width: 230rpx;
+    font-size: 38rpx;
+    font-weight: 540;
+    height: 80rpx;
+    line-height: 80rpx;
+    bottom: 30rpx;
+    margin-left: 30rpx;
+}
+.tex_adrs{
+    top: 4rpx;
+}
+.title .big_text{
+    bottom: 90rpx;
+}
+
+.tex radio-group{
+    display: inline-block;
+    width: 230rpx;
+    height: 80rpx;
+}
+
+.title input, .title textarea{
+    display: inline-block;
+    border: 1rpx solid black;
+    width: 450rpx;
+    border-radius: 10rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 15rpx;
+}
+.title .search{
+    display: inline-block;
+    /*background-color: antiquewhite;*/
+    width: 410rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 15rpx;
+    border: 1px solid black;
+    border-radius: 10rpx;
+}
+.title .big_input{
+    height: 200rpx;
+}
+.title .select_box{
+    display: inline-block;
+    border: 1rpx solid black;
+    width: 100rpx;
+    border-radius: 10rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 15rpx;
+}
+.title .choose_switch{
+    position: relative;
+    display: inline-block;
+    margin-left: 15rpx;
+    bottom: 30rpx;
+    left: 30rpx;
+}
+.title button{
+    display: inline-block;
+    width: 300rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}
+
+.title .choose_time{
+    position: relative;
+    bottom: 30rpx;
+    left: 30rpx;
+    display: inline-block;
+    width: 450rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 15rpx;
+}
+
+/*下拉框*/
+.select_box {
+    background: #fff;
+    width: 100rpx;
+    /* margin: 0 auto; */
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: left;
+    position: relative;
+}
+
+.select {
+    box-sizing: border-box;
+    width: 100%;
+    /*height: 86rpx;*/
+    height: 100%;
+    /* border: 1px solid #efefef; */
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 20rpx;
+    background-color: #f9ca24;
+}
+
+.select_text {
+    font-size: 28rpx;
+    flex: 1;
+    color: rgb(102, 102, 102);
+    line-height: 86rpx;
+    height: 86rpx;
+}
+.option_box {
+    /* position: absolute; */
+    top: 86rpx;
+    width: 100%;
+    /* border: 1px solid #efefef; */
+    box-sizing: border-box;
+    height: 0;
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+    z-index: 100;
+}
+
+.option {
+    display: block;
+    line-height: 40rpx;
+    font-size: 28rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;
+    color: rgb(102, 102, 102);
+}
+
+.search .search_icon{
+    display: inline-block;
+    width: 80rpx;
+    height: 80rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+.search .search_btn{
+    position: absolute;
+    display: inline-block;
+    width: 320rpx;
+    height: 80rpx;
+    /*background-color: #8ebd9b;*/
+    border: 0rpx;
+
+}
+
+/* 下拉框 */
+.select_box {
+    background: #fff;
+    width: 100rpx;
+    /* margin: 0 auto; */
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+.option_box {
+    /* position: absolute; */
+    top: 86rpx;
+    width: 100%;
+    /* border: 1px solid #efefef; */
+    box-sizing: border-box;
+    height: 0;
+    overflow-y: auto;
+    border-top: 0;
+    background: #fff;
+    transition: height 0.3s;
+    z-index: 100;
+}
+
+.option {
+    display: block;
+    line-height: 40rpx;
+    font-size: 28rpx;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;
+    color: rgb(102, 102, 102);
+    z-index: 1;
+}
+
+/*结算*/
+.curObject{
+    /*position: relative;*/
+    /*top: 94%;*/
+    margin-top: 30px;
+    height: 130rpx;
+    width: 100%;
+    background-color: silver;
+    border-radius: 80rpx;
+}
+.curObject view{
+    display: inline-block;
+    float: left;
+    width: 70%;
+    height: 100%;
+    line-height: 130rpx;
+    border-top-left-radius: 80rpx;
+    border-bottom-left-radius: 80rpx;
+    background-color: #191919;
+    color: #fefefe;
+    font-size: 35rpx;
+}
+.curObject .tex{
+    margin-left: 40rpx;
+}
+.curObject .price{
+    font-size: 55rpx;
+}
+.curObject button{
+    float: left;
+    height: 100%;
+    line-height: 130rpx;
+    width: 30%;
+    border-top-right-radius: 80rpx;
+    border-bottom-right-radius: 80rpx;
+    background-color: #ffd64e;
+    font-size: 35rpx;
+}

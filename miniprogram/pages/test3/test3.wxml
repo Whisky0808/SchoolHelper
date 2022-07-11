@@ -1,0 +1,4 @@
+<view>
+    <button bindtap="onshowPopup">点</button>
+    <coupon hide="{{hidepopup}}"></coupon>
+</view>

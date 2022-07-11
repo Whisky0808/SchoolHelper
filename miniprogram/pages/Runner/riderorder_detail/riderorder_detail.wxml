@@ -1,0 +1,84 @@
+<view class="a" style="width: 150px; height: 100rpx; text-align: center;  margin: 10rpx auto;">
+  <h1 style="font-size: 50rpx; line-height: 100rpx">接单详情</h1>
+</view>
+
+<view class="a" style="margin-bottom: 20rpx">
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 50rpx; flex:5">本单佣金：</label>
+    <text class="b" style="font-size: 50rpx; color: red">￥{{helperMoney}}元</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">已召人数：</label>
+    <text class="b" style="font-size: 37rpx; color: red; flex: 3">{{applyNum}} / {{helperNum}}</text>
+    <button bindtap="buildChat" style="font-size: 37rpx; flex:3;">立即联系</button>
+  </view>
+  
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">任务标题：</label>
+    <text class="b" style="font-size: 37rpx">{{title}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">雇主昵称：</label>
+    <text class="b" style=" font-size: 37rpx">{{name}}</text>
+  </view>
+  
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">联系电话：</label>
+    <text class="b" style="font-size: 37rpx">{{phone}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">开始时间：</label>
+    <text class="b" style=" font-size: 37rpx">{{startTime}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">结束时间</label>
+    <text class="b" style="font-size: 37rpx">{{endTime}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">任务内容：</label>
+    <text class="b" style="font-size: 37rpx">{{content}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx">帮手要求：</label>
+    <text class="b" style="font-size: 37rpx">{{helperRequire}}</text>
+  </view>
+
+  <view class="line">
+    <label class="c labelFont" style="font-size: 37rpx; flex: 1">是否满人才生效：</label>
+    <text class="b" style="height: 70rpx; font-size: 37rpx; flex: 1">{{helperMust=='1'?'是':'否'}}</text>
+  </view>
+
+  <view wx:if="{{startAddressList.length>=1?true:false}}" class="labelFont" style="font-size: 50rpx; margin-left: 60rpx;">取物地点：</view>
+    <view wx:for="{{startAddressList}}" wx:key="index">
+      <view style="display: {{index+1!=startAddressList.length?'block':'none'}}">
+        <view class="line">
+          <label class="c" style="font-size: 37rpx; flex: 6">{{item}} {{startDetailAddressList[index]}}</label>
+          <image  bindtap="getRoad" data-latitude="{{startLatitudeList[index]}}" data-longitude="{{startLongitudeList[index]}}" data-name="{{startAddressList[index]}}" style="flex: 1; height: 35px; width: 5px" src="../../../static/icon/navigationBtn.png"></image>
+        </view>
+      </view>
+      
+  </view>
+
+  <view class="labelFont" style="font-size: 50rpx;margin-left: 60rpx;">到达地点：</view>
+  <view class="line" >
+    <label class="c" style="font-size: 37rpx; flex: 6">{{endAddress}} {{endDetailAddress}}</label>
+    <image bindtap="getRoad" data-latitude="{{endLatitude}}" data-longitude="{{endLongitude}}" data-name="{{endAddress}}" style="flex: 1; height: 35px; width: 5px" src="../../../static/icon/navigationBtn.png"></image>
+  </view>
+  <text>\n</text>
+  <!-- <view style="display: {{status=='1'||status=='3'||status=='2'||status=='6'?'block':'none'}}">
+    <button bindtap="confirmHelpOrder" type="primary" plain="true" style="background-color:#f9ca24; color: black; border: 1px solid #f9ca24">确认需求单完成</button>
+  </view> -->
+
+  <view style="display: {{status=='1'?'block':'none'}}">
+    <button bindtap="pay" type="primary" plain="true" style="background-color:#f9ca24; color: black; border: 1px solid #f9ca24">立即支付</button>
+  </view>
+  
+</view>
+  

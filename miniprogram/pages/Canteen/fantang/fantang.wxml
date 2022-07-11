@@ -1,0 +1,38 @@
+<view class="canteen">
+  <scroll-view class="fantang" scroll-y="true">
+    <view>
+      <image class="schoolBg" src="/static/img/schoolPost.png" mode="widthFix"></image>
+      <view class="schoolName">{{schoolName}}</view>
+    </view>
+
+    <view class="schoolCarteen">
+      <view class="carteenKind" wx:for="{{carteen}}" wx:key="*this" bindtap='buttonListener' data-id='{{item.carteenId}}' data-name='{{item.carteenName}}'>
+        <image src="{{item.carteenImage}}"></image>
+        <!-- <view class="canteenText"> -->
+          <button class="btn"><text>{{item.carteenName}} ☞</text></button>
+          <!-- <text>由此进入</text>
+          <image class="comeIn" src="/static/img/comeIn.png"></image>
+        </view> -->
+<!--        <view class="moreads" catchtap="onShowPopup">-->
+<!--          <view class="arrow"></view>-->
+<!--        </view>-->
+      </view>
+      <view class="clear"></view>
+    </view>
+  </scroll-view>
+  <tabbar class="tab"></tabbar>
+</view>
+
+<!-- <view class="canteen">
+  <view>
+    <image class="schoolBg" src="../../static/img/schoolPost.png" mode="widthFix"></image>
+    <view class="schoolName">广东技术师范大学，欢迎您！</view>
+  </view>
+  <view class="schoolCarteen">
+    <view class="carteenKind" wx:for="{{canteenKind}}" wx:key="*this">
+      <image src="{{item.img}}"></image>
+      <button><text>{{item.name}}</text></button>
+    </view>
+    <view class="clear"></view>
+  </view>
+</view> -->

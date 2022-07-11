@@ -1,0 +1,20 @@
+<view class="box">
+    <view class="body">
+        <view class="tab1" bindtap="to1">
+            <image src="{{curimgurl[0]}}"></image>
+            <view class="{{flag[0] == 1 ? 'click' : ''}}">点餐</view>
+        </view>
+        <view class="tab2" bindtap="to2">
+            <image src="{{curimgurl[1]}}"></image>
+            <view class="{{flag[1] == 1 ? 'click' : ''}}">抢单</view>
+        </view>
+        <view class="tab3" bindtap="to3">
+            <image src="{{curimgurl[2]}}"></image>
+            <view class="{{flag[2] == 1 ? 'click' : ''}}">聊天</view>
+        </view>
+        <view class="tab4" bindtap="to4">
+            <image src="{{curimgurl[3]}}"></image>
+            <view class="{{flag[3] == 1 ? 'click' : ''}}">订单</view>
+        </view>
+    </view>
+</view>

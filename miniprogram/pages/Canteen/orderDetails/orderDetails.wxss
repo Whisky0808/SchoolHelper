@@ -1,0 +1,195 @@
+/*整体架构*/
+
+.box{
+    /*background-color: #8ebd9b;*/
+    /*height: 1600rpx;*/
+    background: linear-gradient(#ffcc33,#f6f6f6);
+}
+.box .head{
+    height: 100rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 40rpx;
+}
+.box .address{
+    height: 200rpx;
+    width: 88%;
+    /*background-color: bisque;*/
+    background-color: white;
+    border-radius: 30rpx;
+    box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .3);
+    margin-left: 5%;
+}
+.box .order-detail{
+    height: 750rpx;
+    width: 95%;
+    /*background-color: aqua;*/
+    background-color: white;
+    border-radius: 30rpx;
+    margin-left: 2%;
+    margin-top: 12rpx;
+}
+.box .mark{
+    /*height: 400rpx;*/
+    width: 95%;
+    background-color: white;
+    border-radius: 30rpx;
+    margin-left: 2%;
+    margin-top: 12rpx;
+}
+
+/*备注部分*/
+.distribution_fee {
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 35rpx;
+    margin:0 20rpx;
+    border-bottom:1px solid #3c3f41;
+}
+.distribution_fee .pri{
+    color: red;
+    margin-left: 430rpx;
+}
+.distribution_fee .te{
+    margin-left: 10rpx;
+}
+.remark{
+    height:300rpx;
+}
+.remark text{
+    display: inline-block;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 35rpx;
+    float: left;
+    margin-left: 30rpx;
+}
+.remark textarea{
+    display: inline-block;
+    width: 75%;
+    height: 240rpx;
+    float: left;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    border: 1px solid black;
+    border-radius: 20rpx;
+}
+
+/*订单食物列表部分*/
+.order{
+    float: left;
+    width: 95%;
+    margin-left: 2%;
+    height: 610rpx;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+.order-detail .canteen-name{
+    height: 110rpx;
+    width: 90%;
+    line-height: 110rpx;
+    font-size: 30rpx;
+    padding-left: 30rpx;
+}
+.order-food .food-list{
+    width: 100%;
+    height: 190rpx;
+    margin-bottom: 10rpx;
+    /*background-color: azure;*/
+}
+.food-list image{
+    float: left;
+    height: 150rpx;
+    width: 150rpx;
+    margin: 20rpx 20rpx;
+}
+.food-list .food-text{
+    float: left;
+    width: 250rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+}
+.food-list .food-price-box{
+    float: left;
+    width: 80rpx;
+}
+.food-text h3{
+    display: inline-block;
+    font-size: 40rpx;
+    font-weight: 500;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+.food-text .food-num{
+    display: block;
+    margin-top: 35rpx;
+    margin-left: 30rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 35rpx;
+    margin-right: 20rpx;
+    color: #ababab;
+}
+.food-price{
+    display: inline-block;
+    margin-top: 63rpx;
+    /*margin-right: 30rpx;*/
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 45rpx;
+    font-weight: 550;
+}
+
+/*用户地址*/
+.address .firstads{
+    box-sizing:border-box;
+    float: left;
+    width: 80%;
+    height: 100%;
+    /*background-color: blueviolet;*/
+    padding-left: 8%;
+    padding-top: 5%;
+}
+.address .moreads{
+    float: left;
+    width: 20%;
+    height: 100%;
+    /*line-height: 180rpx;*/
+    /*text-align: center;*/
+    /*background-color: blue;*/
+}
+.moreads .arrow{
+    width: 10px;
+    height: 10px;
+    margin-top: 60%;
+    margin-left: 50%;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    transform: rotate(45deg);
+    position: relative;
+    z-index: 3;
+
+}
+.firstads .userads{
+    height: 50%;
+    font-size: 50rpx;
+    font-weight: 550;
+}
+.firstads .usermsg {
+    height: 50%;
+}
+.usermsg .username{
+    margin-right: 30rpx;
+}
+.firstads .add_ads{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 110rpx;
+    font-size: 40rpx;
+    font-weight: 540;
+    text-align: center;
+    color: red;
+}
+

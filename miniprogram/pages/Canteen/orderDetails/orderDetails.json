@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "selectedBox": "/components/selectedBox/selectedBox",
+    "moreadress": "/components/moreadress/moreadress"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "half-screen-dialog": "/components/half-screen-dialog/half-screen-dialog"
+  },
+  "navigationStyle":"custom"
+
+}

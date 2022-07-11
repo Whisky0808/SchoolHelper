@@ -1,0 +1,7 @@
+<view class="dom" hidden="{{hide}}">
+    <view class="box">
+        <view class="title">提示</view>
+        <view class="body">{{attentionMeg}}</view>
+        <button bindtap="hidepopup" data-canclose="{{true}}">确定</button>
+    </view>
+</view>

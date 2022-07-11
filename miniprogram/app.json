@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/Common/bg_cover/bg_cover",
+
+    "pages/test2/test2",
+    "pages/Runner/add_demand_order/add_demand_order",
+    "pages/Common/drawCoupon/drawCoupon",
+    "pages/test3/test3",
+
+    
+
+    "pages/Common/welcome/welcome",
+    "pages/Runner/help_order_detail/help_order_detail",
+    "pages/Runner/help_order/help_order",
+    "pages/Runner/grab/grab",
+    "pages/Runner/add_demand_order/confirm/confirm",
+    "pages/Runner/riderorder/riderorder",
+    "pages/Runner/riderorder_detail/riderorder_detail",
+    "pages/Canteen/transaction_order/transaction_order",
+    "pages/test/test",
+    "pages/Canteen/orderDetails/orderDetails",
+    "pages/Canteen/Merchandise/Merchandise",
+    "pages/Canteen/fantang/fantang",
+    "pages/Canteen/riderorder/riderorder",
+    "pages/Canteen/competition/competition",
+    "pages/Canteen/competition/successTransfer/successTransfer",
+    "pages/Canteen/details/details",
+    "pages/Canteen/rider_nofinish/rider_nofinish",
+    "pages/Canteen/moreAdress/moreAdress",
+    "pages/Canteen/pay/pay",
+    "pages/Canteen/rider_finish/rider_finish",
+    "pages/Canteen/nopay_order/nopay_order",
+    "pages/Canteen/nocompleted/nocompleted",
+    "pages/Common/protocol/protocol",
+    "pages/Common/individual/individual",
+    "pages/Common/pay/pay",
+    "pages/Common/chatCover/chatCover",
+    "pages/Common/chat/chat",
+    
+    "pages/Common/infoRecord/infoRecord"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "校园帮",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "plugins": {
+    "chooseLocation": {
+      "version": "1.0.5",
+      "provider": "wx50b5593e81dd937a"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

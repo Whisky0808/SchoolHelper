@@ -1,0 +1,76 @@
+<wxs module="numberUtil" src="../../../common/filter.wxs"></wxs>
+<view class="state_change">
+    <text class="user_interface" bindtap="changeToUser">用户</text>
+    <text class="rider_interface">骑手</text>
+</view>
+<view class="swiper-tab">
+    <block wx:for="{{swipertab}}" wx:key="sptab">
+        <view class="swiper-tab-list{{currtab == item.index ? 'on':''}}" data-current="{{item.index}}" bindtap="tabSwitch">
+            {{item.name}}
+        </view>
+    </block>
+</view>
+<swiper class="swiper-box"  indicator-color="rgba(0,0,0,.3)"  duration="300" current="{{currtab}}" bindchange="tabChange" style="background-color:white background-size:100% 110%">
+
+    <!-- 已完成 -->
+    <swiper-item indicatte-dots = "false" autoplay ="flase">
+        <scroll-view class="hot-box scroll" scroll-y="true">
+            <!-- orderDetail是大块，里面包含orderListTitle，orderListDetail.{img,product的信息 } -->
+            <view class="orderDetails" bindtap="alreadyClick" data-index="{{index}}" wx:for="{{alreadyOrder}}" wx:key="*this" style="animation: slideup {{0.35*(index+1)}}s ease-in alternate;">
+                <view class="orderListTile">
+                    <text class="userName">{{item.name}}</text>
+<!--                    <text class="orderStatus">{{item.state}}</text>-->
+                </view>
+                <view class="orderListDetails">
+                    <view class="productImg">
+                        <scroll-view class="scroll" scroll-x="true">
+                            <view class="pic" wx:for="{{item.food}}" wx:key="*this" wx:for-item="it" wx:for-index="ind">
+                                <image src="{{it.imgPath}}"></image>
+                                <text>{{it.foodName}}</text>
+                            </view>
+                        </scroll-view>
+                        <!--                        <image class="" src="{{item.url}}" mode="aspectFit|aspectFill|widthFix" background-size="cover"></image>-->
+                    </view>
+                    <view class="productCount">
+                        <view class="">
+                            <text>合计  ￥ {{numberUtil.numberFormat(item.money * 1)}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <!-- 待支付 -->
+    <swiper-item>
+        <scroll-view class="hot-box scroll" scroll-y="true">
+            <!-- orderDetail是大块，里面包含orderListTitle，orderListDetail.{img,product的信息 } -->
+            <view class="orderDetails" bindtap="waitpayClick" data-index="{{index}}" wx:for="{{waitPayOrder}}" wx:key="*this" style="animation: slideup {{0.35*(index+1)}}s ease-in alternate;">
+                <view class="orderListTile">
+                    <text class="userName">{{item.name}}</text>
+<!--                    <text class="orderStatus">{{item.state}}</text>-->
+                </view>
+                <view class="orderListDetails">
+                    <view class="productImg">
+                        <scroll-view class="scroll" scroll-x="true">
+                            <view class="pic" wx:for="{{item.food}}" wx:key="*this" wx:for-item="it" wx:for-index="ind">
+                                <image src="{{it.imgPath}}"></image>
+                                <text>{{it.foodName}}</text>
+                            </view>
+                        </scroll-view>
+                        <!--                        <image class="" src="{{item.url}}" mode="aspectFit|aspectFill|widthFix" background-size="cover"></image>-->
+                    </view>
+<!--                    <view class="productInfo">-->
+
+<!--                        <view class="productPrice">{{item.statusitem.status}}</view>-->
+<!--                    </view>-->
+                    <view class="productCount">
+                        <view class="">
+                            <text>合计  ￥ {{numberUtil.numberFormat(item.money * 1)}}</text>
+                        </view>
+                        <text>{{item.state}}</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>

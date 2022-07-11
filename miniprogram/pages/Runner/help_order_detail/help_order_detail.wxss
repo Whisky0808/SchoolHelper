@@ -1,0 +1,137 @@
+page{
+    background: linear-gradient(#ffcc33,#f6f6f6);
+}
+
+.labelFont{
+  color: #8ebd9b;
+}
+
+.a{
+  margin-top: 20rpx;
+  margin-left: 3%;
+  width: 94%;
+  background-color: white;
+  border-radius: 5px;
+    box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .5);
+}
+
+.b{
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  flex: 7
+}
+
+.c{
+  margin-top: 10rpx;
+  /* margin-top: 35px; */
+  margin-left: 60rpx;
+  flex: 3
+}
+
+.line{
+  padding-top: 10px;
+  width: 100%;
+  font-size: 38rpx;
+  display: flex;
+}
+
+.curObject{
+    position: relative;
+    top: 90%;
+    height: 130rpx;
+    width: 100%;
+    background-color: silver;
+    border-radius: 80rpx;
+}
+.curObject view{
+    display: inline-block;
+    float: left;
+    width: 70%;
+    height: 100%;
+    line-height: 130rpx;
+    border-top-left-radius: 80rpx;
+    border-bottom-left-radius: 80rpx;
+    background-color: #191919;
+    color: #fefefe;
+    font-size: 35rpx;
+}
+.curObject .tex{
+    margin-left: 40rpx;
+}
+.curObject .price{
+    font-size: 55rpx;
+}
+.curObject button{
+    float: left;
+    height: 100%;
+    line-height: 130rpx;
+    width: 30%;
+    border-top-right-radius: 80rpx;
+    border-bottom-right-radius: 80rpx;
+    background-color: #ffd64e;
+    font-size: 35rpx;
+}
+
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+ }
+ 
+ .modalDlg{
+  width: 580rpx;
+  height: 620rpx;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  margin: -370rpx 85rpx;
+  background-color: #fff;
+  border-radius: 36rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .btn1{
+     display: inline-block;
+     width: 353rpx;
+     height: 90rpx;
+     line-height: 90rpx;
+     background-color:#f9ca24;
+     color: black;
+     border: 1px solid #f9ca24;
+     border-top-right-radius: 0rpx;
+     border-bottom-right-radius: 0rpx;
+ }
+ .btn2{
+     display: inline-block;
+     width: 352rpx;
+     height: 90rpx;
+     line-height: 90rpx;
+     background-color: red;
+     color: white;
+     border: 1px solid red;
+     border-top-left-radius: 0rpx;
+     border-bottom-left-radius: 0rpx;
+ }
+
+ .btn{
+     flex: 3;
+     position: relative;
+     display: inline-block;
+    font-size: 34rpx;
+     background-color: #1aad19;
+     color: white;
+     border-radius: 25rpx;
+     margin-left: -20rpx;
+     left: -30rpx;
+     width: 80rpx;
+ }

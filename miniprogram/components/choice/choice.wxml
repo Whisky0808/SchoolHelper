@@ -1,0 +1,14 @@
+<view class="dom" hidden="{{hide}}" bindtap="hidepopup" data-canclose="{{true}}">
+  <view class="box">
+    <view class="foodName">{{foodname}}</view>
+    <view class="controlNum">
+      <view class="cut">
+        <button class="cutbtn" bindtap="numCut" style="width:100rpx height:100rpx">-</button>
+      </view>
+      <text>{{num}}</text>
+      <view class="add">
+        <button class="addbtn" bindtap="numAdd">+</button>
+      </view>
+    </view>
+  </view>
+</view>

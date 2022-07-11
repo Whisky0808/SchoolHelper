@@ -1,0 +1,75 @@
+page{
+  /*background-color: #8ebd9b;*/
+    background: linear-gradient(#ffcc33,#f6f6f6);
+}
+
+.labelFont{
+  color: #ffcc33;
+}
+
+.a{
+  margin-top: 20rpx;
+  margin-left: 3%;
+  width: 94%;
+  background-color: white;
+  border-radius: 5px;
+    box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .5);
+}
+
+.b{
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  flex: 7
+}
+
+.c{
+  margin-top: 10rpx;
+  /* margin-top: 35px; */
+  margin-left: 60rpx;
+  flex: 3
+}
+
+.line{
+  padding-top: 10px;
+  width: 100%;
+  font-size: 38rpx;
+  display: flex;
+}
+
+.curObject{
+    position: relative;
+    top: 90%;
+    height: 130rpx;
+    width: 100%;
+    background-color: silver;
+    border-radius: 80rpx;
+}
+.curObject view{
+    display: inline-block;
+    float: left;
+    width: 70%;
+    height: 100%;
+    line-height: 130rpx;
+    border-top-left-radius: 80rpx;
+    border-bottom-left-radius: 80rpx;
+    background-color: #191919;
+    color: #fefefe;
+    font-size: 35rpx;
+}
+.curObject .tex{
+    margin-left: 40rpx;
+}
+.curObject .price{
+    font-size: 40rpx;
+}
+.curObject button{
+    float: left;
+    height: 100%;
+    line-height: 130rpx;
+    width: 30%;
+    border-top-right-radius: 80rpx;
+    border-bottom-right-radius: 80rpx;
+    background-color: #ffd64e;
+    font-size: 35rpx;
+}

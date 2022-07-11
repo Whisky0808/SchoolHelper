@@ -1,0 +1,4 @@
+.button-sp-area{
+  margin: 50rpx auto;
+  width: 60%;
+}

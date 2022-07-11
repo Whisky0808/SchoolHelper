@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+		"password": "weui-miniprogram/dialog/dialog",
+        "mp-dialog": "weui-miniprogram/dialog/dialog"
+	},
+  "navigationStyle":"custom"
+}

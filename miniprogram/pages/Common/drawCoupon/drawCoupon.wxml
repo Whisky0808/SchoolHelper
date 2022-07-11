@@ -1,0 +1,9 @@
+<view >
+  <button bindtap="getCoupon" class="button-sp-area" type="primary" plain="true">抽取优惠券</button>
+</view>
+
+<view >
+  <button bindtap="toIndex" class="button-sp-area" type="default" plain="true">返回首页</button>
+</view>
+<!--添加组件-->
+<coupon class="coupon" hide="{{hidepopup}}"></coupon>

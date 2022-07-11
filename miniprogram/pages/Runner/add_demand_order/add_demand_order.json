@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "超短工",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "pickerYMDHM": "/components/pickerYMDHM/pickerYMDHM",
+    "tabbar": "../../../components/tabbar/tabbar",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  }
+
+
+}

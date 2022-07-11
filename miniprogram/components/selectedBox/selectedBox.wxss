@@ -1,0 +1,43 @@
+/*.dom{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    position: fixed;*/
+/*    z-index: 1;*/
+/*    top: 0;*/
+/*}*/
+.curObject{
+    position: relative;
+    top: 90%;
+    height: 130rpx;
+    width: 100%;
+    background-color: silver;
+    border-radius: 80rpx;
+}
+.curObject view{
+    display: inline-block;
+    float: left;
+    width: 70%;
+    height: 100%;
+    line-height: 130rpx;
+    border-top-left-radius: 80rpx;
+    border-bottom-left-radius: 80rpx;
+    background-color: #191919;
+    color: #fefefe;
+    font-size: 35rpx;
+}
+.curObject .tex{
+    margin-left: 40rpx;
+}
+.curObject .price{
+    font-size: 55rpx;
+}
+.curObject button{
+    float: left;
+    height: 100%;
+    line-height: 130rpx;
+    width: 30%;
+    border-top-right-radius: 80rpx;
+    border-bottom-right-radius: 80rpx;
+    background-color: #ffd64e;
+    font-size: 35rpx;
+}
